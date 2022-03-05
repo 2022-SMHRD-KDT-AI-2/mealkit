@@ -1,5 +1,8 @@
 select * from user_tables;
 
+insert into T_KEYWORD
+values(1001, '¸ñ»ì', 1000);
+
 -- t_member Table Create SQL
 CREATE TABLE t_member
 (
@@ -365,10 +368,10 @@ CREATE TABLE t_keyword
     k_seq          NUMBER(12, 0)    NOT NULL, 
     k_name         VARCHAR2(50)     NOT NULL, 
     super_k_seq    NUMBER(12, 0)    NULL, 
-    m_id           VARCHAR2(20)     NOT NULL, 
      PRIMARY KEY (k_seq)
 )
 ;
+
 
 CREATE SEQUENCE t_keyword_SEQ
 START WITH 1
