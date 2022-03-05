@@ -13,6 +13,7 @@ CREATE TABLE t_member
     admin_yn       CHAR(1)          NOT NULL, 
      PRIMARY KEY (m_id)
 )
+;
 
 
 COMMENT ON TABLE t_member IS '회원 테이블';
