@@ -1,0 +1,752 @@
+[
+ {
+  "K_seq": 1000,
+  "K_name": "소고기",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 2000,
+  "K_name": "돼지고기",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 3000,
+  "K_name": "닭고기",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 4000,
+  "K_name": "어류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 5000,
+  "K_name": "해물류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 6000,
+  "K_name": "채소류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 7000,
+  "K_name": "과일류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 8000,
+  "K_name": "쌀\/밀가루류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 9000,
+  "K_name": "콩\/견과류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 10000,
+  "K_name": "버섯류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 11000,
+  "K_name": "가공식품류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 12000,
+  "K_name": "달걀\/유제품류",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 13000,
+  "K_name": "기타",
+  "K_super_seq": null
+ },
+ {
+  "K_seq": 1001,
+  "K_name": "소갈비",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1002,
+  "K_name": "다리살",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1003,
+  "K_name": "대접살",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1004,
+  "K_name": "등심",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1005,
+  "K_name": "사태",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1006,
+  "K_name": "쇠꼬리",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1007,
+  "K_name": "소안심",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1008,
+  "K_name": "양지",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1009,
+  "K_name": "우둔살,홍두깨살",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 1010,
+  "K_name": "채끝살",
+  "K_super_seq": 1000
+ },
+ {
+  "K_seq": 2001,
+  "K_name": "돼지갈비",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 2002,
+  "K_name": "뒷다리",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 2003,
+  "K_name": "돼지등심",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 2004,
+  "K_name": "돼지목심",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 2005,
+  "K_name": "삼겹살",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 2006,
+  "K_name": "돼지안심",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 2007,
+  "K_name": "앞다리",
+  "K_super_seq": 2000
+ },
+ {
+  "K_seq": 3001,
+  "K_name": "가슴살",
+  "K_super_seq": 3000
+ },
+ {
+  "K_seq": 3002,
+  "K_name": "날개",
+  "K_super_seq": 3000
+ },
+ {
+  "K_seq": 3003,
+  "K_name": "닭다리살",
+  "K_super_seq": 3000
+ },
+ {
+  "K_seq": 3004,
+  "K_name": "닭발",
+  "K_super_seq": 3000
+ },
+ {
+  "K_seq": 3005,
+  "K_name": "닭봉",
+  "K_super_seq": 3000
+ },
+ {
+  "K_seq": 4001,
+  "K_name": "가오리",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4002,
+  "K_name": "가자미",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4003,
+  "K_name": "갈치",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4004,
+  "K_name": "고등어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4005,
+  "K_name": "광어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4006,
+  "K_name": "굴비",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4007,
+  "K_name": "꼼장어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4008,
+  "K_name": "꽁치",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4009,
+  "K_name": "농어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4010,
+  "K_name": "대구",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4011,
+  "K_name": "도미",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4012,
+  "K_name": "돔",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4013,
+  "K_name": "동태",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4014,
+  "K_name": "메로",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4015,
+  "K_name": "명태",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4016,
+  "K_name": "미꾸라지",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4017,
+  "K_name": "민어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4018,
+  "K_name": "병어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4019,
+  "K_name": "복어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4020,
+  "K_name": "붕장어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4021,
+  "K_name": "삼치",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4022,
+  "K_name": "생태",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4023,
+  "K_name": "아귀",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4024,
+  "K_name": "연어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4025,
+  "K_name": "임연수",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4026,
+  "K_name": "장어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4027,
+  "K_name": "적어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4028,
+  "K_name": "전어",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4029,
+  "K_name": "조기",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 4030,
+  "K_name": "참돔",
+  "K_super_seq": 4000
+ },
+ {
+  "K_seq": 5001,
+  "K_name": "가리비",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5002,
+  "K_name": "갑오징어",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5003,
+  "K_name": "골뱅이",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5004,
+  "K_name": "관자",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5005,
+  "K_name": "굴",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5006,
+  "K_name": "꼬막",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5007,
+  "K_name": "꼬시래기",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5008,
+  "K_name": "꽃게",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5009,
+  "K_name": "날치알",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5010,
+  "K_name": "대게",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5011,
+  "K_name": "대하",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5012,
+  "K_name": "메생이",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5013,
+  "K_name": "명란",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5014,
+  "K_name": "문어",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5015,
+  "K_name": "미더덕",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5016,
+  "K_name": "미역",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5017,
+  "K_name": "바지락",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5018,
+  "K_name": "백합",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5019,
+  "K_name": "새우",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5020,
+  "K_name": "소라",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5021,
+  "K_name": "오징어",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5022,
+  "K_name": "우렁",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5023,
+  "K_name": "전복",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5024,
+  "K_name": "조개",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5025,
+  "K_name": "주꾸미",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5026,
+  "K_name": "키조개",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5027,
+  "K_name": "킹크랩",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5028,
+  "K_name": "톳",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5029,
+  "K_name": "파래",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5030,
+  "K_name": "해삼",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5031,
+  "K_name": "해파리",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 5032,
+  "K_name": "홍합",
+  "K_super_seq": 5000
+ },
+ {
+  "K_seq": 6001,
+  "K_name": "가지",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6002,
+  "K_name": "감자",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6003,
+  "K_name": "고구마",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6004,
+  "K_name": "고사리",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6005,
+  "K_name": "고추",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6006,
+  "K_name": "깻잎",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6007,
+  "K_name": "냉이",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6008,
+  "K_name": "단호박",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6009,
+  "K_name": "당근",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6010,
+  "K_name": "더덕",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6011,
+  "K_name": "도라지",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6012,
+  "K_name": "마늘",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6013,
+  "K_name": "마늘쫑",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6015,
+  "K_name": "무",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6016,
+  "K_name": "미나리",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6017,
+  "K_name": "배추",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6019,
+  "K_name": "부추",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6021,
+  "K_name": "브로콜리",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6022,
+  "K_name": "상추",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6023,
+  "K_name": "스위트콘",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6024,
+  "K_name": "시금치",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6025,
+  "K_name": "아스파라거스",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6026,
+  "K_name": "애호박",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6027,
+  "K_name": "양배추",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6028,
+  "K_name": "양상추",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6029,
+  "K_name": "양파",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6030,
+  "K_name": "연근",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6031,
+  "K_name": "오이",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6032,
+  "K_name": "옥수수",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6033,
+  "K_name": "우엉",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6034,
+  "K_name": "청경채",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6035,
+  "K_name": "콩나물",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6036,
+  "K_name": "토마토",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6038,
+  "K_name": "파",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6039,
+  "K_name": "파프리카",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6040,
+  "K_name": "피망",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 6041,
+  "K_name": "호박",
+  "K_super_seq": 6000
+ },
+ {
+  "K_seq": 7001,
+  "K_name": "바나나",
+  "K_super_seq": 7000
+ },
+ {
+  "K_seq": 7002,
+  "K_name": "배",
+  "K_super_seq": 7000
+ },
+ {
+  "K_seq": 7003,
+  "K_name": "사과",
+  "K_super_seq": 7000
+ },
+ {
+  "K_seq": 8001,
+  "K_name": "강력분",
+  "K_super_seq": 8000
+ },
+ {
+  "K_seq": 8002,
+  "K_name": "햅쌀",
+  "K_super_seq": 8000
+ },
+ {
+  "K_seq": 9001,
+  "K_name": "땅콩",
+  "K_super_seq": 9000
+ },
+ {
+  "K_seq": 10001,
+  "K_name": "노루궁뎅이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10002,
+  "K_name": "느타리버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10003,
+  "K_name": "능이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10004,
+  "K_name": "만가닥버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10005,
+  "K_name": "목이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10006,
+  "K_name": "새송이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10007,
+  "K_name": "송이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10008,
+  "K_name": "양송이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10009,
+  "K_name": "팽이버섯",
+  "K_super_seq": 10000
+ },
+ {
+  "K_seq": 10010,
+  "K_name": "표고버섯",
+  "K_super_seq": 10000
+ }
+]

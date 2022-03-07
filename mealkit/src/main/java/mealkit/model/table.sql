@@ -1,5 +1,12 @@
 select * from user_tables;
 
+insert into T_KEYWORD
+values(1001, '목살', 1000);
+
+delete from T_KEYWORD where k_seq = 1001;
+
+select * from T_KEYWORD;
+
 -- t_member Table Create SQL
 CREATE TABLE t_member
 (
@@ -13,6 +20,7 @@ CREATE TABLE t_member
     admin_yn       CHAR(1)          NOT NULL, 
      PRIMARY KEY (m_id)
 )
+;
 
 
 COMMENT ON TABLE t_member IS '회원 테이블';
@@ -363,11 +371,11 @@ CREATE TABLE t_keyword
 (
     k_seq          NUMBER(12, 0)    NOT NULL, 
     k_name         VARCHAR2(50)     NOT NULL, 
-    super_k_seq    NUMBER(12, 0)    NULL, 
-    m_id           VARCHAR2(20)     NOT NULL, 
+    k_super_seq    NUMBER(12, 0)    NULL, 
      PRIMARY KEY (k_seq)
 )
 ;
+
 
 CREATE SEQUENCE t_keyword_SEQ
 START WITH 1
