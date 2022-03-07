@@ -9,7 +9,7 @@
   
   <servlet>
   	<servlet-name>BoardFrontController</servlet-name>
-  	<servlet-class>kr.smhrd.controller.BoardFrontController</servlet-class>
+  	<servlet-class>mealkit.controller.BoardFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>

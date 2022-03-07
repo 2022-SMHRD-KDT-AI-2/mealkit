@@ -7,14 +7,7 @@ public class HandlerMapping {
 	
 	public HandlerMapping() {
 		mappings = new HashMap<String, Controller>();
-		mappings.put("/boardList.do", new BoardListController());
-		mappings.put("/boardForm.do", new BoardFormController());
-		mappings.put("/boardInsert.do", new BoardInsertController());
-		mappings.put("/boardContent.do", new BoardContentController());
-		mappings.put("/boardDelete.do", new BoardDeleteController());
-		mappings.put("/boardUpdateForm.do", new BoardUpdateFormController());
-		mappings.put("/boardUpdate.do", new BoardUpdateController());
-		mappings.put("/login.do", new LoginController());
+		mappings.put("/keyword.do", new KeywordController());
 	}
 	
 	public Controller getController(String key) {

@@ -27,5 +27,7 @@
             });
         }
     </script>
+    
+    <button onclick="location.href='/mealkit/keyword.do'">ฟไรป</button>
 </body>
 </html>

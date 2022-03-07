@@ -22,7 +22,6 @@ public class BoardFrontController extends HttpServlet {
 		String command = reqPath.substring(cpath.length());
 		System.out.println(command);
 		
-		
 		String nextView=null;
 		Controller controller = null;
 		
@@ -34,7 +33,7 @@ public class BoardFrontController extends HttpServlet {
 		if(nextView != null) {
 			if(nextView.indexOf("redirect:")!=-1) {
 				nextView = nextView.split(":")[1];
-				response.sendRedirect("/web"+nextView);
+				response.sendRedirect("/mealkit"+nextView);
 			}else {
 				
 				//RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/board/"+nextView+".jsp");
