@@ -3,6 +3,10 @@ select * from user_tables;
 insert into T_KEYWORD
 values(1001, '¸ñ»ì', 1000);
 
+delete from T_KEYWORD where k_seq = 1001;
+
+select * from T_KEYWORD;
+
 -- t_member Table Create SQL
 CREATE TABLE t_member
 (
@@ -367,7 +371,7 @@ CREATE TABLE t_keyword
 (
     k_seq          NUMBER(12, 0)    NOT NULL, 
     k_name         VARCHAR2(50)     NOT NULL, 
-    super_k_seq    NUMBER(12, 0)    NULL, 
+    k_super_seq    NUMBER(12, 0)    NULL, 
      PRIMARY KEY (k_seq)
 )
 ;

@@ -8,7 +8,7 @@
 		select * from T_KEYWORD
 	</select>
 	
-	<insert id="boardInsert" parameterType="mealkit.entity.KeywordVO">
+	<insert id="keywordInsert" parameterType="mealkit.entity.KeywordVO">
 		insert into t_keyword
 		values(#{k_seq}, #{k_name}, #{k_super_seq})
 	</insert>

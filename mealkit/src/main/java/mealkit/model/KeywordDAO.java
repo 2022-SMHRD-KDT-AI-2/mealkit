@@ -34,11 +34,10 @@ public class KeywordDAO {
 		return list;
 	}
 	
-	public int insert(int k_seq, String k_name, int k_super_seq) {
+	public int insert(KeywordVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		KeywordVO vo = new KeywordVO(k_seq, k_name, k_super_seq);
-		
-		int num = session.insert("insert");
+		int num = session.insert("keywordInsert", vo);
+		session.commit();
 		session.close();
 		return num;
 		
