@@ -3,7 +3,7 @@ select * from user_tables;
 insert into T_KEYWORD
 values(1001, '¸ñ»ì', 1000);
 
-delete from T_KEYWORD where k_seq = 1001;
+delete from T_KEYWORD 
 
 select * from T_KEYWORD;
 

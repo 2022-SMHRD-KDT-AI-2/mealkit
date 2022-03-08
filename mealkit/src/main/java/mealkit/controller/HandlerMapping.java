@@ -9,6 +9,8 @@ public class HandlerMapping {
 		mappings = new HashMap<String, Controller>();
 		mappings.put("/keyword.do", new KeywordController());
 		mappings.put("/recipemain.do", new RecipeMainController());
+		mappings.put("/search.do", new SearchController());
+		
 	}
 	
 	public Controller getController(String key) {

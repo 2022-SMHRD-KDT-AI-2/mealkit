@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<% pageContext.setAttribute("Null", null); %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,20 +52,28 @@ font-size: 20px;
 <div class="container">
 
   <ul class="nav nav-tabs" id="ulid">
-
-    <li><a data-toggle="tab" href="#menu1">육류</a></li>
-    <li><a data-toggle="tab" href="#menu2">야채</a></li>
-    <li><a data-toggle="tab" href="#menu3">과일</a></li>
-    <li><a data-toggle="tab" href="#menu4">채소</a></li>
-    <li><a data-toggle="tab" href="#menu5">어류</a></li>
+    <li><a data-toggle="tab" href="#menu1">고기</a></li>
+	<c:forEach var="v" items="${list}">
+		<c:if test="${v.k_super_seq eq 0}">
+			<li><a data-toggle="tab" href="#menu2">${v.k_name}</a></li>
+		</c:if>
+			
+	</c:forEach>
   </ul>
 
   <div class="tab-content">
   
     <div id="menu1" class="tab-pane fade">
-      <div><ul>소고기<li>안창살</li><li>등심</li></ul></div>
-      <div><ul>돼지고기<li>안창살</li><li>등심</li></ul></div>
-      <div><ul>양고기<li>안창살</li><li>등심</li></ul></div>
+    <div><ul>
+	    <c:forEach var="v" items="${list}">
+			<c:if test="${v.k_super_seq eq 1000}">
+				<span>${v.k_name}</span>
+			</c:if>
+		</c:forEach>
+	</ul></div>
+      
+      
+      
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Menu 2</h3>
