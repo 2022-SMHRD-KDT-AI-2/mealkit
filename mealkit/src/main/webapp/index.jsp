@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -23,21 +25,21 @@
 					<div class="contain">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">í•¨ì •ìš”ë¦¬</a></h1>
-							<p>ì›í•˜ëŠ” ìž¬ë£Œë¥¼ ì„ íƒí•´ì„œ ìš”ë¦¬ì™€ ë°€í‚¤íŠ¸ë¥¼ ì¶”ì²œí•´ì£¼ëŠ” ì‚¬ì´íŠ¸ ìž…ë‹ˆë‹¤.</p>
+							<h1 id="logo"><a href="index.html">ÇÔÁ¤¿ä¸®</a></h1>
+							<p>¿øÇÏ´Â Àç·á¸¦ ¼±ÅÃÇØ¼­ ¿ä¸®¿Í ¹ÐÅ°Æ®¸¦ ÃßÃµÇØÁÖ´Â »çÀÌÆ® ÀÔ´Ï´Ù.</p>
 
 		
 
                   <!-- Nav -->
 				  <nav id="nav">
 					<ul>
-					   <li><a id="sea" class="icon solid fa-search" href="/mealkit/keyword.do"><span>ê²€ìƒ‰</span></a>
+					   <li><a id="sea" class="icon solid fa-search" href="/mealkit/keyword.do"><span>°Ë»ö</span></a>
 				
 					
 					
 					</li>
 					   <li>
-						  <a href="/mealkit/recipemain.do" class="icon fa-chart-bar"><span>ë ˆì‹œí”¼</a></span>
+						  <a href="/mealkit/recipemain.do" class="icon fa-chart-bar"><span>·¹½ÃÇÇ</a></span>
 						  <ul>
 							 <li><a href="#">Lorem ipsum dolor</a></li>
 							 <li><a href="#">Magna phasellus</a></li>
@@ -53,9 +55,9 @@
 							 <li><a href="#">Veroeros feugiat</a></li>
 						  </ul>
 					   </li>
-					   <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>ë°€í‚¤íŠ¸</span></a></li>
-					   <li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>ì¦ê²¨ì°¾ê¸°</span></a></li>
-					   <li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>ê²Œì‹œíŒ</span></a></li>
+					   <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>¹ÐÅ°Æ®</span></a></li>
+					   <li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Áñ°ÜÃ£±â</span></a></li>
+					   <li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>°Ô½ÃÆÇ</span></a></li>
 					</ul>
 				 </nav>
 
@@ -67,7 +69,7 @@
 			  <section id="features">
 				<div class="container">
 				   <header>
-					  <h2>ì˜¤ëŠ˜ ì¶”ì²œ  <strong>ë ˆì‹œí”¼!!!</strong>!</h2>
+					  <h2>¿À´Ã ÃßÃµ  <strong>·¹½ÃÇÇ!!!</strong>!</h2>
 				   </header>
 				   <div class="row aln-center">
 					  <div class="col-4 col-6-medium col-12-small">
@@ -76,10 +78,10 @@
 							<section >
 							   <a class="no" href="#"><img class="im" src="images/p2.jpg" alt="" width="300px" height="200px"></a>
 							   <header>
-								  <h3>ë‹­ë³¶ìŒíƒ•</h3>
+								  <h3>´ßººÀ½ÅÁ</h3>
 							   </header>
-							   <p><strong>ìž¬ë£Œ : </strong><a>ë‹­1.1kg,ê°ìž1ê°œ,ì–‘íŒŒ1ê°œ,ë‹¹ê·¼1/3ê°œ,ëŒ€íŒŒ1/2ëŒ€,í™ê³ ì¶”1ê°œ,ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶”ì•½ê°„</a></p>
-							   <p><strong>ë ˆì‹œí”¼ : </strong><a> 1.ê°ìž,ì–‘íŒŒ,ë‹¹ê·¼,ëŒ€íŒŒ,í™ê³ ì¶” í¼ì§í•˜ê²Œ ì°ì–´ì¤€ë‹¤. </a><a>2.ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶” ì•½ê°„ ë„£ê³  ì–‘ë…ìž¥ì„ ë§Œë“¤ì–´ì¤€ë‹¤.</a></p>
+							   <p><strong>Àç·á : </strong><a>´ß1.1kg,°¨ÀÚ1°³,¾çÆÄ1°³,´ç±Ù1/3°³,´ëÆÄ1/2´ë,È«°íÃß1°³,¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß¾à°£</a></p>
+							   <p><strong>·¹½ÃÇÇ : </strong><a> 1.°¨ÀÚ,¾çÆÄ,´ç±Ù,´ëÆÄ,È«°íÃß Å­Á÷ÇÏ°Ô ½ä¾îÁØ´Ù. </a><a>2.¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß ¾à°£ ³Ö°í ¾ç³äÀåÀ» ¸¸µé¾îÁØ´Ù.</a></p>
 							</section>
  
 					  </div>
@@ -89,10 +91,10 @@
 							<section>
 								<a class="no" href="#"><img class="im" src="images/p1.jpg" alt="" width="300px" height="200px" /></a>
 							   <header>
-								  <h3>ì œìœ¡ë³¶ìŒ</h3>
+								  <h3>Á¦À°ººÀ½</h3>
 							   </header>
-							   <p><strong>ìž¬ë£Œ : </strong><a>ë‹­1.1kg,ê°ìž1ê°œ,ì–‘íŒŒ1ê°œ,ë‹¹ê·¼1/3ê°œ,ëŒ€íŒŒ1/2ëŒ€,í™ê³ ì¶”1ê°œ,ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶”ì•½ê°„</a></p>
-							   <p><strong>ë ˆì‹œí”¼ : </strong><a> 1.ê°ìž,ì–‘íŒŒ,ë‹¹ê·¼,ëŒ€íŒŒ,í™ê³ ì¶” í¼ì§í•˜ê²Œ ì°ì–´ì¤€ë‹¤. </a><a>2.ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶” ì•½ê°„ ë„£ê³  ì–‘ë…ìž¥ì„ ë§Œë“¤ì–´ì¤€ë‹¤.</a></p>
+							   <p><strong>Àç·á : </strong><a>´ß1.1kg,°¨ÀÚ1°³,¾çÆÄ1°³,´ç±Ù1/3°³,´ëÆÄ1/2´ë,È«°íÃß1°³,¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß¾à°£</a></p>
+							   <p><strong>·¹½ÃÇÇ : </strong><a> 1.°¨ÀÚ,¾çÆÄ,´ç±Ù,´ëÆÄ,È«°íÃß Å­Á÷ÇÏ°Ô ½ä¾îÁØ´Ù. </a><a>2.¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß ¾à°£ ³Ö°í ¾ç³äÀåÀ» ¸¸µé¾îÁØ´Ù.</a></p>
 							</section>
  
 					  </div>
@@ -102,16 +104,16 @@
 							<section >
 								<a class="no" href="#"><img class="im" src="images/p3.jpg" alt="" width="300px" height="200px"/></a>
 							   <header>
-								  <h3>ë¶ˆê³ ê¸°</h3>
+								  <h3>ºÒ°í±â</h3>
 							   </header>
-							   <p><strong>ìž¬ë£Œ : </strong><a>ë‹­1.1kg,ê°ìž1ê°œ,ì–‘íŒŒ1ê°œ,ë‹¹ê·¼1/3ê°œ,ëŒ€íŒŒ1/2ëŒ€,í™ê³ ì¶”1ê°œ,ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶”ì•½ê°„</a></p>
-							   <p><strong>ë ˆì‹œí”¼ : </strong><a> 1.ê°ìž,ì–‘íŒŒ,ë‹¹ê·¼,ëŒ€íŒŒ,í™ê³ ì¶” í¼ì§í•˜ê²Œ ì°ì–´ì¤€ë‹¤. </a><a>2.ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶” ì•½ê°„ ë„£ê³  ì–‘ë…ìž¥ì„ ë§Œë“¤ì–´ì¤€ë‹¤.</a></p>
+							   <p><strong>Àç·á : </strong><a>´ß1.1kg,°¨ÀÚ1°³,¾çÆÄ1°³,´ç±Ù1/3°³,´ëÆÄ1/2´ë,È«°íÃß1°³,¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß¾à°£</a></p>
+							   <p><strong>·¹½ÃÇÇ : </strong><a> 1.°¨ÀÚ,¾çÆÄ,´ç±Ù,´ëÆÄ,È«°íÃß Å­Á÷ÇÏ°Ô ½ä¾îÁØ´Ù. </a><a>2.¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß ¾à°£ ³Ö°í ¾ç³äÀåÀ» ¸¸µé¾îÁØ´Ù.</a></p>
 							</section>
  
 					  </div>
 					  <div class="col-12">
 						 <ul class="actions">
-							<li><a href="#" class="button icon solid fa-file">ë§¨ìœ„ë¡œ</a></li>
+							<li><a href="#" class="button icon solid fa-file">¸ÇÀ§·Î</a></li>
 						 </ul>
 					  </div>
 				   </div>
