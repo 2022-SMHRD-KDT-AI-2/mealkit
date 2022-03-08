@@ -56,21 +56,25 @@
 				</c:if>
 			</c:forEach>
 		</ul>
-
-		<div class="tab-content">
-			<c:forEach var="i" begin="1000" end="13000" step="1000">
-				<div id="${i}" class="tab-pane fade">
-					<c:forEach var="v" items="${list}">
-						<c:if test="${v.k_super_seq == i}">
-							<form action="#">
-								<input type="checkbox" name="${v.k_name}" value='1' id="input_check"/>${v.k_name}
-								<input type="hidden" name="${v.k_name}" value='0' id="input_check_hidden"/>
-							   </form>
-						</c:if>
-					</c:forEach>
-				</div>
-			</c:forEach>
-		</div>
+		
+		<form action="/mealkit/search.do" method="get">
+			<div class="tab-content">
+				<c:forEach var="i" begin="1000" end="13000" step="1000">
+					<div id="${i}" class="tab-pane fade">
+						<c:forEach var="v" items="${list}">
+							<c:if test="${v.k_super_seq == i}">
+								<input type="checkbox" name="${v.k_name}" value='1'
+									id="input_check" />${v.k_name}
+								<input type="hidden" name="${v.k_name}" value='0'
+									id="input_check_hidden" />
+							</c:if>
+						</c:forEach>
+						<button type="submit" class="btn">검색</button>
+					</div>
+				</c:forEach>
+			</div>
+		</form>
+		
 	</div>
 	
 

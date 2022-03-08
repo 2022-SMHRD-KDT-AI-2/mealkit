@@ -15,6 +15,7 @@ public class SearchController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("good");
 		return null;
 	}
 
