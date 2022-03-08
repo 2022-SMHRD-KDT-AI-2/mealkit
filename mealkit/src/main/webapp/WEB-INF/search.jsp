@@ -50,14 +50,13 @@
 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
-			<c:forEach var="v" items="${list}">
-				<c:if test="${v.k_super_seq eq 0}">
-					<li><a data-toggle="tab" href="${shap}${v.k_seq}">${v.k_name}</a></li>
-				</c:if>
+			<c:forEach var="v" items="${listSuper}">
+				<li><a data-toggle="tab" href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
 			</c:forEach>
 		</ul>
 		
 		<form action="/mealkit/search.do" method="get">
+		
 			<div class="tab-content">
 				<c:forEach var="i" begin="1000" end="13000" step="1000">
 					<div id="${i}" class="tab-pane fade">
@@ -69,10 +68,11 @@
 									id="input_check_hidden" />
 							</c:if>
 						</c:forEach>
-						<button type="submit" class="btn">검색</button>
 					</div>
 				</c:forEach>
+				<button type="submit" class="btn">검색</button>
 			</div>
+			
 		</form>
 		
 	</div>

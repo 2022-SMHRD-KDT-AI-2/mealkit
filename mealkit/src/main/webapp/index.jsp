@@ -96,7 +96,7 @@ max-width: 400px;
 					
 					</li>
 					   <li>
-						  <a href="#" class="icon fa-chart-bar"><span>레시피</a></span>
+						  <a href="/mealkit/recipemain.do" class="icon fa-chart-bar"><span>레시피</span></a>
 				
 					   </li>
 					   <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>밀키트</span></a></li>
