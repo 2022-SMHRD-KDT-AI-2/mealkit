@@ -2,7 +2,7 @@
     pageEncoding="utf-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<% pageContext.setAttribute("Null", null); %>
+<% pageContext.setAttribute("shap", "#"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,11 @@
 		  border-right: 1px solid black;
 		}
 	</style>
+	<script type="text/javascript">
+	if(document.getElementById("input_check").checked) {
+	    document.getElementById("input_check_hidden").disabled = true;
+	}
+	</script>
 </head>
 <body>
 	<!-- Header -->
@@ -45,26 +50,26 @@
 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
-			<li><a data-toggle="tab" href="#menu1">고기</a></li>
 			<c:forEach var="v" items="${list}">
 				<c:if test="${v.k_super_seq eq 0}">
-					<li><a data-toggle="tab" href="#menu2"">${v.k_name}</a></li>
+					<li><a data-toggle="tab" href="${shap}${v.k_seq}">${v.k_name}</a></li>
 				</c:if>
 			</c:forEach>
 		</ul>
 
 		<div class="tab-content">
-
-			<div id="menu1" class="tab-pane fade">
-				<c:forEach var="v" items="${list}">
-					<c:if test="${v.k_super_seq eq 1000}">
-						<form action="#">
-							<input type="checkbox" value="축구">축구
-							<input type="checkbox" value="농구">농구
-					    </form>
-					</c:if>
-				</c:forEach>
-			</div>
+			<c:forEach var="i" begin="1000" end="13000" step="1000">
+				<div id="${i}" class="tab-pane fade">
+					<c:forEach var="v" items="${list}">
+						<c:if test="${v.k_super_seq == i}">
+							<form action="#">
+								<input type="checkbox" name="${v.k_name}" value='1' id="input_check"/>${v.k_name}
+								<input type="hidden" name="${v.k_name}" value='0' id="input_check_hidden"/>
+							   </form>
+						</c:if>
+					</c:forEach>
+				</div>
+			</c:forEach>
 		</div>
 	</div>
 	
