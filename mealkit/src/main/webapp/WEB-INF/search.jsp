@@ -54,10 +54,12 @@ font-size: 20px;
   <ul class="nav nav-tabs" id="ulid">
     <li><a data-toggle="tab" href="#menu1">고기</a></li>
 	<c:forEach var="v" items="${list}">
-		<c:if test="${v.k_super_seq eq 0}">
-			<li><a data-toggle="tab" href="#menu2">${v.k_name}</a></li>
+		<c:if test="${v.k_super_seq eq 0}" >
+			<li><a data-toggle="tab" href="#menu2" ">${v.k_name}</a></li>
 		</c:if>
 			
+			
+	
 	</c:forEach>
   </ul>
 
@@ -67,31 +69,12 @@ font-size: 20px;
     <div><ul>
 	    <c:forEach var="v" items="${list}">
 			<c:if test="${v.k_super_seq eq 1000}">
-				<span>${v.k_name}</span>
+				<input type="check box" id="vehicle1" name="vehicle1">123
 			</c:if>
 		</c:forEach>
 	</ul></div>
-      
-      
-      
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-    <div id="menu4" class="tab-pane fade">
-      <h3>Menu 4</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-    <div id="menu5" class="tab-pane fade">
-      <h3>Menu 5</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
+</div>
+</div>
 </div>
 
 </body>

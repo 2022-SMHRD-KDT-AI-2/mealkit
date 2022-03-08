@@ -1,17 +1,59 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Strongly Typed by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">        
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">  
+	   
+
+		<style>
+
+
+			li{
+				list-style: none;
+			}
+
+			a{
+			text-decoration: none !important;
+			}
+		#logob{
+		position: relative;
+		}
+		.form-control {
+    border: 1px solid #f86146
+}
+.hamjung{
+	
+	position: absolute;
+	left:16%;
+
+}
+#inputdiv{
+	left: 45%;
+	position:absolute;
+
+}
+#inputg{
+	
+    height: 50px;
+max-width: 400px;
+
+}
+#ing{
+	font-size: 8px;
+}
+#icon{
+	font-size: 18px;
+}
+
+
+
+	</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -24,11 +66,19 @@
 				<section id="header">
 					<div class="contain">
 
-						<!-- Logo -->
+							<div id="logob">
+								<div class="hamjung">
 							<h1 id="logo"><a href="index.html">함정요리</a></h1>
-							<p>원하는 재료를 선택해서 요리와 밀키트를 추천해주는 사이트 입니다.</p>
-
+						
+						</div>
+							<div id="inputdiv" class="input-group mb-3"> <input id="inputg" type="text" class="form-control input-text" placeholder="재료검색">
+								<div id="buttong" class="input-group-append"> <button id="ing" type="button" name="ingredient" ><i id="icon" class="fa fa-search"></i></button> </div>
 		
+							</div>
+					  
+							
+						</div>
+			
 
                   <!-- Nav -->
 				  <nav id="nav">
@@ -39,21 +89,8 @@
 					
 					</li>
 					   <li>
-						  <a href="/mealkit/recipemain.do" class="icon fa-chart-bar"><span>레시피</a></span>
-						  <ul>
-							 <li><a href="#">Lorem ipsum dolor</a></li>
-							 <li><a href="#">Magna phasellus</a></li>
-							 <li><a href="#">Etiam dolore nisl</a></li>
-							 <li>
-								<a href="#">Phasellus consequat</a>
-								<ul>
-								   <li><a href="#">Magna phasellus</a></li>
-								   <li><a href="#">Etiam dolore nisl</a></li>
-								   <li><a href="#">Phasellus consequat</a></li>
-								</ul>
-							 </li>
-							 <li><a href="#">Veroeros feugiat</a></li>
-						  </ul>
+						  <a href="#" class="icon fa-chart-bar"><span>레시피</a></span>
+				
 					   </li>
 					   <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>밀키트</span></a></li>
 					   <li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>즐겨찾기</span></a></li>
@@ -80,8 +117,8 @@
 							   <header>
 								  <h3>닭볶음탕</h3>
 							   </header>
-							   <p><strong>재료 : </strong><a>닭1.1kg,감자1개,양파1개,당근1/3개,대파1/2대,홍고추1개,설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추약간</a></p>
-							   <p><strong>레시피 : </strong><a> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다. </a><a>2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.</a></p>
+							   <p><strong>재료 : </strong>닭1.1kg,감자1개,양파1개,당근1/3개,대파1/2대,홍고추1개,설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추약간</p>
+							   <p><strong>레시피 : </strong> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다. 2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.</p>
 							</section>
  
 					  </div>
@@ -93,8 +130,8 @@
 							   <header>
 								  <h3>제육볶음</h3>
 							   </header>
-							   <p><strong>재료 : </strong><a>닭1.1kg,감자1개,양파1개,당근1/3개,대파1/2대,홍고추1개,설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추약간</a></p>
-							   <p><strong>레시피 : </strong><a> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다. </a><a>2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.</a></p>
+							   <p><strong>재료 : </strong>닭1.1kg,감자1개,양파1개,당근1/3개,대파1/2대,홍고추1개,설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추약간</p>
+							   <p><strong>레시피 : </strong> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다. 2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.</p>
 							</section>
  
 					  </div>
@@ -106,8 +143,8 @@
 							   <header>
 								  <h3>불고기</h3>
 							   </header>
-							   <p><strong>재료 : </strong><a>닭1.1kg,감자1개,양파1개,당근1/3개,대파1/2대,홍고추1개,설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추약간</a></p>
-							   <p><strong>레시피 : </strong><a> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다. </a><a>2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.</a></p>
+							   <p><strong>재료 : </strong>닭1.1kg,감자1개,양파1개,당근1/3개,대파1/2대,홍고추1개,설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추약간</p>
+							   <p><strong>레시피 : </strong> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다. 2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.</p>
 							</section>
  
 					  </div>
@@ -115,18 +152,24 @@
 						 <ul class="actions">
 							<li><a href="#" class="button icon solid fa-file">맨위로</a></li>
 						 </ul>
-					  </div>
-				   </div>
+			
+
+
+  
+ 
+
+				   
 				</div>
+
 			 </section>
- 
 			 
-		  
- 
+
 		  
  
 	   </div>
  
+
+	   
 	   <!-- Scripts -->
 		  <script src="assets/js/jquery.min.js"></script>
 		  <script src="assets/js/jquery.dropotron.min.js"></script>
