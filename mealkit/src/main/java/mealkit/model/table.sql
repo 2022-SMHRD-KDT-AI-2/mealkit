@@ -1,11 +1,37 @@
 select * from user_tables;
+drop table t_user_keyword;
 
-insert into T_KEYWORD
-values(1001, '목살', 1000);
+select table_name from user_tables;
+commit;
 
-delete from T_KEYWORD 
+insert into t_member
+values(
+	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
+);
 
-select * from T_KEYWORD;
+INSERT INTO t_recipe (r_name, r_content, m_id, r_date, r_img1, r_img2) 
+VALUES ('r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
+
+
+insert into T_RECIPE
+values(
+	t_recipe_SEQ.nextval, 'testName', 'testContent', 'sys', sysdate, 'testImage1', 'testImage2'
+);
+
+INSERT INTO t_material
+VALUES (t_material_seq.nextval, 2, '등심', 'mat_info 2', 1, 'mat_img 1');
+
+INSERT INTO t_material
+VALUES (t_material_seq.nextval, 2, '목심', 'mat_info 2', 3, 'mat_img 1');
+
+select * from t_recipe;
+
+select * from t_material;
+
+
+
+
+-------------------------------------------------------------------------------------------
 
 -- t_member Table Create SQL
 CREATE TABLE t_member
@@ -23,10 +49,10 @@ CREATE TABLE t_member
 ;
 
 
-COMMENT ON TABLE t_member IS '회원 테이블';
+COMMENT ON TABLE t_member IS '회원 테이블'
 ;
 
-COMMENT ON COLUMN t_member.m_id IS '회원 아이디';
+COMMENT ON COLUMN t_member.m_id IS '회원 아이디'
 ;
 
 COMMENT ON COLUMN t_member.m_pw IS '회원 비밀번호'
@@ -80,11 +106,11 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_recipe_AI_TRG;
-
+DROP TRIGGER t_recipe_AI_TRG;
+;
 
 --DROP SEQUENCE t_recipe_SEQ;
-
+;
 
 COMMENT ON TABLE t_recipe IS '레시피  테이블'
 ;
@@ -145,10 +171,10 @@ END;
 ;
 
 --DROP TRIGGER t_community_AI_TRG;
-/
+;
 
 --DROP SEQUENCE t_community_SEQ;
-/
+;
 
 COMMENT ON TABLE t_community IS '커뮤니티 테이블'
 ;
@@ -174,6 +200,56 @@ COMMENT ON COLUMN t_community.c_file IS '글 첨부파일'
 ALTER TABLE t_community
     ADD CONSTRAINT FK_t_community_m_id_t_member_m FOREIGN KEY (m_id)
         REFERENCES t_member (m_id)
+;
+
+
+-- t_keyword Table Create SQL
+CREATE TABLE t_keyword
+(
+    k_seq          NUMBER(12, 0)    NOT NULL, 
+    k_name         VARCHAR2(50)     NOT NULL, 
+    k_super_seq    NUMBER(12, 0)    NULL, 
+     PRIMARY KEY (k_seq)
+)
+;
+
+
+CREATE SEQUENCE t_keyword_SEQ
+START WITH 1
+INCREMENT BY 1;
+;
+
+CREATE OR REPLACE TRIGGER t_keyword_AI_TRG
+BEFORE INSERT ON t_keyword 
+REFERENCING NEW AS NEW FOR EACH ROW 
+BEGIN 
+    SELECT t_keyword_SEQ.NEXTVAL
+    INTO :NEW.k_seq
+    FROM DUAL;
+END;
+;
+
+--DROP TRIGGER t_keyword_AI_TRG;
+;
+
+--DROP SEQUENCE t_keyword_SEQ;
+;
+
+COMMENT ON TABLE t_keyword IS '키워드 테이블'
+;
+
+COMMENT ON COLUMN t_keyword.k_seq IS '키워드 순번'
+;
+
+COMMENT ON COLUMN t_keyword.k_name IS '키워드 명'
+;
+
+COMMENT ON COLUMN t_keyword.super_k_seq IS '관련 순번'
+;
+
+ALTER TABLE t_keyword
+    ADD CONSTRAINT FK_t_keyword_super_k_seq_t_key FOREIGN KEY (super_k_seq)
+        REFERENCES t_keyword (k_seq)
 ;
 
 
@@ -208,10 +284,10 @@ END;
 ;
 
 --DROP TRIGGER t_mealkit_AI_TRG;
-
+;
 
 --DROP SEQUENCE t_mealkit_SEQ;
-
+;
 
 COMMENT ON TABLE t_mealkit IS '밀키트 테이블'
 ;
@@ -273,10 +349,10 @@ END;
 ;
 
 --DROP TRIGGER t_favorite_AI_TRG;
-
+;
 
 --DROP SEQUENCE t_favorite_SEQ;
-
+;
 
 COMMENT ON TABLE t_favorite IS '즐겨찾기 테이블'
 ;
@@ -366,70 +442,12 @@ ALTER TABLE t_cmt
 ;
 
 
--- t_keyword Table Create SQL
-CREATE TABLE t_keyword
-(
-    k_seq          NUMBER(12, 0)    NOT NULL, 
-    k_name         VARCHAR2(50)     NOT NULL, 
-    k_super_seq    NUMBER(12, 0)    NULL, 
-     PRIMARY KEY (k_seq)
-)
-;
-
-
-CREATE SEQUENCE t_keyword_SEQ
-START WITH 1
-INCREMENT BY 1;
-;
-
-CREATE OR REPLACE TRIGGER t_keyword_AI_TRG
-BEFORE INSERT ON t_keyword 
-REFERENCING NEW AS NEW FOR EACH ROW 
-BEGIN 
-    SELECT t_keyword_SEQ.NEXTVAL
-    INTO :NEW.k_seq
-    FROM DUAL;
-END;
-;
-
---DROP TRIGGER t_keyword_AI_TRG;
-;
-
---DROP SEQUENCE t_keyword_SEQ;
-;
-
-COMMENT ON TABLE t_keyword IS '키워드 테이블'
-;
-
-COMMENT ON COLUMN t_keyword.k_seq IS '키워드 순번'
-;
-
-COMMENT ON COLUMN t_keyword.k_name IS '키워드 명'
-;
-
-COMMENT ON COLUMN t_keyword.super_k_seq IS '관련 순번'
-;
-
-COMMENT ON COLUMN t_keyword.m_id IS '등록자 아이디'
-;
-
-ALTER TABLE t_keyword
-    ADD CONSTRAINT FK_t_keyword_super_k_seq_t_key FOREIGN KEY (super_k_seq)
-        REFERENCES t_keyword (k_seq)
-;
-
-ALTER TABLE t_keyword
-    ADD CONSTRAINT FK_t_keyword_m_id_t_member_m_i FOREIGN KEY (m_id)
-        REFERENCES t_member (m_id)
-;
-
-
 -- t_material Table Create SQL
 CREATE TABLE t_material
 (
     mat_seq       NUMBER(12, 0)     NOT NULL, 
     r_seq         NUMBER(12, 0)     NOT NULL, 
-    k_name        VARCHAR2(50)      NULL, 
+    k_name        VARCHAR2(50)      not NULL, 
     mat_info      VARCHAR2(4000)    NOT NULL, 
     mat_weight    NUMBER(12, 1)     NOT NULL, 
     mat_img       VARCHAR2(200)     NULL, 
@@ -452,7 +470,7 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_material_AI_TRG;
+DROP TRIGGER t_material_AI_TRG;
 ;
 
 --DROP SEQUENCE t_material_SEQ;
@@ -483,6 +501,12 @@ ALTER TABLE t_material
     ADD CONSTRAINT FK_t_material_r_seq_t_recipe_r FOREIGN KEY (r_seq)
         REFERENCES t_recipe (r_seq)
 ;
+
+ALTER TABLE t_material
+    ADD CONSTRAINT FK_t_material_k_name_t_keyword FOREIGN KEY (k_name)
+        REFERENCES t_keyword (k_name)
+;
+
 
 
 -- t_user_keyword Table Create SQL
@@ -602,3 +626,90 @@ ALTER TABLE t_recommend
     ADD CONSTRAINT FK_t_recommend_m_id_t_member_m FOREIGN KEY (m_id)
         REFERENCES t_member (m_id)
 ;
+
+
+-- t_member_copy1 Table Create SQL
+CREATE TABLE t_member_copy1
+(
+    m_id           VARCHAR2(20)     NOT NULL, 
+    m_pw           VARCHAR2(20)     NOT NULL, 
+    m_phone        VARCHAR2(20)     NOT NULL, 
+    m_birthdate    DATE             NOT NULL, 
+    m_addr         VARCHAR2(200)    NOT NULL, 
+    m_email        VARCHAR2(50)     NOT NULL, 
+    m_joindate     DATE             NOT NULL, 
+    admin_yn       CHAR(1)          NOT NULL, 
+     PRIMARY KEY (m_id)
+)
+;
+
+COMMENT ON TABLE t_member_copy1 IS '예비 테이블1'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_id IS '회원 아이디'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_pw IS '회원 비밀번호'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_phone IS '회원 연락처'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_birthdate IS '회원 생년월일'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_addr IS '회원 주소'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_email IS '회원 이메일'
+;
+
+COMMENT ON COLUMN t_member_copy1.m_joindate IS '회원 가입일자'
+;
+
+COMMENT ON COLUMN t_member_copy1.admin_yn IS '관리자 여부'
+;
+
+
+-- t_member_copy2 Table Create SQL
+CREATE TABLE t_member_copy2
+(
+    m_id           VARCHAR2(20)     NOT NULL, 
+    m_pw           VARCHAR2(20)     NOT NULL, 
+    m_phone        VARCHAR2(20)     NOT NULL, 
+    m_birthdate    DATE             NOT NULL, 
+    m_addr         VARCHAR2(200)    NOT NULL, 
+    m_email        VARCHAR2(50)     NOT NULL, 
+    m_joindate     DATE             NOT NULL, 
+    admin_yn       CHAR(1)          NOT NULL, 
+     PRIMARY KEY (m_id)
+)
+;
+
+COMMENT ON TABLE t_member_copy2 IS '예비 테이블2'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_id IS '회원 아이디'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_pw IS '회원 비밀번호'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_phone IS '회원 연락처'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_birthdate IS '회원 생년월일'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_addr IS '회원 주소'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_email IS '회원 이메일'
+;
+
+COMMENT ON COLUMN t_member_copy2.m_joindate IS '회원 가입일자'
+;
+
+COMMENT ON COLUMN t_member_copy2.admin_yn IS '관리자 여부'
+;
+
