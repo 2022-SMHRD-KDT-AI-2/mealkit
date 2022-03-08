@@ -41,6 +41,7 @@ public class KeywordInsert {
 			for(int i = 0; i < array.size(); i++) {
 				
 				JSONObject array2 = (JSONObject)array.get(i);
+				KeywordVO vo = new KeywordVO();
 				
 				long k_seq2 = (long) array2.get("K_seq");
 				int k_seq = (int)k_seq2;
@@ -48,10 +49,14 @@ public class KeywordInsert {
 				
 				String k_name = String.valueOf(array2.get("K_name"));
 				
-				int k_super_seq = 0;
-
+				long k_super_seq2 = (long) array2.get("K_super_seq");
+				int k_super_seq = (int)k_super_seq2;
 				
-				KeywordVO vo = new KeywordVO(k_seq, k_name, k_super_seq);
+				vo.setK_seq(k_seq);
+				vo.setK_name(k_name);
+				vo.setK_super_seq(k_super_seq);
+				
+				
 				int num = dao.insert(vo);
 				System.out.println(num);
 			}

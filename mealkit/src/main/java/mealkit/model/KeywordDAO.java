@@ -18,7 +18,7 @@ public class KeywordDAO {
 	static {
 		//connection pool
 		try {
-		String resource = "Keyword_javaDB/config.xml";
+		String resource = "mealkit/model/config.xml";
 		InputStream inputStream = Resources.getResourceAsStream(resource);
 		sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		} catch (IOException e) {

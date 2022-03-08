@@ -2,6 +2,6 @@ package mealkit.controller;
 
 public class ViewResolver {
 	public static String makeURL(String nextView) {
-		return "WEB-INF/"+nextView+".html";
+		return "WEB-INF/"+nextView+".jsp";
 	}
 }
