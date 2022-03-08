@@ -4,6 +4,35 @@ drop table t_user_keyword;
 select table_name from user_tables;
 commit;
 
+insert into t_member
+values(
+	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
+);
+
+INSERT INTO t_recipe (r_name, r_content, m_id, r_date, r_img1, r_img2) 
+VALUES ('r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
+
+
+insert into T_RECIPE
+values(
+	t_recipe_SEQ.nextval, 'testName', 'testContent', 'sys', sysdate, 'testImage1', 'testImage2'
+);
+
+INSERT INTO t_material
+VALUES (t_material_seq.nextval, 2, '등심', 'mat_info 2', 1, 'mat_img 1');
+
+INSERT INTO t_material
+VALUES (t_material_seq.nextval, 2, '목심', 'mat_info 2', 3, 'mat_img 1');
+
+select * from t_recipe;
+
+select * from t_material;
+
+
+
+
+-------------------------------------------------------------------------------------------
+
 -- t_member Table Create SQL
 CREATE TABLE t_member
 (
@@ -18,6 +47,7 @@ CREATE TABLE t_member
      PRIMARY KEY (m_id)
 )
 ;
+
 
 COMMENT ON TABLE t_member IS '회원 테이블'
 ;
@@ -76,7 +106,7 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_recipe_AI_TRG;
+DROP TRIGGER t_recipe_AI_TRG;
 ;
 
 --DROP SEQUENCE t_recipe_SEQ;
@@ -417,7 +447,7 @@ CREATE TABLE t_material
 (
     mat_seq       NUMBER(12, 0)     NOT NULL, 
     r_seq         NUMBER(12, 0)     NOT NULL, 
-    k_name        VARCHAR2(50)      NULL, 
+    k_name        VARCHAR2(50)      not NULL, 
     mat_info      VARCHAR2(4000)    NOT NULL, 
     mat_weight    NUMBER(12, 1)     NOT NULL, 
     mat_img       VARCHAR2(200)     NULL, 
@@ -440,7 +470,7 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_material_AI_TRG;
+DROP TRIGGER t_material_AI_TRG;
 ;
 
 --DROP SEQUENCE t_material_SEQ;
@@ -476,6 +506,7 @@ ALTER TABLE t_material
     ADD CONSTRAINT FK_t_material_k_name_t_keyword FOREIGN KEY (k_name)
         REFERENCES t_keyword (k_name)
 ;
+
 
 
 -- t_user_keyword Table Create SQL

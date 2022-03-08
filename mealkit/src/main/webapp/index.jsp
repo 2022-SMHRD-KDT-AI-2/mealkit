@@ -25,7 +25,7 @@
 					<div class="contain">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">함정요리</a></h1>
+							<h1 id="logo"><a href="index.jsp">함정요리</a></h1>
 							<p>원하는 재료를 선택해서 요리와 밀키트를 추천해주는 사이트 입니다.</p>
 
 		
