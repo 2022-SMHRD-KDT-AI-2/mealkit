@@ -9,6 +9,11 @@ commit;
 
 select * from t_member;
 
+select *
+from user_constraints;
+
+alter table t_recipe
+drop constraint sys_c0033526;
 
 insert into t_member
 values(
@@ -131,8 +136,8 @@ CREATE TABLE t_recipe
     r_content    VARCHAR2(4000)    NOT NULL, 
     m_id         VARCHAR2(20)      NOT NULL, 
     r_date       DATE              NOT NULL, 
-    r_img1       VARCHAR2(200)     NOT NULL, 
-    r_img2       VARCHAR2(20)      NOT NULL, 
+    r_img1       VARCHAR2(200)     , 
+    r_img2       VARCHAR2(20)      , 
      PRIMARY KEY (r_seq)
 )
 ;

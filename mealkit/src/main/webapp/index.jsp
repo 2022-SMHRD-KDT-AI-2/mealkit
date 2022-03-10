@@ -22,6 +22,9 @@
 	function goOut() {
 		location.href="/mealkit/logout.do"
 	}
+	function gologin(){
+		location.href="login.jsp"
+	}
 </script>
 <style>
 li {
@@ -61,6 +64,9 @@ a {
 
 #icon {
 	font-size: 18px;
+}
+.pull{
+	width: 100%;
 }
 </style>
 </head>
@@ -104,29 +110,8 @@ a {
 		</section>
 
 
-		<div class="panel-heading">
-			
-				<c:if test="${empty memVO}">
-					<form class="form-inline" action="/mealkit/login.do" method="post">
-						<div class="form-group">
-							<label for="memid">ID:</label> <input type="text"
-								class="form-control" name="memId">
-						</div>
-						<div class="form-group">
-							<label for="mempwd">Password:</label> <input type="password"
-								class="form-control" name="memPwd">
-						</div>
-						<button type="submit" class="btn btn-default">로그인</button>
-					</form>
-				</c:if>
-				<c:if test="${!empty memVO}">
-					<div>
-						<label>${memVO.m_id}님 방문을 환영합니다.</label>
-						<button class="btn btn-info btn-sm" onclick="goOut()">로그아웃</button>
-					</div>
-				</c:if>
-				
-			</div>
+		<button class="btn btn-primary" onclick="gologin()"></button>
+		
 
 
 		<!-- Features -->
