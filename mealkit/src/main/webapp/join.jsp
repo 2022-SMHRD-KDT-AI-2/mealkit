@@ -5,6 +5,7 @@
 <html>
 <head>
 <script type="text/javascript">
+	fuction 
 	function goOut() {
 		location.href="/mealkit/logout.do"
 	}
@@ -33,7 +34,6 @@
 				<button class="btn btn-info btn-sm" onclick="goOut()">·Î±×¾Æ¿ô</button>
 			</div>
 		</c:if>
-
 	</div>
 </body>
 </html>

@@ -25,6 +25,9 @@
 	function gologin(){
 		location.href="login.jsp"
 	}
+	function goJoin(){
+		location.href="join.jsp"
+	}
 </script>
 <style>
 li {
@@ -74,6 +77,7 @@ a {
 <c:if test="${empty memVO}">
 			<div  style="width: 100%;" align="right">
 				<button class="btn btn-lg btn-primary"  onclick="gologin()">로그인</button>
+				<button class="btn btn-join btn-primary" onclick="goJoin()">회원가입</button>
 			</div>
 			</c:if>
 			<c:if test="${!empty memVO}">
