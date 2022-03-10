@@ -16,20 +16,77 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	
 	<style>
+
+
+	}
+	#header{
+
+
+	}
+	
 		#ulid li{
+
 		 margin-top: 50px;
-		padding-left: 130px;
-		font-size: 20px;
+		padding-left: 70px;
+		font-size: 18px;
+			
 		}
 		#logo{
 		  color: #fd887a;
+		  left:500px;
 		}
+		.container{
+			margin:0 auto;
+		width:1300px;
+		height:100%;
+		}
+		.sideme{
+		font-size:20px;
+		width:200px;
+		height:100px;
+		float:left;
+		position:relative;
+				
+
+		}
+	#ulid > div:nth-child(1):hover{
+	
+
+		background-image: url(images/cow.jpg);
+		background-size:100%;
+		height:100px;
+		width:200px;
+			background-color:red;
+		transition: 1.4s;
+		background-color:none;
+		
+			transition:background-image 55s;   
+	}
+	
+	#ulid > div:nth-child(2):hover{
+	background-color:red;
+		transition: 1.4s;
+	}
+		#ulid > div:nth-child(3):hover{
+	background-color:blue;
+		transition: 1.4s;
+	}
+			#ulid > div:nth-child(4):hover{
+	background-color:black;
+		transition: 1.4s;
+	}
+		#ulid > div:nth-child(4):hover{
+	background-color:black;
+		transition: 1.4s;
+	}
+		
+		
 		
 		#menu1 div{
 		
 		  float: left;
 		  padding: 40px;
-		  border-right: 1px solid black;
+	
 		}
 	</style>
 	<script type="text/javascript">
@@ -49,8 +106,16 @@
 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
+<<<<<<< HEAD
 			<c:forEach var="v" items="${listSuper}">
 				<li><a data-toggle="tab" href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
+=======
+			<c:forEach var="v" items="${list}">
+				<c:if test="${v.k_super_seq eq 0}">
+			
+					<div class="sideme"><li><a data-toggle="tab" href="${shap}${v.k_seq}">${v.k_name}</a></li></div>
+				</c:if>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
 			</c:forEach>
 		</ul>
 		
@@ -67,6 +132,11 @@
 									id="input_check_hidden" />
 							</c:if>
 						</c:forEach>
+<<<<<<< HEAD
+=======
+			
+						<button type="submit" class="btn">검색</button>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
 					</div>
 				</c:forEach>
 				<button type="button" class="btn" onclick="aa()">검색</button>

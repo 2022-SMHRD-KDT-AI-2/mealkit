@@ -7,6 +7,8 @@ alter table t_super_keyword modify k_super_name varchar2(50);
 select table_name from user_tables;
 commit;
 
+
+
 insert into t_member
 values(
 	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
