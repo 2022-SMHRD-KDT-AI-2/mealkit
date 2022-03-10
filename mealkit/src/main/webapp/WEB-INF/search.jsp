@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
 	<style>
 		#ulid li{
 		 margin-top: 50px;
@@ -32,9 +33,7 @@
 		}
 	</style>
 	<script type="text/javascript">
-	if(document.getElementById("input_check").checked) {
-	    document.getElementById("input_check_hidden").disabled = true;
-	}
+	
 	</script>
 </head>
 <body>
@@ -55,7 +54,7 @@
 			</c:forEach>
 		</ul>
 		
-		<form action="/mealkit/search.do" method="get">
+		<form action="/mealkit/search.do" id = "form">
 		
 			<div class="tab-content">
 				<c:forEach var="i" begin="1000" end="13000" step="1000">
@@ -70,13 +69,33 @@
 						</c:forEach>
 					</div>
 				</c:forEach>
-				<button type="submit" class="btn">검색</button>
+				<button type="button" class="btn" onclick="aa()">검색</button>
 			</div>
 			
 		</form>
 		
 	</div>
 	
-
+<script>
+		
+        function aa(){
+        	var formData = new FormData($('#form')[0]);
+            $.ajax({
+            	url : "http://127.0.0.1:8082/analysis",
+            	type : "post",
+                data : formData,
+                cache : false,
+                contentType : false,
+                processData : false,
+                success : function(){
+                	alert("suc입니다!");
+                	//왜 success 가 안뜰까요??
+                },
+                error : function(){
+                    alert("erro입니다!");
+                }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -24,6 +24,7 @@ public class SearchController implements Controller {
 		
 		for(int i = 0; i < list.size(); i++) {
 			System.out.println(request.getParameter(list.get(i).getK_name()));
+			System.out.println(request.getParameter(list.get(i).getK_name()));
 		}
 		
 		
