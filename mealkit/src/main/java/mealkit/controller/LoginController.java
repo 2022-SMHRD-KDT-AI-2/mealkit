@@ -30,6 +30,6 @@ public class LoginController implements Controller{
 				HttpSession session = request.getSession();
 				session.setAttribute("memVO", memVO);
 			}
-			return "keyword";
+			return "/mealkit/index.jsp";
 }
 }

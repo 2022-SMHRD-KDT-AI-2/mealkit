@@ -71,6 +71,16 @@ a {
 </style>
 </head>
 <body class="homepage is-preload">
+<c:if test="${empty memVO}">
+			<div  style="width: 100%;" align="right">
+				<button class="btn btn-lg btn-primary"  onclick="gologin()">로그인</button>
+			</div>
+			</c:if>
+			<c:if test="${!empty memVO}">
+			<div  style="width: 100%;" align="right">
+				<button class="btn btn-lg btn-primary"  onclick="goOut()">로그아웃</button>
+			</div>
+			</c:if>
 	<div id="page-wrapper">
 		<div class="searchbar"></div>
 
@@ -108,11 +118,6 @@ a {
 				</nav>
 			</div>
 		</section>
-
-
-		<button class="btn btn-primary" onclick="gologin()"></button>
-		
-
 
 		<!-- Features -->
 		<section id="features">

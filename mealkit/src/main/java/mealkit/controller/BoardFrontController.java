@@ -34,6 +34,9 @@ public class BoardFrontController extends HttpServlet {
 			if(nextView.indexOf("redirect:")!=-1) {
 				nextView = nextView.split(":")[1];
 				response.sendRedirect("/mealkit"+nextView);
+			}else if(nextView.indexOf("index")!=-1) {
+				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+				rd.forward(request, response);
 			}else {
 				
 				//RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/board/"+nextView+".jsp");

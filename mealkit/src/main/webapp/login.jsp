@@ -4,22 +4,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+	function goOut() {
+		location.href="/mealkit/logout.do"
+	}
+</script>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body align="center">
-	<div class="panel-heading pull" >
+	<div class="panel-heading" style="margin-top:200px" >
 		<c:if test="${empty memVO}">
 			<form class="form-inline" action="/mealkit/login.do" method="post">
 				<div class="form-group">
 					<label for="memid">ID:</label> <input type="text"
 						class="form-control" name="memId">
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="margin-top:10px">
 					<label for="mempwd">Password:</label> <input type="password"
 						class="form-control" name="memPwd">
 				</div>
-				<button id="login" type="submit" class="btn btn-info">로그인</button>
+				<button id="login" type="submit" class="btn btn-info" style="margin-top:10px">로그인</button>
 			</form>
 		</c:if>
 		<c:if test="${!empty memVO}">
