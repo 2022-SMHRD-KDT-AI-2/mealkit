@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -101,6 +102,30 @@ max-width: 400px;
 		
 					</div>
 				</section>
+
+
+	    <div class="login">
+			<c:if test="${empty memVO}">
+			  <form class="form-inline" action="/web/boardLogin.do" method="post">
+			  <div class="form-group">
+			    <label for="memid">ID:</label>
+			    <input type="text" class="form-control" name="memId">
+			  </div>
+			  <div class="form-group">
+			    <label for="mempwd">Password:</label>
+			    <input type="password" class="form-control" name="memPwd">
+			  </div>
+			  <button type="submit" class="btn btn-default">로그인</button>
+			</form>
+			</c:if>
+			<c:if test="${!empty memVO}">
+				<div>
+					<label>${memVO.memUser}님 방문을 환영합니다.</label>
+					<button class="btn btn-info btn-sm">로그아웃</button>
+				</div>
+			</c:if>
+	    </div>
+
 
 		      <!-- Features -->
 			  <section id="features">
