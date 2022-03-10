@@ -7,6 +7,7 @@ alter table t_super_keyword modify k_super_name varchar2(50);
 select table_name from user_tables;
 commit;
 
+select * from t_member;
 
 
 insert into t_member

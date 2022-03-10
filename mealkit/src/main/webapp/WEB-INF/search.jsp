@@ -106,16 +106,9 @@
 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
-<<<<<<< HEAD
+
 			<c:forEach var="v" items="${listSuper}">
 				<li><a data-toggle="tab" href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
-=======
-			<c:forEach var="v" items="${list}">
-				<c:if test="${v.k_super_seq eq 0}">
-			
-					<div class="sideme"><li><a data-toggle="tab" href="${shap}${v.k_seq}">${v.k_name}</a></li></div>
-				</c:if>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
 			</c:forEach>
 		</ul>
 		
@@ -132,11 +125,6 @@
 									id="input_check_hidden" />
 							</c:if>
 						</c:forEach>
-<<<<<<< HEAD
-=======
-			
-						<button type="submit" class="btn">검색</button>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
 					</div>
 				</c:forEach>
 				<button type="button" class="btn" onclick="aa()">검색</button>
