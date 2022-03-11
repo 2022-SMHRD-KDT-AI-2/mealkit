@@ -1,6 +1,7 @@
 select * from user_tables;
 drop table t_user_keyword;
 select * from t_super_keyword;
+delete from T_SUPER_KEYWORD where k_super_seq = 0;
 
 alter table t_super_keyword modify k_super_name varchar2(50);
 
@@ -11,8 +12,7 @@ select * from t_member;
 select * from t_recipe;
 
 
-select *
-from user_constraints;
+select * from user_constraints;
 
 alter table t_recipe
 drop constraint sys_c0033526;
