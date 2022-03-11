@@ -88,6 +88,10 @@
 		  padding: 40px;
 	
 		}
+		
+		.kname{
+		font-size:50px;
+		}
 	</style>
 	<script type="text/javascript">
 	
@@ -119,9 +123,9 @@
 					<div id="${i}" class="tab-pane fade">
 						<c:forEach var="v" items="${list}">
 							<c:if test="${v.k_super_seq == i}">
-								<input type="checkbox" name="${v.k_name}" value='1'
+								<input class="kname" type="checkbox" name="${v.k_name}" value='1'
 									id="input_check" />${v.k_name}
-								<input type="hidden" name="${v.k_name}" value='0'
+								<input class="kname" type="hidden" name="${v.k_name}" value='0'
 									id="input_check_hidden" />
 							</c:if>
 						</c:forEach>
