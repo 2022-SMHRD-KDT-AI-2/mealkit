@@ -135,7 +135,7 @@ html {
 }
 
 .find_wrap li{
-margin-left:70px;
+margin-left:66px;
 float:left;
 }
 
