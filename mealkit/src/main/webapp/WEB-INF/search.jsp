@@ -30,6 +30,10 @@
 		  padding: 40px;
 		  border-right: 1px solid black;
 		}
+		#ulid tab-content{
+	     color : blue;
+	     
+		}
 	</style>
 	<script type="text/javascript">
 	if(document.getElementById("input_check").checked) {
