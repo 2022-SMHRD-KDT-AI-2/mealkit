@@ -20,6 +20,7 @@
 
 	}
 	#header{
+	position:relative;
 
 
 	}
@@ -80,6 +81,10 @@
 		transition: 1.4s;
 	}
 		
+		#search{
+		margin-left:45%;
+		position:absolute;
+		}
 		
 		
 		#menu1 div{
@@ -92,6 +97,25 @@
 	     color : blue;
 	     
 		}
+		#form > div{
+
+		}
+	li{
+	list-style:none;
+	font-size:15px;
+
+	color:#333;
+
+	
+	}
+	.btn{
+	text-align:center;}
+
+div{
+text-size"30px";}
+.searchdiv{
+	float:left;
+width:140px;
 	</style>
 	<script type="text/javascript">
 	
@@ -123,20 +147,24 @@
 					<div id="${i}" class="tab-pane fade">
 						<c:forEach var="v" items="${list}">
 							<c:if test="${v.k_super_seq == i}">
-								<input type="checkbox" name="${v.k_name}" value='1'
-									id="input_check" />${v.k_name}
-								<input type="hidden" name="${v.k_name}" value='0'
-									id="input_check_hidden" />
+								<div class="searchdiv"><li><input class="kname" type="checkbox" name="${v.k_name}" value='1'
+									id="input_check" />${v.k_name}</li></div>
+									<div class="searchdiv"><li><input class="kname" type="hidden" name="${v.k_name}" value='0'
+								
+									id="input_check_hidden" /></li></div>
 							</c:if>
 						</c:forEach>
 					</div>
 				</c:forEach>
-				<button type="button" class="btn" onclick="aa()">검색</button>
+				
 			</div>
 			
 		</form>
-		
 	</div>
+	<div id=search>
+	     <button type="button" class="btn" onclick="aa()">검색</button>
+	     </div>
+			
 	
 <script>
 		

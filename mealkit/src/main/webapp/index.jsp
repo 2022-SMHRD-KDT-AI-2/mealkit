@@ -133,13 +133,12 @@ a {
 				 </nav>
 
 		
-=======
 				<div id="logob">
 					<div class="hamjung">
 						<h1 id="logo">
 							<a href="index.html">함정요리</a>
 						</h1>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
+
 					</div>
 					<div id="inputdiv" class="input-group mb-3">
 						<input id="inputg" type="text" class="form-control input-text"
