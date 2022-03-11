@@ -25,7 +25,7 @@ public class LoginController implements Controller{
 			vo.setM_pw(memPwd);
 			
 			MemberDAO dao = new MemberDAO();
-			MemberVO memVO = dao.checkLogin(vo);
+			MemberVO memVO = dao.memberJoin(vo);
 			if(memVO!=null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("memVO", memVO);
