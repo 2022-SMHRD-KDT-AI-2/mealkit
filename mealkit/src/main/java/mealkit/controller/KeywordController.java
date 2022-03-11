@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mealkit.entity.KeywordSuperVO;
 import mealkit.entity.KeywordVO;
 import mealkit.model.KeywordDAO;
 
@@ -18,9 +19,12 @@ public class KeywordController implements Controller{
 			throws ServletException, IOException {
 		KeywordDAO dao = new KeywordDAO();
 		List<KeywordVO> list = dao.selectAll();
+		List<KeywordSuperVO> list_super = dao.selectSuperAll();
 		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		
 		request.setAttribute("list", list);
+		request.setAttribute("listSuper", list_super);
 		System.out.println(list);
 		
 		return "search";

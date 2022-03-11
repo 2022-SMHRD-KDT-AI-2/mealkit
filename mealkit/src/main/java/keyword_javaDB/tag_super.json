@@ -1,0 +1,54 @@
+[
+ {
+  "K_super_seq": 1000,
+  "K_name": "소고기"
+ },
+ {
+  "K_super_seq": 2000,
+  "K_name": "돼지고기"
+ },
+ {
+  "K_super_seq": 3000,
+  "K_name": "닭고기"
+ },
+ {
+  "K_super_seq": 4000,
+  "K_name": "어류"
+ },
+ {
+  "K_super_seq": 5000,
+  "K_name": "해물류"
+ },
+ {
+  "K_super_seq": 6000,
+  "K_name": "채소류"
+ },
+ {
+  "K_super_seq": 7000,
+  "K_name": "과일류"
+ },
+ {
+  "K_super_seq": 8000,
+  "K_name": "쌀\/밀가루류"
+ },
+ {
+  "K_super_seq": 9000,
+  "K_name": "콩\/견과류"
+ },
+ {
+  "K_super_seq": 10000,
+  "K_name": "버섯류"
+ },
+ {
+  "K_super_seq": 11000,
+  "K_name": "가공식품류"
+ },
+ {
+  "K_super_seq": 12000,
+  "K_name": "달걀\/유제품류"
+ },
+ {
+  "K_super_seq": 13000,
+  "K_name": "기타"
+ }
+]
