@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 <link rel = "stylesheet" href="./css/login.css">
 <style>
+*{
+   list-style: none;
+       text-decoration: none !important;
+}
 body{
-    text-align: center;
-    background-color: lightgray;
+text-align:center;
+
 }
 #div_login{
 margin-left: 30%;
@@ -21,7 +25,7 @@ background-color: white;
 #div_login2{
 padding-top: 50px;
 font-size: 30px;
-
+color: #ed786a;
 }
 #div_member{
 height: 40px;
@@ -94,6 +98,47 @@ border: none;
 
 }
 
+.find_wrap, .relogin_find_wrap {
+    padding: 20px 0 35px;
+    text-align: center;
+}
+ol, ul {
+    list-style: none;
+}
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+    font-family: -apple-system,BlinkMacSystemFont,helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.wrap {
+    position: relative;
+    height: 100%;
+    letter-spacing: -.5px;
+}
+body {
+    height: 100%;
+    color: #222;
+    background-color: #fff;
+}
+html {
+    height: 100%;
+    font-size: 14px;
+}
+
+.find_wrap li{
+margin-left:66px;
+float:left;
+}
+
 
 </style>
 </head>
@@ -101,7 +146,7 @@ border: none;
 <form action="/mealkit/login.do"" method="post">
   <div id="div_login">
   
-        <div id="div_login2"> <b>로그인</b> </div>
+        <div id="div_login2"> <b>함정요리</b> </div>
         <div id="div_member">  </div>
         
         <div id="div_id"> 
@@ -122,8 +167,18 @@ border: none;
         <div id="out">
             <input type="submit" value="회원탈퇴" id="out_a">
         </div>
+        <ul class="find_wrap" id="find_wrap">
+   <li><a target="_blank" href="#" class="find_text">아이디 찾기</a></li>
+
+                <li><a target="_blank" href="#" class="find_text">비밀번호 찾기</a></li>
+             
+                <li><a target="_blank" href="#" class="find_text">고객센터</a>
+                </li>
+
+            </ul>
         
     </div>
+    
  
 </form>
 </body>
