@@ -90,10 +90,20 @@
 		}
 	</style>
 	<script type="text/javascript">
-	
+	$(function(){
+        let div = "<div><button class='dat'>삭제</button>"
+        
+        $("#searchRecipe").click(function(){
+            $("#search_data").append("<div><button class='btn'></button></div>");
+        })
+
+        
+        
+    })
 	</script>
 </head>
 <body>
+	
 	<!-- Header -->
 	<section id="header">
 		<div class="hamjung">
@@ -127,11 +137,29 @@
 						</c:forEach>
 					</div>
 				</c:forEach>
-				<button type="button" class="btn" onclick="aa()">검색</button>
+				<button type="button" id="searchRecipe" class="btn" onclick="aa()">검색</button>
 			</div>
 			
 		</form>
 		
+	</div>
+	<div class="list-group">
+		<c:forEach var="v" items="${rlist}">
+			<div class="container">
+				<a href="#" class="list-group-item">
+					<div id="search_data">
+						<table border="1">
+							<tr>
+								<td>${v.getR_name()}</td>
+							</tr>
+							<tr>
+								<td>${v.getR_content()}</td>
+							</tr>
+						</table>
+					</div>
+				</a>
+			</div>
+		</c:forEach>
 	</div>
 	
 <script>

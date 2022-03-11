@@ -2,11 +2,17 @@ select * from user_tables;
 drop table t_user_keyword;
 select * from t_super_keyword;
 delete from T_SUPER_KEYWORD where k_super_seq = 0;
+select * from T_MEMBER;
+
+select * from user_constraints where constraint_name = CGI_5_0216_4.SYS_C0033516;
+delete from t_member where m_id in('qwer', 'wqe', 'kd2675','dy2675','1234','asd');
 
 alter table t_super_keyword modify k_super_name varchar2(50);
 
 select table_name from user_tables;
 commit;
+
+alter table t_member modify m_id varchar2(50);
 
 select * from t_member;
 select * from t_recipe;
@@ -19,7 +25,7 @@ drop constraint sys_c0033526;
 
 insert into t_member
 values(
-	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
+	'sys1', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
 );
 
 INSERT INTO t_recipe
