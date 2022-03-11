@@ -14,97 +14,119 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+}
+#header {
+	position: relative;
+}
+
+#ulid li {
+	margin-top: 50px;
+	padding-left: 70px;
+	font-size: 18px;
+}
+
+#logo {
+	color: #fd887a;
+	left: 500px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1300px;
+	height: 100%;
+}
+
+.sideme {
+	font-size: 20px;
+	width: 200px;
+	height: 100px;
+	float: left;
+	position: relative;
+}
+
+#ulid>div:nth-child(1):hover {
+	background-image: url(images/cow.jpg);
+	background-size: 100%;
+	height: 100px;
+	width: 200px;
+	background-color: red;
+	transition: 1.4s;
+	background-color: none;
+	transition: background-image 55s;
+}
+
+#ulid>div:nth-child(2):hover {
+	background-color: red;
+	transition: 1.4s;
+}
+
+#ulid>div:nth-child(3):hover {
+	background-color: blue;
+	transition: 1.4s;
+}
+
+#ulid>div:nth-child(4):hover {
+	background-color: black;
+	transition: 1.4s;
+}
+
+#ulid>div:nth-child(4):hover {
+	background-color: black;
+	transition: 1.4s;
+}
+
+#search {
+	margin-left: 45%;
+	position: absolute;
+}
+
+#menu1 div {
+	float: left;
+	padding: 40px;
+}
+
+#ulid tab-content {
+	color: blue;
+}
+
+#form>div {
 	
-	<style>
+}
 
+li {
+	list-style: none;
+	font-size: 15px;
+	color: #333;
+}
 
-	}
-	#header{
+.btn {
+	text-align: center;
+}
 
-
-	}
+div {text-size "30px";
 	
-		#ulid li{
+}
 
-		 margin-top: 50px;
-		padding-left: 70px;
-		font-size: 18px;
+.searchdiv {
+	float: left;
+	width: 140px;
+}
+</style>
+
+<script type="text/javascript">
+	$(
+		function() {
+			let div = "<div><button class='dat'>삭제</button>"
 			
-		}
-		#logo{
-		  color: #fd887a;
-		  left:500px;
-		}
-		.container{
-			margin:0 auto;
-		width:1300px;
-		height:100%;
-		}
-		.sideme{
-		font-size:20px;
-		width:200px;
-		height:100px;
-		float:left;
-		position:relative;
-				
+			$("#searchRecipe").click(function() {
+				$("#search_data").append("<div><button class='btn'></button></div>");
+			})
 
-		}
-	#ulid > div:nth-child(1):hover{
-	
+		})
+</script>
 
-		background-image: url(images/cow.jpg);
-		background-size:100%;
-		height:100px;
-		width:200px;
-			background-color:red;
-		transition: 1.4s;
-		background-color:none;
-		
-			transition:background-image 55s;   
-	}
-	
-	#ulid > div:nth-child(2):hover{
-	background-color:red;
-		transition: 1.4s;
-	}
-		#ulid > div:nth-child(3):hover{
-	background-color:blue;
-		transition: 1.4s;
-	}
-			#ulid > div:nth-child(4):hover{
-	background-color:black;
-		transition: 1.4s;
-	}
-		#ulid > div:nth-child(4):hover{
-	background-color:black;
-		transition: 1.4s;
-	}
-		
-		
-		
-		#menu1 div{
-		
-		  float: left;
-		  padding: 40px;
-	
-		}
-		
-		.kname{
-		font-size:50px;
-		}
-	</style>
-	<script type="text/javascript">
-	$(function(){
-        let div = "<div><button class='dat'>삭제</button>"
-        
-        $("#searchRecipe").click(function(){
-            $("#search_data").append("<div><button class='btn'></button></div>");
-        })
-
-        
-        
-    })
-	</script>
 </head>
 <body>
 	
@@ -133,20 +155,25 @@
 					<div id="${i}" class="tab-pane fade">
 						<c:forEach var="v" items="${list}">
 							<c:if test="${v.k_super_seq == i}">
-								<input class="kname" type="checkbox" name="${v.k_name}" value='1'
-									id="input_check" />${v.k_name}
-								<input class="kname" type="hidden" name="${v.k_name}" value='0'
-									id="input_check_hidden" />
+
+								<div class="searchdiv"><li><input class="kname" type="checkbox" name="${v.k_name}" value='1'
+									id="input_check" />${v.k_name}</li></div>
+									<div class="searchdiv"><li><input class="kname" type="hidden" name="${v.k_name}" value='0'
+								
+									id="input_check_hidden" /></li></div>
+
 							</c:if>
 						</c:forEach>
 					</div>
 				</c:forEach>
+
 				<button type="button" id="searchRecipe" class="btn" onclick="aa()">검색</button>
+
 			</div>
 			
 		</form>
-		
 	</div>
+
 	<div class="list-group">
 		<c:forEach var="v" items="${rlist}">
 			<div class="container">
@@ -165,6 +192,7 @@
 			</div>
 		</c:forEach>
 	</div>
+
 	
 <script>
 		
@@ -187,5 +215,7 @@
             });
         }
     </script>
+    
+    
 </body>
 </html>
