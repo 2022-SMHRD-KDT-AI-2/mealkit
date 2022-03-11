@@ -8,6 +8,8 @@ select table_name from user_tables;
 commit;
 
 select * from t_member;
+select * from t_recipe;
+
 
 select *
 from user_constraints;
@@ -20,8 +22,8 @@ values(
 	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
 );
 
-INSERT INTO t_recipe (r_name, r_content, m_id, r_date, r_img1, r_img2) 
-VALUES ('r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
+INSERT INTO t_recipe
+VALUES (1, 'r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
 
 
 insert into T_RECIPE
