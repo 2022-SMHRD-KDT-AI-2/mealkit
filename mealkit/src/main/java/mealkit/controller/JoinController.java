@@ -10,13 +10,10 @@ import javax.servlet.http.HttpSession;
 import mealkit.entity.MemberVO;
 import mealkit.model.MemberDAO;
 
-
-
-public class LoginController implements Controller{
-		@Override
-		public String requestHandler(HttpServletRequest request, HttpServletResponse response)
-				throws ServletException, IOException {
-			
+public class JoinController implements Controller{
+	@Override
+	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 			String memId = request.getParameter("memId");
 			String memPwd = request.getParameter("memPwd");
 			
@@ -25,11 +22,11 @@ public class LoginController implements Controller{
 			vo.setM_pw(memPwd);
 			
 			MemberDAO dao = new MemberDAO();
-			MemberVO memVO = dao.memberJoin(vo);
+			MemberVO memVO = dao.checkLogin(vo);
 			if(memVO!=null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("memVO", memVO);
 			}
 			return "/mealkit/index.jsp";
-}
+	}
 }
