@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mealkit.model.KeywordMapper">
+
+	<select id="selectAll" resultType="mealkit.entity.KeywordVO">
+		select * from t_keyword
+	</select>
+	
+	<select id="selectSuperAll" resultType="mealkit.entity.KeywordSuperVO">
+		select * from t_super_keyword
+	</select>
+	
+	<insert id="keywordInsert" parameterType="mealkit.entity.KeywordVO">
+		insert into t_keyword
+		values(#{k_seq}, #{k_name}, #{k_super_seq})
+	</insert>
+	
+	<insert id="keywordSuperInsert" parameterType="mealkit.entity.KeywordSuperVO">
+		insert into t_super_keyword
+		values(#{k_super_seq}, #{k_super_name})
+	</insert>
+  
+</mapper>
+
