@@ -34,6 +34,14 @@ public class MemberDAO {
 		return memVO;
 	}
 	
+
+	public MemberVO memberJoin(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO memVO = session.selectOne("memberJoin", vo);
+		session.close();
+		return memVO;
+	}
+
 	public int insertMember(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int num = session.insert("insertMember", vo);
