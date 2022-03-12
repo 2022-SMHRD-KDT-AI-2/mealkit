@@ -34,19 +34,19 @@ public class MemberDAO {
 		return memVO;
 	}
 	
-<<<<<<< HEAD
+
 	public MemberVO memberJoin(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		MemberVO memVO = session.selectOne("memberJoin", vo);
 		session.close();
 		return memVO;
-=======
+	}
+
 	public int insertMember(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int num = session.insert("insertMember", vo);
 		session.commit();
 		session.close();
 		return num;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
 	}
 }
