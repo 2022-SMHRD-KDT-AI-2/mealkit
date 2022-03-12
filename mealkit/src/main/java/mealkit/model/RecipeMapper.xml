@@ -13,6 +13,11 @@
 		values(#{r_seq}, #{r_name}, #{r_content}, #{m_id}, SYSDATE)
 	</insert>
 	
+	<insert id="insertMaterial" parameterType="mealkit.entity.MaterialVO">
+		insert into t_material(mat_seq,r_seq,mat_name,mat_info,mat_weight)
+		values(t_material_SEQ.nextVal, #{r_seq}, #{mat_name}, #{mat_info}, #{mat_weight})
+	</insert>
+	
 	
   
 </mapper>

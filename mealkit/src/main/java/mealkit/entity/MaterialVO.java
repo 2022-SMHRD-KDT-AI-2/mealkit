@@ -5,12 +5,12 @@ public class MaterialVO {
 	private int r_seq;
 	private String mat_name;
 	private String mat_info;
-	private int mat_weight;
+	private String mat_weight;
 	private String mat_img;
 	
 	public MaterialVO() {}
 
-	public MaterialVO(int mat_seq, int r_seq, String mat_name, String mat_info, int mat_weight, String mat_img) {
+	public MaterialVO(int mat_seq, int r_seq, String mat_name, String mat_info, String mat_weight, String mat_img) {
 		super();
 		this.mat_seq = mat_seq;
 		this.r_seq = r_seq;
@@ -52,11 +52,11 @@ public class MaterialVO {
 		this.mat_info = mat_info;
 	}
 
-	public int getMat_weight() {
+	public String getMat_weight() {
 		return mat_weight;
 	}
 
-	public void setMat_weight(int mat_weight) {
+	public void setMat_weight(String mat_weight) {
 		this.mat_weight = mat_weight;
 	}
 

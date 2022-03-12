@@ -18,23 +18,60 @@
 <style>
 </style>
 
+
+
 <script>
+
+
+		function objectifyForm(formArray) {
+		    //serialize data function
+		    var returnArray = {};
+		    for (var i = 0; i < formArray.length; i++){
+		        returnArray[formArray[i]['name']] = formArray[i]['value'];
+		    }
+		    return returnArray;
+		}
+		function serialize (rawData) {
+			let rtnData = {};
+			for (let [key, value] of rawData) {
+				let sel = document.querySelectorAll("[name=" + key + "]");
+				// Array Values 
+				if (sel.length > 1) { 
+					if (rtnData[key] === undefined) {
+						rtnData[key] = []; 
+						} 
+					rtnData[key].push(value); 
+				} 
+				// Other 
+				else { 
+					rtnData[key] = value; 
+					} 
+				} 
+			return rtnData; 
+		}
+
+		
+		
         function aa(){
-        	var formData = new FormData($('#form')[0]);
-            var rlist = "<c:out value='${rlist}'/>";
+        	let formData = new FormData($('#form')[0]);
+        	
+        	let serializedFormData = serialize(formData);
+        	formData = JSON.stringify(serializedFormData);
+        	
+        	//var formData1 = objectifyForm(formData);
+        	//var formData2 = JSON.stringify(formData);
+        	console.log(formData);
+            //var rlist = "<c:out value='${rlist}'/>";
         	$.ajax({
-            	url : "http://127.0.0.1:8082/analysis",
+            	url : "http://127.0.0.1:8083/analysis",
             	type : "post",
                 data : formData,
-                cache : false,
-                contentType : false,
-                processData : false,
+                contentType: 'application/json',
                 success : function(){
-                	
-        			$("#search_data").append("<div><button class='btn'></button></div>");
-        			console.log(rlist);
-                	//alert("suc입니다!");
-                	//왜 success 가 안뜰까요??
+        			//$("#search_data").append("<div><button class='btn'></button></div>");
+        			//console.log(rlist);
+                	alert("suc입니다!");
+                	console.log(formData);
                 },
                 error : function(){
                     alert("erro입니다!");
@@ -69,13 +106,8 @@
 					<div id="${i}" class="tab-pane fade">
 						<c:forEach var="v" items="${list}">
 							<c:if test="${v.k_super_seq == i}">
-
 								<div class="searchdiv"><li><input class="kname" type="checkbox" name="${v.k_name}" value='1'
-									id="input_check" />${v.k_name}</li></div>
-									<div class="searchdiv"><li><input class="kname" type="hidden" name="${v.k_name}" value='0'
-								
-									id="input_check_hidden" /></li></div>
-
+									  />${v.k_name}</li></div>
 							</c:if>
 						</c:forEach>
 					</div>
@@ -84,8 +116,8 @@
 			<button type="button" class="btn" onclick="aa()">검색</button>
 		</form>
 	</div>
-
-	<%-- 
+	
+	
 	<div class="list-group">
 		<c:forEach var="v" items="${rlist}">
 			<div class="container">

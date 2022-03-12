@@ -7,7 +7,17 @@ select * from T_MEMBER;
 select * from user_constraints where constraint_name = CGI_5_0216_4.SYS_C0033516;
 delete from t_member where m_id in('qwer', 'wqe', 'kd2675','dy2675','1234','asd');
 
-alter table t_super_keyword modify k_super_name varchar2(50);
+alter table t_material modify mat_weight varchar2(20);
+
+delete from t_material;
+
+alter table t_material drop constraint SYS_C0033570;
+
+select * from t_material;
+
+delete from t_keyword;
+
+select * from t_material;
 
 select table_name from user_tables;
 commit;

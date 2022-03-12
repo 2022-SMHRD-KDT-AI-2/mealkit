@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import mealkit.entity.KeywordVO;
+import mealkit.entity.MaterialVO;
 import mealkit.entity.RecipeVO;
 
 
@@ -38,6 +39,14 @@ public class RecipeDAO {
 	public int insertRecipe(RecipeVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int num = session.insert("insertRecipe", vo);
+		session.commit();
+		session.close();
+		return num;
+	}
+	
+	public int insertMaterial(MaterialVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int num = session.insert("insertMaterial", vo);
 		session.commit();
 		session.close();
 		return num;
