@@ -14,117 +14,33 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+	<link rel="stylesheet" href="assets/css/search.css">
 <style>
-}
-#header {
-	position: relative;
-}
-
-#ulid li {
-	margin-top: 50px;
-	padding-left: 70px;
-	font-size: 18px;
-}
-
-#logo {
-	color: #fd887a;
-	left: 500px;
-}
-
-.container {
-	margin: 0 auto;
-	width: 1300px;
-	height: 100%;
-}
-
-.sideme {
-	font-size: 20px;
-	width: 200px;
-	height: 100px;
-	float: left;
-	position: relative;
-}
-
-#ulid>div:nth-child(1):hover {
-	background-image: url(images/cow.jpg);
-	background-size: 100%;
-	height: 100px;
-	width: 200px;
-	background-color: red;
-	transition: 1.4s;
-	background-color: none;
-	transition: background-image 55s;
-}
-
-#ulid>div:nth-child(2):hover {
-	background-color: red;
-	transition: 1.4s;
-}
-
-#ulid>div:nth-child(3):hover {
-	background-color: blue;
-	transition: 1.4s;
-}
-
-#ulid>div:nth-child(4):hover {
-	background-color: black;
-	transition: 1.4s;
-}
-
-#ulid>div:nth-child(4):hover {
-	background-color: black;
-	transition: 1.4s;
-}
-
-#search {
-	margin-left: 45%;
-	position: absolute;
-}
-
-#menu1 div {
-	float: left;
-	padding: 40px;
-}
-
-#ulid tab-content {
-	color: blue;
-}
-
-#form>div {
-	
-}
-
-li {
-	list-style: none;
-	font-size: 15px;
-	color: #333;
-}
-
-.btn {
-	text-align: center;
-}
-
-div {text-size "30px";
-	
-}
-
-.searchdiv {
-	float: left;
-	width: 140px;
-}
 </style>
 
-<script type="text/javascript">
-	$(
-		function() {
-			let div = "<div><button class='dat'>삭제</button>"
-			
-			$("#searchRecipe").click(function() {
-				$("#search_data").append("<div><button class='btn'></button></div>");
-			})
-
-		})
+<script>
+        function aa(){
+        	var formData = new FormData($('#form')[0]);
+            var rlist = "<c:out value='${rlist}'/>";
+        	$.ajax({
+            	url : "http://127.0.0.1:8082/analysis",
+            	type : "post",
+                data : formData,
+                cache : false,
+                contentType : false,
+                processData : false,
+                success : function(){
+                	
+        			$("#search_data").append("<div><button class='btn'></button></div>");
+        			console.log(rlist);
+                	//alert("suc입니다!");
+                	//왜 success 가 안뜰까요??
+                },
+                error : function(){
+                    alert("erro입니다!");
+                }
+            });
+        }
 </script>
 
 </head>
@@ -142,14 +58,12 @@ div {text-size "30px";
 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
-
 			<c:forEach var="v" items="${listSuper}">
 				<li><a data-toggle="tab" href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
 			</c:forEach>
 		</ul>
 		
 		<form action="/mealkit/search.do" id = "form">
-		
 			<div class="tab-content">
 				<c:forEach var="i" begin="1000" end="13000" step="1000">
 					<div id="${i}" class="tab-pane fade">
@@ -166,19 +80,17 @@ div {text-size "30px";
 						</c:forEach>
 					</div>
 				</c:forEach>
-
-				<button type="button" id="searchRecipe" class="btn" onclick="aa()">검색</button>
-
 			</div>
-			
+			<button type="button" class="btn" onclick="aa()">검색</button>
 		</form>
 	</div>
 
+	<%-- 
 	<div class="list-group">
 		<c:forEach var="v" items="${rlist}">
 			<div class="container">
 				<a href="#" class="list-group-item">
-					<div id="search_data">
+					<div id="search_data" onclick="location.href='#'">
 						<table border="1">
 							<tr>
 								<td>${v.getR_name()}</td>
@@ -192,30 +104,7 @@ div {text-size "30px";
 			</div>
 		</c:forEach>
 	</div>
-
+	--%>
 	
-<script>
-		
-        function aa(){
-        	var formData = new FormData($('#form')[0]);
-            $.ajax({
-            	url : "http://127.0.0.1:8082/analysis",
-            	type : "post",
-                data : formData,
-                cache : false,
-                contentType : false,
-                processData : false,
-                success : function(){
-                	alert("suc입니다!");
-                	//왜 success 가 안뜰까요??
-                },
-                error : function(){
-                    alert("erro입니다!");
-                }
-            });
-        }
-    </script>
-    
-    
 </body>
 </html>

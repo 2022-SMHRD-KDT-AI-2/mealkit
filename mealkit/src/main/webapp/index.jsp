@@ -17,6 +17,7 @@
 	href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 	integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
 	crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/index.css">
 
 <script type="text/javascript">
 	function goOut() {
@@ -30,48 +31,8 @@
 	}
 </script>
 <style>
-li {
-	list-style: none;
-}
-
-a {
-	text-decoration: none !important;
-}
-
-#logob {
-	position: relative;
-}
-
-.form-control {
-	border: 1px solid #f86146
-}
-
-.hamjung {
-	position: absolute;
-	left: 16%;
-}
-
-#inputdiv {
-	left: 45%;
-	position: absolute;
-}
-
-#inputg {
-	height: 50px;
-	max-width: 400px;
-}
-
-#ing {
-	font-size: 8px;
-}
-
-#icon {
-	font-size: 18px;
-}
-.pull{
-	width: 100%;
-}
 </style>
+
 </head>
 <body class="homepage is-preload">
 <c:if test="${empty memVO}">
@@ -91,9 +52,6 @@ a {
 		<!-- Header -->
 		<section id="header">
 			<div class="contain">
-
-<<<<<<< HEAD
-
 							<div id="logob">
 								<div class="hamjung">
 							<h1 id="logo"><a href="index.html">함정요리</a></h1>
