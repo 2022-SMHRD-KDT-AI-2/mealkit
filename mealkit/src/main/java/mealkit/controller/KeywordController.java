@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import mealkit.entity.KeywordSuperVO;
 import mealkit.entity.KeywordVO;
+import mealkit.entity.RecipeVO;
 import mealkit.model.KeywordDAO;
+import mealkit.model.RecipeDAO;
 
 
 
@@ -25,7 +27,11 @@ public class KeywordController implements Controller{
 		
 		request.setAttribute("list", list);
 		request.setAttribute("listSuper", list_super);
-		System.out.println(list);
+		
+		RecipeDAO rdao = new RecipeDAO();
+		List<RecipeVO> rlist = rdao.selectAllRecipe();
+		
+		request.setAttribute("rlist", rlist);
 		
 		return "search";
 		

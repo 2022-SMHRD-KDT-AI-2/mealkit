@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mealkit.model.RecipeMapper">
+
+	<select id="selectAllRecipe" resultType="mealkit.entity.RecipeVO">
+		select * from t_recipe
+	</select>
+	
+	<insert id="insertRecipe" parameterType="mealkit.entity.RecipeVO">
+		insert into t_recipe(r_seq, r_name, r_content, m_id, r_date)
+		values(#{r_seq}, #{r_name}, #{r_content}, #{m_id}, SYSDATE)
+	</insert>
+	
+	
+  
+</mapper>

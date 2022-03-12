@@ -1,27 +1,42 @@
 select * from user_tables;
 drop table t_user_keyword;
 select * from t_super_keyword;
+delete from T_SUPER_KEYWORD where k_super_seq = 0;
+select * from T_MEMBER;
+
+select * from user_constraints where constraint_name = CGI_5_0216_4.SYS_C0033516;
+delete from t_member where m_id in('qwer', 'wqe', 'kd2675','dy2675','1234','asd');
 
 alter table t_super_keyword modify k_super_name varchar2(50);
 
 select table_name from user_tables;
 commit;
 
-select * from t_member;
+select * from t_keyword;
+delete from t_keyword;
 
-select *
-from user_constraints;
+select * from t_material;
+alter table t_keyword drop constraint 'FK_T_MATERIAL_K_SEQ_T_KEYWORD_';                   NULL                         CGI_5_0216_4 SYS_C0033540      NO ACTION   ENABLED NOT DEFERRABLE IMMEDIATE VALIDATED USER NAME      NULL NULL 2022-03-08 08:27:53.0 NULL         NULL                           NULL    NULL
+
+select * from user_constraints;
+alter table t_member modify m_id varchar2(50);
+
+select * from t_member;
+select * from t_recipe;
+
+
+select * from user_constraints;
 
 alter table t_recipe
 drop constraint sys_c0033526;
 
 insert into t_member
 values(
-	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
+	'sys1', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
 );
 
-INSERT INTO t_recipe (r_name, r_content, m_id, r_date, r_img1, r_img2) 
-VALUES ('r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
+INSERT INTO t_recipe
+VALUES (1, 'r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
 
 
 insert into T_RECIPE

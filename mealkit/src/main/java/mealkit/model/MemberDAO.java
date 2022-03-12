@@ -33,4 +33,12 @@ public class MemberDAO {
 		session.close();
 		return memVO;
 	}
+	
+	public int insertMember(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int num = session.insert("insertMember", vo);
+		session.commit();
+		session.close();
+		return num;
+	}
 }

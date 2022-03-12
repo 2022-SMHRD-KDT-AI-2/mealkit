@@ -28,13 +28,13 @@ public class KeywordInsert {
 		
 		try { 
 			
-			//FileReader reader = new FileReader("c:/tag.json"); 
-			BufferedReader reader_super = new BufferedReader(new InputStreamReader(new FileInputStream("c:/tag_super.json"), "utf-8"));
-			Object obj_super = parser.parse(reader_super); 
-			array_super = new JSONArray();
-			array_super.add(obj_super);
-			
-			reader_super.close(); 
+//			//FileReader reader = new FileReader("c:/tag.json"); 
+//			BufferedReader reader_super = new BufferedReader(new InputStreamReader(new FileInputStream("c:/tag_super.json"), "utf-8"));
+//			Object obj_super = parser.parse(reader_super); 
+//			array_super = new JSONArray();
+//			array_super.add(obj_super);
+//			
+//			reader_super.close(); 
 			
 			//FileReader reader = new FileReader("c:/tag.json"); 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("c:/tag.json"), "utf-8"));
@@ -46,25 +46,25 @@ public class KeywordInsert {
 			
 			
 			
-			array_super = (JSONArray) array_super.get(0);
-			for(int i = 0; i < array_super.size(); i++) {
-				
-				JSONObject array2_super = (JSONObject)array_super.get(i);
-				KeywordSuperVO vo_super = new KeywordSuperVO();
-				
-				long k_super_seq2 = (long) array2_super.get("K_super_seq");
-				int k_super_seq = (int)k_super_seq2;
-				
-				
-				String k_super_name = String.valueOf(array2_super.get("K_name"));
-				
-				vo_super.setK_super_seq(k_super_seq);
-				vo_super.setK_super_name(k_super_name);
-				
-				
-				int num = dao.insertSuper(vo_super);
-				System.out.println(num);
-			}
+//			array_super = (JSONArray) array_super.get(0);
+//			for(int i = 0; i < array_super.size(); i++) {
+//				
+//				JSONObject array2_super = (JSONObject)array_super.get(i);
+//				KeywordSuperVO vo_super = new KeywordSuperVO();
+//				
+//				long k_super_seq2 = (long) array2_super.get("K_super_seq");
+//				int k_super_seq = (int)k_super_seq2;
+//				
+//				
+//				String k_super_name = String.valueOf(array2_super.get("K_name"));
+//				
+//				vo_super.setK_super_seq(k_super_seq);
+//				vo_super.setK_super_name(k_super_name);
+//				
+//				
+//				int num = dao.insertSuper(vo_super);
+//				System.out.println(num);
+//			}
 			
 			
 			array = (JSONArray) array.get(0);
