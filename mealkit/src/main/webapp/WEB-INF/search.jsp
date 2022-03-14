@@ -80,6 +80,7 @@
         }
 </script>
 
+
 </head>
 <body>
 	
@@ -107,7 +108,7 @@
 						<c:forEach var="v" items="${list}">
 							<c:if test="${v.k_super_seq == i}">
 								<div class="searchdiv"><li><input class="kname" type="checkbox" name="${v.k_name}" value='1'
-									  />${v.k_name}</li></div>
+									/>${v.k_name}</li></div>
 							</c:if>
 						</c:forEach>
 					</div>
