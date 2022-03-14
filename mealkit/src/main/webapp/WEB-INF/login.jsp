@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR" isELIgnored="false" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,7 +144,7 @@ float:left;
 </style>
 </head>
 <body>
-<form action="/mealkit/login.do"" method="post">
+<form action="/mealkit/login.do" method="post">
   <div id="div_login">
   
         <div id="div_login2"> <b>함정요리</b> </div>

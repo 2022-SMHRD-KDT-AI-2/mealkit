@@ -24,7 +24,7 @@
 		location.href="/mealkit/logout.do"
 	}
 	function gologin(){
-		location.href="login.jsp"
+		location.href="/mealkit/login.do"
 	}
 	function goJoin(){
 		location.href="join.jsp"
@@ -95,8 +95,8 @@ float:right;
 								<i id="icon" class="fa fa-search"></i>
 							</button>
 						</div>
-						
 					</div>
+					
 					<c:if test="${empty memVO}">
 					
 			<div align="center">
