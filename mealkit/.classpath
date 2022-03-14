@@ -31,5 +31,16 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/smhrd/.m2/repository/org/apache/tomcat/tomcat-catalina/8.5.75/tomcat-catalina-8.5.75.jar" sourcepath="C:/Users/smhrd/.m2/repository/org/apache/tomcat/tomcat-catalina/8.5.75/tomcat-catalina-8.5.75-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="tomcat-catalina-8.5.75.jar"/>
+			<attribute name="maven.groupId" value="org.apache.tomcat"/>
+			<attribute name="maven.artifactId" value="tomcat-catalina"/>
+			<attribute name="maven.version" value="8.5.75"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

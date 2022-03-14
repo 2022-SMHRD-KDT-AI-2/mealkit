@@ -162,7 +162,7 @@ float:left;
         </div>
        
         <div style="margin-top: 15px;">
-            <a href="member.jsp" style="text-decoration: none; color: black;"> 회원가입 </a>
+            <a href="join.jsp" style="text-decoration: none; color: black;"> 회원가입 </a>
         </div>
         <div id="out">
             <input type="submit" value="회원탈퇴" id="out_a">

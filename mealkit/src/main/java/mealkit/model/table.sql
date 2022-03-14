@@ -744,3 +744,11 @@ COMMENT ON COLUMN t_member_copy2.m_joindate IS '회원 가입일자'
 COMMENT ON COLUMN t_member_copy2.admin_yn IS '관리자 여부'
 ;
 
+
+
+create table cart(
+cart_id number not null primary key,
+userid varchar2(50) not null,
+product_id number not null,
+amount number default 0
+);
