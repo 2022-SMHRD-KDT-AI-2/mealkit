@@ -82,7 +82,7 @@ float:right;
 				<div id="logob">
 					<div class="hamjung">
 						<h1 id="logo">
-							<a href="index.html">함정요리</a>
+							<a href="index.jsp">함정요리</a>
 						</h1>
 
 					</div>
