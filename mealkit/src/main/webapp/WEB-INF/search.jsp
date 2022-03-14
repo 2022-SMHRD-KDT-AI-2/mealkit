@@ -2,6 +2,7 @@
     pageEncoding="utf-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <% pageContext.setAttribute("shap", "#"); %>
 
 <!DOCTYPE html>
@@ -22,6 +23,23 @@
 
 <script>
 
+		//var list;
+		//$(document).ready(loadJson);
+		//// $(document) --> 현재페이지 객체
+		//// $(document).ready( function ) --> 현재페이지가 열릴때, 매개변수로 넣어준 함수를 실행하라 
+		//function loadJson(){
+		//	console.log('loadJson');
+		//	 $.ajax({
+		//		url : 'http://127.0.0.1:8082/test.data',
+		//		type : 'get',
+		//		dataType : 'json',
+		//		success : function(res){
+		//			list = res; // controller가 넘겨준 json 데이터를 list라는 전역변수에 담기
+		//		},
+		//		error : function(){ alert('error!');}
+		//	}) 
+		//}
+		
 
 		function objectifyForm(formArray) {
 		    //serialize data function
@@ -51,7 +69,6 @@
 		}
 
 		
-		
         function aa(){
         	let formData = new FormData($('#form')[0]);
         	
@@ -67,18 +84,38 @@
             	type : "post",
                 data : formData,
                 contentType: 'application/json',
-                success : function(){
+                success : function(data){
         			//$("#search_data").append("<div><button class='btn'></button></div>");
         			//console.log(rlist);
-                	alert("suc입니다!");
+                	alert(Object.keys(data));
                 	console.log(formData);
+    				
+                	$(".list-group").html("");
+	                for(let i = 0; i < Object.keys(data).length; i++){
+	                    $(".list-group").append("<div class='container'><a href='#' class='list-group-item'><div id='search_data'><table id='table1' border='1'><tr><td>"+Number(Object.keys(data)[i])+"</a></div></table></div></td></tr><tr><td></td></tr>");
+	                }
+	                for(let i = 0; i < Object.keys(data).length; i++){
+		                <c:forEach var="code" items="${rlist}">
+			            	if(Object.keys(data)[i] == "${code.r_seq}"){
+			            		console.log(Object.keys(data)[i]);
+			            		console.log("${code.r_seq}");
+			            		console.log("${code.r_name}");
+			            	}
+			            	
+			        	</c:forEach>
+	                }
+	                
+                    
                 },
                 error : function(){
                     alert("erro입니다!");
                 }
             });
         }
+        
 </script>
+
+
 
 
 </head>
@@ -120,22 +157,9 @@
 	
 	
 	<div class="list-group">
-		<c:forEach var="v" items="${rlist}">
-			<div class="container">
-				<a href="#" class="list-group-item">
-					<div id="search_data" onclick="location.href='#'">
-						<table border="1">
-							<tr>
-								<td>${v.getR_name()}</td>
-							</tr>
-							<tr>
-								<td>${v.getR_content()}</td>
-							</tr>
-						</table>
-					</div>
-				</a>
-			</div>
-		</c:forEach>
+		
+			
+		
 	</div>
 	--%>
 	
