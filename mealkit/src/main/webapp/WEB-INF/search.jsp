@@ -14,10 +14,36 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	
-	<style>
+	<link rel="stylesheet" href="assets/css/search.css">
+<style>
+</style>
 
+<script>
+        function aa(){
+        	var formData = new FormData($('#form')[0]);
+            var rlist = "<c:out value='${rlist}'/>";
+        	$.ajax({
+            	url : "http://127.0.0.1:8082/analysis",
+            	type : "post",
+                data : formData,
+                cache : false,
+                contentType : false,
+                processData : false,
+                success : function(){
+                	
+        			$("#search_data").append("<div><button class='btn'></button></div>");
+        			console.log(rlist);
+                	//alert("suc입니다!");
+                	//왜 success 가 안뜰까요??
+                },
+                error : function(){
+                    alert("erro입니다!");
+                }
+            });
+        }
+</script>
 
+<<<<<<< HEAD
 	}
 	#header{
 	position:relative;
@@ -127,8 +153,11 @@ width:140px;
 	<script type="text/javascript">
 	
 	</script>
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
 </head>
 <body>
+	
 	<!-- Header -->
 	<section id="header">
 		<div class="hamjung">
@@ -141,14 +170,12 @@ width:140px;
 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
-
 			<c:forEach var="v" items="${listSuper}">
 				<li><a data-toggle="tab" href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
 			</c:forEach>
 		</ul>
 		
 		<form action="/mealkit/search.do" id = "form">
-		
 			<div class="tab-content">
 				<c:forEach var="i" begin="1000" end="13000" step="1000">
 					<div id="${i}" class="tab-pane fade">
@@ -159,44 +186,37 @@ width:140px;
 									id="input_check" />${v.k_name}</li></div>
 									<div class="searchdiv"><li><input class="kname" type="hidden" name="${v.k_name}" value='0'
 								
-									id="input_check_hidden" /></li></div>
+									id="input_check_hidden" /></li></div>                
 
 							</c:if>
 						</c:forEach>
 					</div>
 				</c:forEach>
-				
 			</div>
-			
+			<button type="button" class="btn" onclick="aa()">검색</button>
 		</form>
 	</div>
-	<div id=search>
-	     <button type="button" class="btn" onclick="aa()">검색</button>
-	     </div>
-			
+
+	<%-- 
+	<div class="list-group">
+		<c:forEach var="v" items="${rlist}">
+			<div class="container">
+				<a href="#" class="list-group-item">
+					<div id="search_data" onclick="location.href='#'">
+						<table border="1">
+							<tr>
+								<td>${v.getR_name()}</td>
+							</tr>
+							<tr>
+								<td>${v.getR_content()}</td>
+							</tr>
+						</table>
+					</div>
+				</a>
+			</div>
+		</c:forEach>
+	</div>
+	--%>
 	
-<script>
-		
-        function aa(){
-        	var formData = new FormData($('#form')[0]);
-            $.ajax({
-            	url : "http://127.0.0.1:8082/analysis",
-            	type : "post",
-                data : formData,
-                cache : false,
-                contentType : false,
-                processData : false,
-                success : function(){
-                	alert("suc입니다!");
-                	//왜 success 가 안뜰까요??
-                },
-                error : function(){
-                    alert("erro입니다!");
-                }
-            });
-        }
-    </script>
-    
-    
 </body>
 </html>
