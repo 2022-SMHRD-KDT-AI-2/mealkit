@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Strongly Typed by HTML5 UP1</title>
+<title>Strongly Typed by HTML5 UP</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -31,65 +31,19 @@
 	}
 </script>
 <style>
+
 </style>
 
 </head>
 <body class="homepage is-preload">
-<c:if test="${empty memVO}">
-			<div  style="width: 100%;" align="right">
-				<button class="btn btn-lg btn-primary"  onclick="gologin()">로그인</button>
-				<button class="btn btn-join btn-primary" onclick="goJoin()">회원가입</button>
-			</div>
-			</c:if>
-			<c:if test="${!empty memVO}">
-			<div  style="width: 100%;" align="right">
-				<button class="btn btn-lg btn-primary"  onclick="goOut()">로그아웃</button>
-			</div>
-			</c:if>
+
 	<div id="page-wrapper">
 		<div class="searchbar"></div>
 
 		<!-- Header -->
 		<section id="header">
-			<div class="contain">
-							<div id="logob">
-								<div class="hamjung">
-							<h1 id="logo"><a href="index.html">함정요리</a></h1>
-						
-						</div>
-							<div id="inputdiv" class="input-group mb-3"> <input id="inputg" type="text" class="form-control input-text" placeholder="재료검색">
-								<div id="buttong" class="input-group-append"> <button id="ing" type="button" name="ingredient" ><i id="icon" class="fa fa-search"></i></button> </div>
-
-						<!-- Logo -->
-							<h1 id="logo"><a href="index.jsp">함정요리</a></h1>
-							<p>원하는 재료를 선택해서 요리와 밀키트를 추천해주는 사이트 입니다.</p>
-
-
 		
-							</div>
-					  
-							
-						</div>
-			
-
-                  <!-- Nav -->
-				  <nav id="nav">
-					<ul>
-					   <li><a id="sea" class="icon solid fa-search" href="/mealkit/keyword.do"><span>검색</span></a>
-				
-					
-					
-					</li>
-					   <li>
-						  <a href="#" class="icon fa-chart-bar"><span>레시피</a></span>
-				
-					   </li>
-					   <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>밀키트</span></a></li>
-					   <li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>즐겨찾기</span></a></li>
-					   <li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>게시판</span></a></li>
-					</ul>
-				 </nav>
-
+			<div class="contain">
 		
 				<div id="logob">
 					<div class="hamjung">
@@ -98,6 +52,7 @@
 						</h1>
 
 					</div>
+					
 					<div id="inputdiv" class="input-group mb-3">
 						<input id="inputg" type="text" class="form-control input-text"
 							placeholder="재료검색">
@@ -106,7 +61,26 @@
 								<i id="icon" class="fa fa-search"></i>
 							</button>
 						</div>
+						
 					</div>
+					<c:if test="${empty memVO}">
+					
+			<div align="center">
+			<div id="mem" onclick="gologin()"><img src="images/top_mem.png" alt="로그인"><br>회원정보</div>
+			 	<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="회원가입"><br>회원가입</div>
+				<div id="logi" onclick="gologin()"><img src="images/top_login.gif" alt="로그인"><br>로그인</div>
+			
+			
+		
+			</div>
+				
+			</c:if>
+			<c:if test="${!empty memVO}">
+			<div  style="width: 100%;" align="right">
+				<div id="logo" onclick="goOut()"><img src="images/top_login.gif" alt="로그아웃"><br>로그아웃</div>
+			</div>
+			</c:if>
+					
 				</div>
 				<nav id="nav">
 					<ul>
@@ -199,6 +173,8 @@
 		</section>
 	</div>
 	
+
+
 
 
 
