@@ -17,19 +17,19 @@ public class LoginController implements Controller{
 		public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 				throws ServletException, IOException {
 			
-			String memId = request.getParameter("memId");
-			String memPwd = request.getParameter("memPwd");
-			
-			MemberVO vo = new MemberVO();
-			vo.setM_id(memId);
-			vo.setM_pw(memPwd);
-			
-			MemberDAO dao = new MemberDAO();
-			MemberVO memVO = dao.memberJoin(vo);
-			if(memVO!=null) {
-				HttpSession session = request.getSession();
-				session.setAttribute("memVO", memVO);
-			}
-			return "/mealkit/index.jsp";
+//			String memId = request.getParameter("memId");
+//			String memPwd = request.getParameter("memPwd");
+//			
+//			MemberVO vo = new MemberVO();
+//			vo.setM_id(memId);
+//			vo.setM_pw(memPwd);
+//			
+//			MemberDAO dao = new MemberDAO();
+//			MemberVO memVO = dao.checkLogin(vo);
+//			if(memVO!=null) {
+//				HttpSession session = request.getSession();
+//				session.setAttribute("memVO", memVO);
+//			}
+			return "login";
 }
 }

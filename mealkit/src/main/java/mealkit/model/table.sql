@@ -3,6 +3,9 @@ drop table t_user_keyword;
 select * from t_super_keyword;
 delete from T_SUPER_KEYWORD where k_super_seq = 0;
 select * from T_MEMBER;
+select * from t_recipe;
+select * from user_tables;
+select * from t_favorite;
 
 select * from user_constraints where constraint_name = CGI_5_0216_4.SYS_C0033516;
 delete from t_member where m_id in('qwer', 'wqe', 'kd2675','dy2675','1234','asd');
