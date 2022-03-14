@@ -144,7 +144,7 @@ float:left;
 </style>
 </head>
 <body>
-<form action="/mealkit/login.do" method="post">
+<form action="/mealkit/join.do" method="post">
   <div id="div_login">
   
         <div id="div_login2"> <b>함정요리</b> </div>
