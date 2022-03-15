@@ -73,80 +73,44 @@ float:right;
 
 	<div id="page-wrapper">
 		<div class="searchbar"></div>
-
-<<<<<<< HEAD
-			<!-- Header -->
-				<section id="header">
-					<div class="contain">
-
-
-							<h1 id="logo"><a href="index.jsp">ÇÔÁ¤¿ä¸®</a></h1>
-							<p>¿øÇÏ´Â Àç·á¸¦ ¼±ÅÃÇØ¼­ ¿ä¸®¿Í ¹ĞÅ°Æ®¸¦ ÃßÃµÇØÁÖ´Â »çÀÌÆ® ÀÔ´Ï´Ù.</p>
-=======
-		<!-- Header -->
-		<section id="header">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
+		<div class="contain">
+			<div id="logob">
+				<div class="hamjung">
+					<h1 id="logo">
+					<a href="index.jsp">í•¨ì •ìš”ë¦¬</a>
+					</h1>
+				</div>
 		
-			<div class="contain">
-		
-				<div id="logob">
-					<div class="hamjung">
-						<h1 id="logo">
-							<a href="index.jsp">í•¨ì •ìš”ë¦¬</a>
-						</h1>
-
+				<div id="inputdiv" class="input-group mb-3">
+					<input id="inputg" type="text" class="form-control input-text"
+						placeholder="ì¬ë£Œê²€ìƒ‰">
+					<div id="buttong" class="input-group-append">
+						<button id="ing" type="button" name="ingredient">
+							<i id="icon" class="fa fa-search"></i>
+						</button>
 					</div>
-					
-					<div id="inputdiv" class="input-group mb-3">
-						<input id="inputg" type="text" class="form-control input-text"
-							placeholder="ì¬ë£Œê²€ìƒ‰">
-						<div id="buttong" class="input-group-append">
-							<button id="ing" type="button" name="ingredient">
-								<i id="icon" class="fa fa-search"></i>
-							</button>
-						</div>
-					</div>
-					
-<<<<<<< HEAD
-			<c:if test="${empty memVO}">
-=======
-
-			<div align="center">
-			<div id="mem" onclick="gologin()"><img src="images/top_mem.png" alt="ë¡œê·¸ì¸"><br>íšŒì›ì •ë³´</div>
-			 	<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="íšŒì›ê°€ì…"><br>íšŒì›ê°€ì…</div>
-				<div id="logi" onclick="gologin()"><img src="images/top_login.gif" alt="ë¡œê·¸ì¸"><br>ë¡œê·¸ì¸</div>
-			
-			
-<c:if test="${empty memVO}">
-					
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
-				<div align="center">
-<<<<<<< HEAD
-			 		<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="È¸¿ø°¡ÀÔ"><br>È¸¿ø°¡ÀÔ</div>
-					<div id="login" onclick="gologin()"><img src="images/top_login.gif" alt="·Î±×ÀÎ"><br>·Î±×ÀÎ</div>
-=======
-				<div id="mem" onclick="gologin()"><img src="images/top_mem.png" alt="ï¿½Î±ï¿½ï¿½ï¿½"><br>È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</div>
-			 	<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"><br>È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</div>
-				<div id="logi" onclick="gologin()"><img src="images/top_login.gif" alt="ï¿½Î±ï¿½ï¿½ï¿½"><br></br></div>
-
+				</div>
 			</div>
-				
+		</div>
+	</div>
+			<c:if test="${empty memVO}">
+				<div align="center">
+					<div id="mem" onclick="gologin()"><img src="images/top_mem.png" alt="ë¡œê·¸ì¸"><br>íšŒì›ì •ë³´</div>
+					<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="íšŒì›ê°€ì…"><br>íšŒì›ê°€ì…</div>
+					<div id="logi" onclick="gologin()"><img src="images/top_login.gif" alt="ë¡œê·¸ì¸"><br>ë¡œê·¸ì¸</div>
+				</div>
 			</c:if>
+			
 			<c:if test="${!empty memVO}">
 			<div  style="width: 100%;" align="right">
 				<div id="logo" onclick="goOut()"><img src="images/top_login.gif" alt="ë¡œê·¸ì•„ì›ƒ"><br>ë¡œê·¸ì•„ì›ƒ</div>
 			</div>
 			</c:if>
 					
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-2/mealkit.git
-				</div>
-			</c:if>
+
+				
 			
-			<c:if test="${!empty memVO}">
-				<div  style="width: 100%;" align="right">
-					<div id="logo" onclick="goOut()"><img src="images/top_login.gif" alt="·Î±×¾Æ¿ô"><br>·Î±×¾Æ¿ô</div>
-				</div>
-			</c:if>
+			
 			</div>
 				<nav id="nav">
 					<ul>
