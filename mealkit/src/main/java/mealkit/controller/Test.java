@@ -17,9 +17,9 @@ import mealkit.model.RecipeDAO;
  */
 @WebServlet("/test.data")
 public class Test extends HttpServlet {
-	public static List<RecipeVO> main(String[] args) {
-		RecipeDAO dao = new RecipeDAO();
-		List<RecipeVO> list = dao.selectAllRecipe();
-		return list;
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		super.service(req, resp);
 	}
 }

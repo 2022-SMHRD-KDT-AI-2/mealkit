@@ -28,10 +28,7 @@ public class KeywordController implements Controller{
 		request.setAttribute("list", list);
 		request.setAttribute("listSuper", list_super);
 		
-		RecipeDAO rdao = new RecipeDAO();
-		List<RecipeVO> rlist = rdao.selectAllRecipe();
 		
-		request.setAttribute("rlist", rlist);
 		
 		return "search";
 		

@@ -7,6 +7,18 @@ select * from t_recipe;
 select * from user_tables;
 select * from t_favorite;
 
+delete from t_material;
+
+
+
+alter sequence t_material_SEQ increment by -10541;
+
+select t_material_SEQ.nextVal from dual;
+
+alter sequence t_material_SEQ increment by 1;
+
+delete from t_recipe;
+
 select * from user_constraints where constraint_name = CGI_5_0216_4.SYS_C0033516;
 delete from t_member where m_id in('qwer', 'wqe', 'kd2675','dy2675','1234','asd');
 

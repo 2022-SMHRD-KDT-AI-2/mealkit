@@ -30,8 +30,9 @@
 		//function loadJson(){
 		//	console.log('loadJson');
 		//	 $.ajax({
-		//		url : 'http://127.0.0.1:8082/test.data',
+		//		url : 'http://127.0.0.1:8082/search.do',
 		//		type : 'get',
+		//		contentType: 'application/json',
 		//		dataType : 'json',
 		//		success : function(res){
 		//			list = res; // controller가 넘겨준 json 데이터를 list라는 전역변수에 담기
@@ -87,25 +88,14 @@
                 success : function(data){
         			//$("#search_data").append("<div><button class='btn'></button></div>");
         			//console.log(rlist);
-                	alert(Object.keys(data));
                 	console.log(formData);
-    				
+                	console.log(Object.keys(data));
+                	
                 	$(".list-group").html("");
 	                for(let i = 0; i < Object.keys(data).length; i++){
-	                    $(".list-group").append("<div class='container'><a href='#' class='list-group-item'><div id='search_data'><table id='table1' border='1'><tr><td>"+Number(Object.keys(data)[i])+"</a></div></table></div></td></tr><tr><td></td></tr>");
+	                	$(".list-group").append("<div class='container'><a href='#' class='list-group-item'><div id='search_data'><table id='table1' border='1'><tr><td>"+Object.values(data)[i][1]+"</a></div></table></div></td></tr><tr><td>"+Object.values(data)[i][2]+"</td></tr>");
+	                	console.log(Object.values(data)[i][1]);
 	                }
-	                for(let i = 0; i < Object.keys(data).length; i++){
-		                <c:forEach var="code" items="${rlist}">
-			            	if(Object.keys(data)[i] == "${code.r_seq}"){
-			            		console.log(Object.keys(data)[i]);
-			            		console.log("${code.r_seq}");
-			            		console.log("${code.r_name}");
-			            	}
-			            	
-			        	</c:forEach>
-	                }
-	                
-                    
                 },
                 error : function(){
                     alert("erro입니다!");

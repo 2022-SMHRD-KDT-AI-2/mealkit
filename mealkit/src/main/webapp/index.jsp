@@ -98,21 +98,18 @@ float:right;
 					</div>
 					
 			<c:if test="${empty memVO}">
-					
 				<div align="center">
-				<div id="mem" onclick="gologin()"><img src="images/top_mem.png" alt="로그인"><br>회원정보</div>
-			 	<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="회원가입"><br>회원가입</div>
-				<div id="logi" onclick="gologin()"><img src="images/top_login.gif" alt="로그인"><br>로그인</div>
-			</div>
-				
-			</c:if>
-			<c:if test="${!empty memVO}">
-			<div  style="width: 100%;" align="right">
-				<div id="logo" onclick="goOut()"><img src="images/top_login.gif" alt="로그아웃"><br>로그아웃</div>
-			</div>
-			</c:if>
-					
+			 		<div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="회원가입"><br>회원가입</div>
+					<div id="login" onclick="gologin()"><img src="images/top_login.gif" alt="로그인"><br>로그인</div>
 				</div>
+			</c:if>
+			
+			<c:if test="${!empty memVO}">
+				<div  style="width: 100%;" align="right">
+					<div id="logo" onclick="goOut()"><img src="images/top_login.gif" alt="로그아웃"><br>로그아웃</div>
+				</div>
+			</c:if>
+			</div>
 				<nav id="nav">
 					<ul>
 						<li><a id="sea" class="icon solid fa-search"
