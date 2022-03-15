@@ -8,6 +8,14 @@
 		select * from t_recipe
 	</select>
 	
+	<select id="selectRecipe" resultType="mealkit.entity.RecipeVO">
+		select * from t_recipe where r_seq = #{r_seq}
+	</select>
+	
+	<select id="selectFavorite" parameterType="mealkit.entity.RecipeVO" resultType="mealkit.entity.FavoriteVO">
+		select * from t_favorite where m_id in(#{m_id}) and r_seq in(#{r_seq})
+	</select>
+	
 	<insert id="insertRecipe" parameterType="mealkit.entity.RecipeVO">
 		insert into t_recipe(r_seq, r_name, r_content, m_id, r_date)
 		values(#{r_seq}, #{r_name}, #{r_content}, #{m_id}, SYSDATE)
@@ -16,6 +24,11 @@
 	<insert id="insertMaterial" parameterType="mealkit.entity.MaterialVO">
 		insert into t_material(mat_seq,r_seq,mat_name,mat_info,mat_weight)
 		values(t_material_SEQ.nextVal, #{r_seq}, #{mat_name}, #{mat_info}, #{mat_weight})
+	</insert>
+	
+	<insert id="insertFavorite" parameterType="mealkit.entity.FavoriteVO">
+		insert into t_favorite
+		values(t_favorite_SEQ.nextVal, #{m_id}, #{r_seq}, SYSDATE)
 	</insert>
 	
 	

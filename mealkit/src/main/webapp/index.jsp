@@ -31,39 +31,6 @@
    }
 </script>
 <style>
-#login{
-left:8%;
-position:relative;
-height:30px;
-float:right;
-
-}
-
-#joi{
-left:10%;
-position:relative;
-height:30px;
-float:right;
-
-
-}
-#mem{
-left:12%;
-position:relative;
-height:30px;
-float:right;
-
-
-}
-#logo{
-position:relative;
-height:30px;
-float:right;
-}
-#logi,#joi, #mem:hover{
-   cursor: pointer;
-}
-
 
 
 </style>
