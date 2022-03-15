@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import mealkit.entity.FavoriteVO;
 import mealkit.entity.KeywordVO;
 import mealkit.entity.MaterialVO;
 import mealkit.entity.RecipeVO;
@@ -36,6 +37,20 @@ public class RecipeDAO {
 		return list;
 	}
 	
+	public RecipeVO selectRecipe(int r_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		RecipeVO vo = session.selectOne("selectRecipe", r_seq);
+		session.close();
+		return vo;
+	}
+	
+	public List<FavoriteVO> selectFavorite(FavoriteVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<FavoriteVO> list = session.selectList("selectFavorite", vo);
+		session.close();
+		return list;
+	}
+	
 	public int insertRecipe(RecipeVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int num = session.insert("insertRecipe", vo);
@@ -47,6 +62,14 @@ public class RecipeDAO {
 	public int insertMaterial(MaterialVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int num = session.insert("insertMaterial", vo);
+		session.commit();
+		session.close();
+		return num;
+	}
+
+	public int insertFavorite(FavoriteVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int num = session.insert("insertFavorite", vo);
 		session.commit();
 		session.close();
 		return num;

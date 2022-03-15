@@ -1,18 +1,7 @@
 @charset "EUC-KR";
-li {
-	list-style: none;
-}
-
-a {
-	text-decoration: none !important;
-}
 
 #logob {
 	position: relative;
-}
-
-.form-control {
-	border: 1px solid #f86146
 }
 
 .hamjung {
@@ -28,17 +17,6 @@ a {
 #inputg {
 	height: 50px;
 	max-width: 400px;
-}
-
-#ing {
-	font-size: 8px;
-}
-
-#icon {
-	font-size: 18px;
-}
-.pull{
-	width: 100%;
 }
 
 #login{

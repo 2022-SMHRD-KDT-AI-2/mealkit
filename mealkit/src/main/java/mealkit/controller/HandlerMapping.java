@@ -16,7 +16,8 @@ public class HandlerMapping {
 		mappings.put("/memberinsert.do", new MemberInsertController());
 		mappings.put("/memberinsertform.do", new MemberInsertFormController());
 		mappings.put("/loginform.do", new LoginFormController());
-		
+		mappings.put("/searchdetail.do", new SearchDetailController());
+		mappings.put("/favorite.do", new FavoriteController());
 	}
 	
 	public Controller getController(String key) {
