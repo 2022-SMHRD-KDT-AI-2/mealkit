@@ -1,16 +1,55 @@
 select * from user_tables;
 drop table t_user_keyword;
+select * from t_super_keyword;
+delete from T_SUPER_KEYWORD where k_super_seq = 0;
+select * from T_MEMBER;
+select * from t_recipe;
+select * from user_tables;
+select * from t_favorite;
+
+select * from user_constraints where constraint_name = CGI_5_0216_4.SYS_C0033516;
+delete from t_member where m_id in('qwer', 'wqe', 'kd2675','dy2675','1234','asd');
+
+alter table t_material modify mat_weight varchar2(20);
+
+delete from t_material;
+
+alter table t_material drop constraint SYS_C0033570;
+
+select * from t_material;
+
+delete from t_keyword;
+
+select * from t_material;
 
 select table_name from user_tables;
 commit;
 
+select * from t_keyword;
+delete from t_keyword;
+
+select * from t_material;
+alter table t_keyword drop constraint 'FK_T_MATERIAL_K_SEQ_T_KEYWORD_';                   NULL                         CGI_5_0216_4 SYS_C0033540      NO ACTION   ENABLED NOT DEFERRABLE IMMEDIATE VALIDATED USER NAME      NULL NULL 2022-03-08 08:27:53.0 NULL         NULL                           NULL    NULL
+
+select * from user_constraints;
+alter table t_member modify m_id varchar2(50);
+
+select * from t_member;
+select * from t_recipe;
+
+
+select * from user_constraints;
+
+alter table t_recipe
+drop constraint sys_c0033526;
+
 insert into t_member
 values(
-	'sys', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
+	'sys1', '1234', '1', '2022-03-08', '1', '1', '2022-03-08', '1'
 );
 
-INSERT INTO t_recipe (r_name, r_content, m_id, r_date, r_img1, r_img2) 
-VALUES ('r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
+INSERT INTO t_recipe
+VALUES (1, 'r_name 1', 'r_content 1', 'sys', sysdate, 'r_img1 1', 'r_img2 1');
 
 
 insert into T_RECIPE
@@ -28,12 +67,34 @@ select * from t_recipe;
 
 select * from t_material;
 
+DROP SEQUENCE T_CMT_SEQ ;
+DROP SEQUENCE T_COMMUNITY_SEQ ;
+DROP SEQUENCE T_FAVORITE_SEQ ;
+DROP SEQUENCE T_KEYWORD_SEQ ;
+DROP SEQUENCE T_MATERIAL_SEQ ;
+DROP SEQUENCE T_MEALKIT_SEQ ;
+DROP SEQUENCE T_RECIPE_SEQ ;
+DROP SEQUENCE T_RECOMMEND_SEQ ;
+DROP SEQUENCE T_USER_KEYWORD_SEQ ;
+
+drop table t_user_keyword
+drop table t_recipe;
+drop table t_keyword;
+drop table t_community;
+drop table t_mealkit;
+drop table t_favorite;
+drop table t_cmt;
+drop table t_material;
+drop table t_recommend;
+drop table t_member_copy1;
+drop table t_member_copy2;
+drop table t_member;
 
 
 
 -------------------------------------------------------------------------------------------
 
--- t_member Table Create SQL
+
 CREATE TABLE t_member
 (
     m_id           VARCHAR2(20)     NOT NULL, 
@@ -47,7 +108,6 @@ CREATE TABLE t_member
      PRIMARY KEY (m_id)
 )
 ;
-
 
 COMMENT ON TABLE t_member IS '회원 테이블'
 ;
@@ -77,7 +137,26 @@ COMMENT ON COLUMN t_member.admin_yn IS '관리자 여부'
 ;
 
 
--- t_recipe Table Create SQL
+
+CREATE TABLE t_super_keyword
+(
+    k_super_seq     NUMBER(12, 0)    NOT NULL, 
+    k_super_name    VARCHAR2(50)          NOT NULL, 
+     PRIMARY KEY (k_super_seq)
+)
+;
+
+COMMENT ON TABLE t_super_keyword IS '예비 테이블1'
+;
+
+COMMENT ON COLUMN t_super_keyword.k_super_seq IS '슈퍼키워드 번호'
+;
+
+COMMENT ON COLUMN t_super_keyword.k_super_name IS '슈퍼키워드 명'
+;
+
+
+
 CREATE TABLE t_recipe
 (
     r_seq        NUMBER(12, 0)     NOT NULL, 
@@ -85,8 +164,8 @@ CREATE TABLE t_recipe
     r_content    VARCHAR2(4000)    NOT NULL, 
     m_id         VARCHAR2(20)      NOT NULL, 
     r_date       DATE              NOT NULL, 
-    r_img1       VARCHAR2(200)     NOT NULL, 
-    r_img2       VARCHAR2(20)      NOT NULL, 
+    r_img1       VARCHAR2(200)     , 
+    r_img2       VARCHAR2(20)      , 
      PRIMARY KEY (r_seq)
 )
 ;
@@ -109,7 +188,7 @@ END;
 DROP TRIGGER t_recipe_AI_TRG;
 ;
 
---DROP SEQUENCE t_recipe_SEQ;
+DROP SEQUENCE t_recipe_SEQ;
 ;
 
 COMMENT ON TABLE t_recipe IS '레시피  테이블'
@@ -142,7 +221,7 @@ ALTER TABLE t_recipe
 ;
 
 
--- t_community Table Create SQL
+
 CREATE TABLE t_community
 (
     c_seq        NUMBER(12, 0)     NOT NULL, 
@@ -170,10 +249,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_community_AI_TRG;
+DROP TRIGGER t_community_AI_TRG;
 ;
 
---DROP SEQUENCE t_community_SEQ;
+DROP SEQUENCE t_community_SEQ;
 ;
 
 COMMENT ON TABLE t_community IS '커뮤니티 테이블'
@@ -203,16 +282,15 @@ ALTER TABLE t_community
 ;
 
 
--- t_keyword Table Create SQL
+
 CREATE TABLE t_keyword
 (
     k_seq          NUMBER(12, 0)    NOT NULL, 
     k_name         VARCHAR2(50)     NOT NULL, 
-    k_super_seq    NUMBER(12, 0)    NULL, 
+    k_super_seq    NUMBER(12, 0)    NOT NULL, 
      PRIMARY KEY (k_seq)
 )
 ;
-
 
 CREATE SEQUENCE t_keyword_SEQ
 START WITH 1
@@ -229,10 +307,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_keyword_AI_TRG;
+DROP TRIGGER t_keyword_AI_TRG;
 ;
 
---DROP SEQUENCE t_keyword_SEQ;
+DROP SEQUENCE t_keyword_SEQ;
 ;
 
 COMMENT ON TABLE t_keyword IS '키워드 테이블'
@@ -244,16 +322,16 @@ COMMENT ON COLUMN t_keyword.k_seq IS '키워드 순번'
 COMMENT ON COLUMN t_keyword.k_name IS '키워드 명'
 ;
 
-COMMENT ON COLUMN t_keyword.super_k_seq IS '관련 순번'
+COMMENT ON COLUMN t_keyword.k_super_seq IS '슈퍼키워드 번호'
 ;
 
 ALTER TABLE t_keyword
-    ADD CONSTRAINT FK_t_keyword_super_k_seq_t_key FOREIGN KEY (super_k_seq)
-        REFERENCES t_keyword (k_seq)
+    ADD CONSTRAINT FK_t_keyword_k_super_seq_t_sup FOREIGN KEY (k_super_seq)
+        REFERENCES t_super_keyword (k_super_seq)
 ;
 
 
--- t_mealkit Table Create SQL
+
 CREATE TABLE t_mealkit
 (
     ml_seq            NUMBER(12, 0)     NOT NULL, 
@@ -283,10 +361,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_mealkit_AI_TRG;
+DROP TRIGGER t_mealkit_AI_TRG;
 ;
 
---DROP SEQUENCE t_mealkit_SEQ;
+DROP SEQUENCE t_mealkit_SEQ;
 ;
 
 COMMENT ON TABLE t_mealkit IS '밀키트 테이블'
@@ -322,7 +400,7 @@ ALTER TABLE t_mealkit
 ;
 
 
--- t_favorite Table Create SQL
+
 CREATE TABLE t_favorite
 (
     f_seq       NUMBER(12, 0)    NOT NULL, 
@@ -348,10 +426,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_favorite_AI_TRG;
+DROP TRIGGER t_favorite_AI_TRG;
 ;
 
---DROP SEQUENCE t_favorite_SEQ;
+DROP SEQUENCE t_favorite_SEQ;
 ;
 
 COMMENT ON TABLE t_favorite IS '즐겨찾기 테이블'
@@ -380,7 +458,7 @@ ALTER TABLE t_favorite
 ;
 
 
--- t_cmt Table Create SQL
+
 CREATE TABLE t_cmt
 (
     cmt_seq        NUMBER(12, 0)     NOT NULL, 
@@ -407,10 +485,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_cmt_AI_TRG;
+DROP TRIGGER t_cmt_AI_TRG;
 ;
 
---DROP SEQUENCE t_cmt_SEQ;
+DROP SEQUENCE t_cmt_SEQ;
 ;
 
 COMMENT ON TABLE t_cmt IS '댓글 테이블'
@@ -442,12 +520,12 @@ ALTER TABLE t_cmt
 ;
 
 
--- t_material Table Create SQL
+
 CREATE TABLE t_material
 (
     mat_seq       NUMBER(12, 0)     NOT NULL, 
     r_seq         NUMBER(12, 0)     NOT NULL, 
-    k_name        VARCHAR2(50)      not NULL, 
+    k_seq         NUMBER(12, 0)     NOT NULL, 
     mat_info      VARCHAR2(4000)    NOT NULL, 
     mat_weight    NUMBER(12, 1)     NOT NULL, 
     mat_img       VARCHAR2(200)     NULL, 
@@ -473,7 +551,7 @@ END;
 DROP TRIGGER t_material_AI_TRG;
 ;
 
---DROP SEQUENCE t_material_SEQ;
+DROP SEQUENCE t_material_SEQ;
 ;
 
 COMMENT ON TABLE t_material IS '식재료 테이블'
@@ -485,7 +563,7 @@ COMMENT ON COLUMN t_material.mat_seq IS '식재료 순번'
 COMMENT ON COLUMN t_material.r_seq IS '레시피 순번'
 ;
 
-COMMENT ON COLUMN t_material.k_name IS '키워드 명'
+COMMENT ON COLUMN t_material.k_seq IS '키워드 순번'
 ;
 
 COMMENT ON COLUMN t_material.mat_info IS '식재료 정보'
@@ -503,13 +581,12 @@ ALTER TABLE t_material
 ;
 
 ALTER TABLE t_material
-    ADD CONSTRAINT FK_t_material_k_name_t_keyword FOREIGN KEY (k_name)
-        REFERENCES t_keyword (k_name)
+    ADD CONSTRAINT FK_t_material_k_seq_t_keyword_ FOREIGN KEY (k_seq)
+        REFERENCES t_keyword (k_seq)
 ;
 
 
 
--- t_user_keyword Table Create SQL
 CREATE TABLE t_user_keyword
 (
     uk_seq     NUMBER(12, 0)    NOT NULL, 
@@ -535,10 +612,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_user_keyword_AI_TRG;
+DROP TRIGGER t_user_keyword_AI_TRG;
 ;
 
---DROP SEQUENCE t_user_keyword_SEQ;
+DROP SEQUENCE t_user_keyword_SEQ;
 ;
 
 COMMENT ON TABLE t_user_keyword IS '사용자 선택 키워드 테이블'
@@ -562,7 +639,7 @@ ALTER TABLE t_user_keyword
 ;
 
 
--- t_recommend Table Create SQL
+
 CREATE TABLE t_recommend
 (
     reco_seq        NUMBER(12, 0)     NOT NULL, 
@@ -590,10 +667,10 @@ BEGIN
 END;
 ;
 
---DROP TRIGGER t_recommend_AI_TRG;
+DROP TRIGGER t_recommend_AI_TRG;
 ;
 
---DROP SEQUENCE t_recommend_SEQ;
+DROP SEQUENCE t_recommend_SEQ;
 ;
 
 COMMENT ON TABLE t_recommend IS '추천 레시피'
@@ -628,50 +705,7 @@ ALTER TABLE t_recommend
 ;
 
 
--- t_member_copy1 Table Create SQL
-CREATE TABLE t_member_copy1
-(
-    m_id           VARCHAR2(20)     NOT NULL, 
-    m_pw           VARCHAR2(20)     NOT NULL, 
-    m_phone        VARCHAR2(20)     NOT NULL, 
-    m_birthdate    DATE             NOT NULL, 
-    m_addr         VARCHAR2(200)    NOT NULL, 
-    m_email        VARCHAR2(50)     NOT NULL, 
-    m_joindate     DATE             NOT NULL, 
-    admin_yn       CHAR(1)          NOT NULL, 
-     PRIMARY KEY (m_id)
-)
-;
 
-COMMENT ON TABLE t_member_copy1 IS '예비 테이블1'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_id IS '회원 아이디'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_pw IS '회원 비밀번호'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_phone IS '회원 연락처'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_birthdate IS '회원 생년월일'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_addr IS '회원 주소'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_email IS '회원 이메일'
-;
-
-COMMENT ON COLUMN t_member_copy1.m_joindate IS '회원 가입일자'
-;
-
-COMMENT ON COLUMN t_member_copy1.admin_yn IS '관리자 여부'
-;
-
-
--- t_member_copy2 Table Create SQL
 CREATE TABLE t_member_copy2
 (
     m_id           VARCHAR2(20)     NOT NULL, 
@@ -713,3 +747,11 @@ COMMENT ON COLUMN t_member_copy2.m_joindate IS '회원 가입일자'
 COMMENT ON COLUMN t_member_copy2.admin_yn IS '관리자 여부'
 ;
 
+
+
+create table cart(
+cart_id number not null primary key,
+userid varchar2(50) not null,
+product_id number not null,
+amount number default 0
+);

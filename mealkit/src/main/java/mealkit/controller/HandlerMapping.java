@@ -2,6 +2,8 @@ package mealkit.controller;
 
 import java.util.HashMap;
 
+import kr.smhrd.controller.LoginController;
+
 public class HandlerMapping {
 	private HashMap<String, Controller> mappings;
 	
@@ -10,6 +12,11 @@ public class HandlerMapping {
 		mappings.put("/keyword.do", new KeywordController());
 		mappings.put("/recipemain.do", new RecipeMainController());
 		mappings.put("/search.do", new SearchController());
+		mappings.put("/login.do", new LoginController());
+		mappings.put("/logout.do", new LogOutController());
+		mappings.put("/memberinsert.do", new MemberInsertController());
+		mappings.put("/join.do", new JoinController());
+		mappings.put("/memberinsertform.do", new MemberInsertform());
 		
 	}
 	

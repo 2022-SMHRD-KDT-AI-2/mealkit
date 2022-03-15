@@ -17,5 +17,7 @@
   </environments>
   <mappers>
     <mapper resource="mealkit/model/KeywordMapper.xml"/>
+    <mapper resource="mealkit/model/MemberMapper.xml"/>
+    <mapper resource="mealkit/model/RecipeMapper.xml"/>
   </mappers>
 </configuration>

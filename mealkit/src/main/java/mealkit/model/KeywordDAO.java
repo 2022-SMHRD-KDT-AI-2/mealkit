@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-
+import mealkit.entity.KeywordSuperVO;
 import mealkit.entity.KeywordVO;
 
 public class KeywordDAO {
@@ -34,12 +34,26 @@ public class KeywordDAO {
 		return list;
 	}
 	
+	public List<KeywordSuperVO> selectSuperAll() {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<KeywordSuperVO> list = session.selectList("selectSuperAll");
+		session.close();
+		return list;
+	}
+	
 	public int insert(KeywordVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int num = session.insert("keywordInsert", vo);
 		session.commit();
 		session.close();
 		return num;
-		
+	}
+	
+	public int insertSuper(KeywordSuperVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int num = session.insert("keywordSuperInsert", vo);
+		session.commit();
+		session.close();
+		return num;
 	}
 }

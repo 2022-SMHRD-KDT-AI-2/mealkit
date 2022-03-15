@@ -8,9 +8,19 @@
 		select * from t_keyword
 	</select>
 	
+	<select id="selectSuperAll" resultType="mealkit.entity.KeywordSuperVO">
+		select * from t_super_keyword
+	</select>
+	
 	<insert id="keywordInsert" parameterType="mealkit.entity.KeywordVO">
 		insert into t_keyword
 		values(#{k_seq}, #{k_name}, #{k_super_seq})
 	</insert>
+	
+	<insert id="keywordSuperInsert" parameterType="mealkit.entity.KeywordSuperVO">
+		insert into t_super_keyword
+		values(#{k_super_seq}, #{k_super_name})
+	</insert>
   
 </mapper>
+
