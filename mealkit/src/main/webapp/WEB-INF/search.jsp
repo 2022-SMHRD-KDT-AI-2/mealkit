@@ -22,7 +22,6 @@
 
 <script>
 
-
       function objectifyForm(formArray) {
           //serialize data function
           var returnArray = {};
@@ -45,9 +44,11 @@
             // Other 
             else { 
                rtnData[key] = value; 
-               } 
             } 
-         return rtnData; 
+           
+         
+      	}
+        return rtnData; 
       }
 
       
@@ -67,11 +68,12 @@
                type : "post",
                 data : formData,
                 contentType: 'application/json',
-                success : function(){
-                 //$("#search_data").append("<div><button class='btn'></button></div>");
-                 //console.log(rlist);
-                   alert("suc입니다!");
-                   console.log(formData);
+                success : function(data){
+                	$(".list-group").html("");
+                    for(let i = 0; i < Object.keys(data).length; i++){
+                       $(".list-group").append("<div class='container'><a href='#' class='list-group-item'><div id='search_data'><table id='table1' border='1'><tr><td>"+Object.values(data)[i][1]+"</a></div></table></div></td></tr><tr><td>"+Object.values(data)[i][2]+"</td></tr>");
+                       console.log(Object.values(data)[i][1]);
+                    }
                 },
                 error : function(){
                     alert("erro입니다!");
@@ -120,24 +122,8 @@
    
    
    <div class="list-group">
-      <c:forEach var="v" items="${rlist}">
-         <div class="container">
-            <a href="#" class="list-group-item">
-               <div id="search_data" onclick="location.href='#'">
-                  <table border="1">
-                     <tr>
-                        <td>${v.getR_name()}</td>
-                     </tr>
-                     <tr>
-                        <td>${v.getR_content()}</td>
-                     </tr>
-                  </table>
-               </div>
-            </a>
-         </div>
-      </c:forEach>
+      
    </div>
-   --%>
    
 </body>
 </html>
