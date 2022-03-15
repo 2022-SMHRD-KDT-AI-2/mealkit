@@ -64,7 +64,7 @@
            console.log(formData);
             //var rlist = "<c:out value='${rlist}'/>";
            $.ajax({
-               url : "http://127.0.0.1:8083/analysis",
+               url : "http://220.95.45.213:8083/analysis",
                type : "post",
                 data : formData,
                 contentType: 'application/json',
