@@ -31,7 +31,7 @@
    }
 </script>
 <style>
-#logi{
+#login{
 left:8%;
 position:relative;
 height:30px;
@@ -99,7 +99,7 @@ float:right;
                
          <c:if test="${empty memVO}">
             <div align="center">
-                <div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="회원가입"><br>회원가입</div>
+               <div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="회원가입"><br>회원가입</div>
                <div id="login" onclick="gologin()"><img src="images/top_login.gif" alt="로그인"><br>로그인</div>
             </div>
          </c:if>
