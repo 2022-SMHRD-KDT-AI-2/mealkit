@@ -22,6 +22,7 @@ public class FavoriteController implements Controller {
 		
 		RecipeDAO dao = new RecipeDAO();
 		FavoriteVO vo = new FavoriteVO();
+		
 		HttpSession session = request.getSession();
 		MemberVO memvo = (MemberVO) session.getAttribute("memVO");
 		

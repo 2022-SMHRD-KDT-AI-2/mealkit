@@ -151,7 +151,7 @@ a {
 				<nav id="nav">
 					<ul>
 						<li><a id="sea" class="icon solid fa-search"
-							href="left-sidebar.html"><span>검색</span></a></li>
+							href="/mealkit/keyword.do"><span>검색</span></a></li>
 						<li><a href="#" class="icon fa-chart-bar" href="recipe.html"><span>레시피</a></span>
 						</li> 
 						<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>밀키트</span></a></li>
