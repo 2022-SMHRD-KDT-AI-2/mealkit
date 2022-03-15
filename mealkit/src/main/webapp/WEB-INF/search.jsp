@@ -8,14 +8,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Bootstrap Example</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="assets/css/search.css">
+   <title>Bootstrap Example</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="assets/css/main.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="assets/css/search.css">
 <style>
 </style>
 
@@ -23,68 +23,53 @@
 
 <script>
 
-		//var list;
-		//$(document).ready(loadJson);
-		//// $(document) --> 현재페이지 객체
-		//// $(document).ready( function ) --> 현재페이지가 열릴때, 매개변수로 넣어준 함수를 실행하라 
-		//function loadJson(){
-		//	console.log('loadJson');
-		//	 $.ajax({
-		//		url : 'http://127.0.0.1:8082/search.do',
-		//		type : 'get',
-		//		contentType: 'application/json',
-		//		dataType : 'json',
-		//		success : function(res){
-		//			list = res; // controller가 넘겨준 json 데이터를 list라는 전역변수에 담기
-		//		},
-		//		error : function(){ alert('error!');}
-		//	}) 
-		//}
+		
 		
 
-		function objectifyForm(formArray) {
-		    //serialize data function
-		    var returnArray = {};
-		    for (var i = 0; i < formArray.length; i++){
-		        returnArray[formArray[i]['name']] = formArray[i]['value'];
-		    }
-		    return returnArray;
-		}
-		function serialize (rawData) {
-			let rtnData = {};
-			for (let [key, value] of rawData) {
-				let sel = document.querySelectorAll("[name=" + key + "]");
-				// Array Values 
-				if (sel.length > 1) { 
-					if (rtnData[key] === undefined) {
-						rtnData[key] = []; 
-						} 
-					rtnData[key].push(value); 
-				} 
-				// Other 
-				else { 
-					rtnData[key] = value; 
-					} 
-				} 
-			return rtnData; 
-		}
+      function objectifyForm(formArray) {
+          //serialize data function
+          var returnArray = {};
+          for (var i = 0; i < formArray.length; i++){
+              returnArray[formArray[i]['name']] = formArray[i]['value'];
+          }
+          return returnArray;
+      }
+      function serialize (rawData) {
+         let rtnData = {};
+         for (let [key, value] of rawData) {
+            let sel = document.querySelectorAll("[name=" + key + "]");
+            // Array Values 
+            if (sel.length > 1) { 
+               if (rtnData[key] === undefined) {
+                  rtnData[key] = []; 
+                  } 
+               rtnData[key].push(value); 
+            } 
+            // Other 
+            else { 
+               rtnData[key] = value; 
+               } 
+            } 
+         return rtnData; 
+      }
 
-		
+
         function aa(){
-        	let formData = new FormData($('#form')[0]);
-        	
-        	let serializedFormData = serialize(formData);
-        	formData = JSON.stringify(serializedFormData);
-        	
-        	//var formData1 = objectifyForm(formData);
-        	//var formData2 = JSON.stringify(formData);
-        	console.log(formData);
+           let formData = new FormData($('#form')[0]);
+           
+           let serializedFormData = serialize(formData);
+           formData = JSON.stringify(serializedFormData);
+           
+           //var formData1 = objectifyForm(formData);
+           //var formData2 = JSON.stringify(formData);
+           console.log(formData);
             //var rlist = "<c:out value='${rlist}'/>";
-        	$.ajax({
-            	url : "http://127.0.0.1:8083/analysis",
-            	type : "post",
+           $.ajax({
+               url : "http://127.0.0.1:8083/analysis",
+               type : "post",
                 data : formData,
                 contentType: 'application/json',
+
                 success : function(data){
         			//$("#search_data").append("<div><button class='btn'></button></div>");
         			//console.log(rlist);
@@ -107,20 +92,19 @@
 
 
 
-
 </head>
 <body>
-	
-	<!-- Header -->
-	<section id="header">
-		<div class="hamjung">
-			<br>
-			<h1 id="logo">
-				<a href="index.jsp">함정요리</a>
-			</h1>
-		</div>
-	</section>
-
+   
+   <!-- Header -->
+   <section id="header">
+      <div class="hamjung">
+         <br>
+         <h1 id="logo">
+            <a href="index.jsp">함정요리</a>
+         </h1>
+      </div>
+   </section>
+ 
 	<div class="container">
 		<ul class="nav nav-tabs" id="ulid">
 			<c:forEach var="v" items="${listSuper}">
@@ -151,7 +135,6 @@
 			
 		
 	</div>
-	--%>
 	
 </body>
 </html>
