@@ -24,14 +24,14 @@
       location.href="/mealkit/logout.do"
    }
    function gologin(){
-      location.href="/mealkit/login.do"
+      location.href="/mealkit/loginform.do"
    }
    function goJoin(){
       location.href="/mealkit/memberinsertform.do"
    }
 </script>
 <style>
-#logi{
+#login{
 left:8%;
 position:relative;
 height:30px;

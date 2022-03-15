@@ -16,6 +16,7 @@ public class HandlerMapping {
 		mappings.put("/logout.do", new LogOutController());
 		mappings.put("/memberinsert.do", new MemberInsertController());
 		mappings.put("/memberinsertform.do", new MemberInsertFormController());
+		mappings.put("/loginform.do", new LoginFormController());
 		
 	}
 	
