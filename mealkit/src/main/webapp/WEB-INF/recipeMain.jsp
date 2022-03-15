@@ -134,9 +134,9 @@ a {
 
 					</div>
 
-
 				</div>
-
+			
+		
 
 				<!-- Nav -->
 				<nav id="nav">
@@ -155,6 +155,7 @@ a {
 
 			</div>
 		</section>
+	</div>
 
 		<div id="main">
 			<div class="zero"></div>
