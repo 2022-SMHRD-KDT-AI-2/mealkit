@@ -18,6 +18,7 @@ public class HandlerMapping {
 		mappings.put("/loginform.do", new LoginFormController());
 		mappings.put("/searchdetail.do", new SearchDetailController());
 		mappings.put("/favorite.do", new FavoriteController());
+		mappings.put("/loginnot.do", new LoginNotController());
 	}
 	
 	public Controller getController(String key) {

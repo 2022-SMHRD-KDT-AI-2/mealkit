@@ -29,6 +29,8 @@ public class LoginController implements Controller{
 			if(memVO!=null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("memVO", memVO);
+			}else {
+				return "redirect:/loginnot.do";
 			}
 			return "/mealkit/index.jsp";
 }
