@@ -5,6 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+ 
+
 <link rel = "stylesheet" href="./css/login.css">
 <style>
 *{
@@ -181,5 +187,16 @@ float:left;
     
  
 </form>
+<script>
+ 
+    /* 로그인 버튼 클릭 메서드 */
+    $("#login_button").click(function(){
+        
+        alert("로그인 버튼 작동");
+        
+    });
+ 
+</script>
+ 
 </body>
 </html>
