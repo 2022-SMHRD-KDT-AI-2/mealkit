@@ -2,7 +2,6 @@ package mealkit.controller;
 
 import java.util.HashMap;
 
-import kr.smhrd.controller.LoginController;
 
 public class HandlerMapping {
 	private HashMap<String, Controller> mappings;
