@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
@@ -37,67 +37,15 @@
 
 </head>
 <body class="homepage is-preload">
+    <!-- Header -->
+	<%@ include file="/mainHeader.jsp" %>
 
-   <div id="page-wrapper">
-      <div class="searchbar"></div>
-
-      <!-- Header -->
-      <section id="header">
-      
-         <div class="contain">
-      
-            <div id="logob">
-               <div class="hamjung">
-                  <h1 id="logo">
-                     <a href="index.jsp">ÇÔÁ¤¿ä¸®</a>
-                  </h1>
-
-               </div>
-               
-               <div id="inputdiv" class="input-group mb-3">
-                  <input id="inputg" type="text" class="form-control input-text"
-                     placeholder="Àç·á°Ë»ö">
-                  <div id="buttong" class="input-group-append">
-                     <button id="ing" type="button" name="ingredient">
-                        <i id="icon" class="fa fa-search"></i>
-                     </button>
-                  </div>
-               </div>
-               
-         <c:if test="${empty memVO}">
-            <div align="center">
-                <div id="joi" onclick="goJoin()"><img src="images/top_join.gif" alt="È¸¿ø°¡ÀÔ"><br>È¸¿ø°¡ÀÔ</div>
-               <div id="login" onclick="gologin()"><img src="images/top_login.gif" alt="·Î±×ÀÎ"><br>·Î±×ÀÎ</div>
-            </div>
-         </c:if>
-         
-         <c:if test="${!empty memVO}">
-            <div  style="width: 100%;" align="right">
-               <div id="logo" onclick="goOut()"><img src="images/top_login.gif" alt="·Î±×¾Æ¿ô"><br>·Î±×¾Æ¿ô</div>
-            </div>
-         </c:if>
-         </div>
-            <nav id="nav">
-               <ul>
-                  <li><a id="sea" class="icon solid fa-search"
-                     href="/mealkit/keyword.do"><span>°Ë»ö</span></a></li>
-                  <li><a href="/mealkit/recipemain.do"
-                     class="icon fa-chart-bar"><span>·¹½ÃÇÇ</span></a></li>
-                  <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>¹ÐÅ°Æ®</span></a></li>
-                  <li><a class="icon solid fa-retweet"
-                     href="right-sidebar.html"><span>Áñ°ÜÃ£±â</span></a></li>
-                  <li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>°Ô½ÃÆÇ</span></a></li>
-               </ul>
-            </nav>
-         </div>
-      </section>
-
-      <!-- Features -->
+	<!-- Features -->
       <section id="features">
          <div class="container">
             <header>
                <h2>
-                  ¿À´Ã ÃßÃµ <strong>·¹½ÃÇÇ!!!</strong>!
+                  ì˜¤ëŠ˜ ì¶”ì²œ <strong>ë ˆì‹œí”¼!!!</strong>!
                </h2>
             </header>
             <div class="row aln-center">
@@ -108,14 +56,14 @@
                      <a class="no" href="#"><img class="im" src="images/p2.jpg"
                         alt="" width="300px" height="200px"></a>
                      <header>
-                        <h3>´ßººÀ½ÅÁ</h3>
+                        <h3>ë‹­ë³¶ìŒíƒ•</h3>
                      </header>
                      <p>
-                        <strong>Àç·á : </strong>´ß1.1kg,°¨ÀÚ1°³,¾çÆÄ1°³,´ç±Ù1/3°³,´ëÆÄ1/2´ë,È«°íÃß1°³,¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß¾à°£
+                        <strong>ìž¬ë£Œ : </strong>ë‹­1.1kg,ê°ìž1ê°œ,ì–‘íŒŒ1ê°œ,ë‹¹ê·¼1/3ê°œ,ëŒ€íŒŒ1/2ëŒ€,í™ê³ ì¶”1ê°œ,ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶”ì•½ê°„
                      </p>
                      <p>
-                        <strong>·¹½ÃÇÇ : </strong> 1.°¨ÀÚ,¾çÆÄ,´ç±Ù,´ëÆÄ,È«°íÃß Å­Á÷ÇÏ°Ô ½ä¾îÁØ´Ù.
-                        2.¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß ¾à°£ ³Ö°í ¾ç³äÀåÀ» ¸¸µé¾îÁØ´Ù.
+                        <strong>ë ˆì‹œí”¼ : </strong> 1.ê°ìž,ì–‘íŒŒ,ë‹¹ê·¼,ëŒ€íŒŒ,í™ê³ ì¶” í¼ì§í•˜ê²Œ ì°ì–´ì¤€ë‹¤.
+                        2.ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶” ì•½ê°„ ë„£ê³  ì–‘ë…ìž¥ì„ ë§Œë“¤ì–´ì¤€ë‹¤.
                      </p>
                   </section>
 
@@ -127,14 +75,14 @@
                      <a class="no" href="#"><img class="im" src="images/p1.jpg"
                         alt="" width="300px" height="200px" /></a>
                      <header>
-                        <h3>Á¦À°ººÀ½</h3>
+                        <h3>ì œìœ¡ë³¶ìŒ</h3>
                      </header>
                      <p>
-                        <strong>Àç·á : </strong>´ß1.1kg,°¨ÀÚ1°³,¾çÆÄ1°³,´ç±Ù1/3°³,´ëÆÄ1/2´ë,È«°íÃß1°³,¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß¾à°£
+                        <strong>ìž¬ë£Œ : </strong>ë‹­1.1kg,ê°ìž1ê°œ,ì–‘íŒŒ1ê°œ,ë‹¹ê·¼1/3ê°œ,ëŒ€íŒŒ1/2ëŒ€,í™ê³ ì¶”1ê°œ,ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶”ì•½ê°„
                      </p>
                      <p>
-                        <strong>·¹½ÃÇÇ : </strong> 1.°¨ÀÚ,¾çÆÄ,´ç±Ù,´ëÆÄ,È«°íÃß Å­Á÷ÇÏ°Ô ½ä¾îÁØ´Ù.
-                        2.¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß ¾à°£ ³Ö°í ¾ç³äÀåÀ» ¸¸µé¾îÁØ´Ù.
+                        <strong>ë ˆì‹œí”¼ : </strong> 1.ê°ìž,ì–‘íŒŒ,ë‹¹ê·¼,ëŒ€íŒŒ,í™ê³ ì¶” í¼ì§í•˜ê²Œ ì°ì–´ì¤€ë‹¤.
+                        2.ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶” ì•½ê°„ ë„£ê³  ì–‘ë…ìž¥ì„ ë§Œë“¤ì–´ì¤€ë‹¤.
                      </p>
                   </section>
 
@@ -146,21 +94,21 @@
                      <a class="no" href="#"><img class="im" src="images/p3.jpg"
                         alt="" width="300px" height="200px" /></a>
                      <header>
-                        <h3>ºÒ°í±â</h3>
+                        <h3>ë¶ˆê³ ê¸°</h3>
                      </header>
                      <p>
-                        <strong>Àç·á : </strong>´ß1.1kg,°¨ÀÚ1°³,¾çÆÄ1°³,´ç±Ù1/3°³,´ëÆÄ1/2´ë,È«°íÃß1°³,¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß¾à°£
+                        <strong>ìž¬ë£Œ : </strong>ë‹­1.1kg,ê°ìž1ê°œ,ì–‘íŒŒ1ê°œ,ë‹¹ê·¼1/3ê°œ,ëŒ€íŒŒ1/2ëŒ€,í™ê³ ì¶”1ê°œ,ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶”ì•½ê°„
                      </p>
                      <p>
-                        <strong>·¹½ÃÇÇ : </strong> 1.°¨ÀÚ,¾çÆÄ,´ç±Ù,´ëÆÄ,È«°íÃß Å­Á÷ÇÏ°Ô ½ä¾îÁØ´Ù.
-                        2.¼³ÅÁ2,°íÃå°¡·ç2,°íÃßÀå1,Ä«·¹°¡·ç1,°£Àå3,´ÙÁø¸¶´Ã1,ÈÄÃß ¾à°£ ³Ö°í ¾ç³äÀåÀ» ¸¸µé¾îÁØ´Ù.
+                        <strong>ë ˆì‹œí”¼ : </strong> 1.ê°ìž,ì–‘íŒŒ,ë‹¹ê·¼,ëŒ€íŒŒ,í™ê³ ì¶” í¼ì§í•˜ê²Œ ì°ì–´ì¤€ë‹¤.
+                        2.ì„¤íƒ•2,ê³ ì¶§ê°€ë£¨2,ê³ ì¶”ìž¥1,ì¹´ë ˆê°€ë£¨1,ê°„ìž¥3,ë‹¤ì§„ë§ˆëŠ˜1,í›„ì¶” ì•½ê°„ ë„£ê³  ì–‘ë…ìž¥ì„ ë§Œë“¤ì–´ì¤€ë‹¤.
                      </p>
                   </section>
 
                </div>
                <div class="col-12">
                   <ul class="actions">
-                     <li><a href="#" class="button icon solid fa-file">¸ÇÀ§·Î</a></li>
+                     <li><a href="#" class="button icon solid fa-file">ë§¨ìœ„ë¡œ</a></li>
                   </ul>
                </div>
             </div>

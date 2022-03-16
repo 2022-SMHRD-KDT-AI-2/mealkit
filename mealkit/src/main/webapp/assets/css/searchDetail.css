@@ -1,13 +1,5 @@
 @charset "EUC-KR";
 
-#logob {
-	position: relative;
-}
-
-.hamjung {
-	position: absolute;
-	left: 16%;
-}
 
 #inputdiv {
 	left: 45%;

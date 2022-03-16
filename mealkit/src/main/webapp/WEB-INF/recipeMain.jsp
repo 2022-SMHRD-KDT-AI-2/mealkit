@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE HTML>
@@ -18,146 +18,20 @@
 	href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 	integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
 	crossorigin="anonymous">
-
+<link rel="stylesheet" href="assets/css/recipeMain.css">
 
 <style>
-li {
-	list-style: none;
-}
 
-a {
-	text-decoration: none !important;
-}
-
-#logob {
-	position: relative;
-}
-
-.form-control {
-	border: 1px solid #f86146
-}
-
-.hamjung {
-	overflow: hidden;
-	position: absolute;
-	left: 16%;
-}
-
-#inputdiv {
-	left: 45%;
-	position: absolute;
-}
-
-#inputg {
-	height: 50px;
-	max-width: 400px;
-}
-
-#ing {
-	font-size: 8px;
-}
-
-#icon {
-	font-size: 18px;
-}
-
-.box {
-	width: 200px;
-	float: left;
-	margin: auto;
-	margin: 2%;
-	margin-left: 2%;
-}
-
-#main {
-	width: 1000px;
-	height: 800px;
-	margin: 0 auto;
-	position: relative;
-}
-
-.boxone {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-}
-
-.boxtwo {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-	top: 300px;
-}
-
-.boxthree {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-	top: 500px;
-	padding-bottom: 100px;
-}
-
-.contain {
-	height: 300px !important;
-}
-
-#page-wrapper {
-	margin: 0 auto;
-	height: 100%;
-	width: 100%;
-}
 </style>
 </head>
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 		<div class="searchbar"></div>
-
 		<!-- Header -->
-		<section id="header">
-			<div class="contain">
-			
-				<div id="logob">
-					<div class="hamjung">
-						<h1 id="logo">
-							<a href="index.html">«‘¡§ø‰∏Æ</a>
-						</h1>
-
-					</div>
-					<div id="inputdiv" class="input-group mb-3">
-						<input id="inputg" type="text" class="form-control input-text"
-							placeholder="¿Á∑·∞Àªˆ">
-						<div id="buttong" class="input-group-append">
-							<button id="ing" type="button" name="ingredient">
-								<i id="icon" class="fa fa-search"></i>
-							</button>
-						</div>
-
-					</div>
-
-				</div>
-			
-		
-
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a id="sea" class="icon solid fa-search"
-							href="left-sidebar.html"><span>∞Àªˆ</span></a></li>
-						<li><a href="#" class="icon fa-chart-bar" href="recipe.html"><span>∑πΩ√««</a></span>
-						</li> 
-						<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>π–≈∞∆Æ</span></a></li>
-						<li><a class="icon solid fa-retweet"
-							href="right-sidebar.html"><span>¡Ò∞‹√£±‚</span></a></li>
-						<li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>∞‘Ω√∆«</span></a></li>
-					</ul>
-				</nav>
-
-
-			</div>
-		</section>
+		<%@include file="/mainHeader.jsp" %>
 	</div>
 
-		<div id="main">
+	<div id="main">
 			<div class="zero"></div>
 			<div class="boxone">
 				<c:forEach begin="1" end="4">
@@ -166,7 +40,7 @@ a {
 							<img src="images/p1.jpg" width="200px">
 						</div>
 						<div calss="txt">
-							<h4>¡¶¿∞∫∫¿Ω1</h4>
+							<h4>Ï†úÏú°Î≥∂Ïùå1</h4>
 						</div>
 					</div>
 				</c:forEach>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE HTML>
@@ -129,12 +129,12 @@ a {
 				<div id="logob">
 					<div class="hamjung">
 						<h1 id="logo">
-							<a href="/mealkit/index.jsp">«‘¡§ø‰∏Æ</a>
+							<a href="/mealkit/index.jsp">Ìï®Ï†ïÏöîÎ¶¨</a>
 						</h1>
 					</div>
 					<div id="inputdiv" class="input-group mb-3">
 						<input id="inputg" type="text" class="form-control input-text"
-							placeholder="¿Á∑·∞Àªˆ">
+							placeholder="Ïû¨Î£åÍ≤ÄÏÉâ">
 						<div id="buttong" class="input-group-append">
 							<button id="ing" type="button" name="ingredient">
 								<i id="icon" class="fa fa-search"></i>
@@ -148,28 +148,17 @@ a {
 		
 
 				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a id="sea" class="icon solid fa-search"
-							href="/mealkit/keyword.do"><span>∞Àªˆ</span></a></li>
-						<li><a href="#" class="icon fa-chart-bar" href="recipe.html"><span>∑πΩ√««</a></span>
-						</li> 
-						<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>π–≈∞∆Æ</span></a></li>
-						<li><a class="icon solid fa-retweet"
-							href="right-sidebar.html"><span>¡Ò∞‹√£±‚</span></a></li>
-						<li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>∞‘Ω√∆«</span></a></li>
-					</ul>
-				</nav>
+				<%@ include file="/menubar.jsp" %>
 
 
 			</div>
 		</section>
 	</div>
 		<c:if test="${empty flist}">
-			<button class="btn btn-primary" onclick="favorite(${r_seq})">¡Ò∞‹√£±‚</button>
+			<button class="btn btn-primary" onclick="favorite(${r_seq})">Ï¶êÍ≤®Ï∞æÍ∏∞</button>
 		</c:if>
 		<c:if test="${!empty flist}">
-			<button class="btn btn-primary" onclick="#">¡Ò∞‹√£±‚ ªË¡¶</button>
+			<button class="btn btn-primary" onclick="#">Ï¶êÍ≤®Ï∞æÍ∏∞ ÏÇ≠Ï†ú</button>
 		</c:if>
 		<div id="main">
 			<div class="zero"></div>

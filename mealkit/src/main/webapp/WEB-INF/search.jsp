@@ -90,45 +90,40 @@
 
 </head>
 <body>
-   
    <!-- Header -->
-   <section id="header">
-      <div class="hamjung">
-         <br>
-         <h1 id="logo">
-            <a href="index.jsp">함정요리</a>
-         </h1>
-      </div>
-   </section>
+	<%@ include file="/mainHeader.jsp"%>
+	<section id="body">
+		<div class="container">
+			<ul class="nav nav-tabs" id="ulid">
+				<c:forEach var="v" items="${listSuper}">
+					<li><a class="" data-toggle="tab"
+						href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
+				</c:forEach>
+			</ul>
 
-   <div class="container">
-      <ul class="nav nav-tabs" id="ulid">
-         <c:forEach var="v" items="${listSuper}">
-            <li><a data-toggle="tab" href="${shap}${v.k_super_seq}">${v.k_super_name}</a></li>
-         </c:forEach>
-      </ul>
-      
-      <form action="/mealkit/search.do" id = "form">
-         <div class="tab-content">
-            <c:forEach var="i" begin="1000" end="13000" step="1000">
-               <div id="${i}" class="tab-pane fade">
-                  <c:forEach var="v" items="${list}">
-                     <c:if test="${v.k_super_seq == i}">
-                        <div class="searchdiv"><li><input class="kname" type="checkbox" name="${v.k_name}" value='1'
-                           />${v.k_name}</li></div>
-                     </c:if>
-                  </c:forEach>
-               </div>
-            </c:forEach>
-         </div>
-         <button type="button" class="btn" onclick="aa()">검색</button>
-      </form>
-   </div>
-   
-   
-   <div class="list-group">
-      
-   </div>
-   
+			<form action="/mealkit/search.do" id="form">
+				<div class="tab-content">
+					<c:forEach var="i" begin="1000" end="13000" step="1000">
+						<div id="${i}" class="tab-pane fade">
+							<c:forEach var="v" items="${list}">
+								<c:if test="${v.k_super_seq == i}">
+									<div class="searchdiv">
+										<li><input class="kname" type="checkbox"
+											name="${v.k_name}" value='1' />${v.k_name}</li>
+									</div>
+								</c:if>
+							</c:forEach>
+						</div>
+					</c:forEach>
+				</div>
+				<button type="button" class="btn" onclick="aa()">검색</button>
+			</form>
+			
+			<div class="list-group">
+			
+			</div>
+		</div>
+	</section>
+
 </body>
 </html>
