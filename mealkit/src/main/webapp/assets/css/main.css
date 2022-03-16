@@ -212,12 +212,12 @@ input::-moz-focus-inner {
 }
 
 .contain{
-	position:relative;
-	margin: 0 auto;
-	max-width: 100%;
-	width: 70em;
-	height:300px;
-padding-top:140px;
+   position:relative;
+   margin: 0 auto;
+   max-width: 100%;
+   width: 70em;
+   height:180px;
+   padding-top:50px;
 }
 
 .meatc{
@@ -2153,12 +2153,12 @@ overflow: hidden;
 /* Features */
 
 	#features {
-		position: relative;
-		overflow: hidden;
-		background: #fff;
-		text-align: center;
-		padding: 6em 0;
-	}
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      text-align: center;
+      padding: 1em 0;
+   }
 
 		#features p {
 			text-align: center;
@@ -2778,3 +2778,5 @@ overflow: hidden;
 
 	}
 		/* index*/
+		
+		

@@ -16,6 +16,10 @@
 		select * from t_favorite where m_id in(#{m_id}) and r_seq in(#{r_seq})
 	</select>
 	
+	<select id="selectMaterial" resultType="mealkit.entity.MaterialVO">
+		select * from t_material where r_seq in(#{r_seq})
+	</select>
+	
 	<insert id="insertRecipe" parameterType="mealkit.entity.RecipeVO">
 		insert into t_recipe(r_seq, r_name, r_content, m_id, r_date)
 		values(#{r_seq}, #{r_name}, #{r_content}, #{m_id}, SYSDATE)
