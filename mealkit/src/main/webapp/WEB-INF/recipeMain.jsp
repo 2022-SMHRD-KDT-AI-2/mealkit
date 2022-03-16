@@ -49,23 +49,25 @@ $(function(){
 </script>
 </head>
 <body class="homepage is-preload">
-   <div id="page-wrapper">
-      <div class="searchbar"></div>
-      <!-- Header -->
-      <%@include file="/mainHeader.jsp" %>
-   </div>
-
-   
-   <div class="list-group">
-         
-   </div>
-   
-
-   
+	<div id="page-wrapper">
+		<div class="searchbar"></div>
+		<!-- Header -->
+		<%@include file="/mainHeader.jsp"%>
+	</div>
 
 
+	<div class="list-group"></div>
 
-      <!-- Scripts -->
+	<c:if test="${empty memVO}">
+		123
+	</c:if>
+
+
+
+
+
+
+	<!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
       <script src="assets/js/browser.min.js"></script>
