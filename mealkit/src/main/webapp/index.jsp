@@ -17,7 +17,6 @@
    href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
    crossorigin="anonymous">
-   <link rel="stylesheet" href="assets/css/index.css">
 
 <script type="text/javascript">
    function goOut() {
@@ -31,7 +30,6 @@
    }
 </script>
 <style>
-
 
 </style>
 
@@ -48,10 +46,11 @@
                   오늘 추천 <strong>레시피!!!</strong>!
                </h2>
             </header>
-            <div class="row aln-center">
+            <div id="hidden" class="row aln-center">
                <div class="col-4 col-6-medium col-12-small">
 
                   <!-- Feature -->
+         
                   <section>
                      <a class="no" href="#"><img class="im" src="images/p2.jpg"
                         alt="" width="300px" height="200px"></a>
@@ -103,9 +102,18 @@
                         <strong>레시피 : </strong> 1.감자,양파,당근,대파,홍고추 큼직하게 썰어준다.
                         2.설탕2,고춧가루2,고추장1,카레가루1,간장3,다진마늘1,후추 약간 넣고 양념장을 만들어준다.
                      </p>
-                  </section>
-
+      
+                  </section>         
+                  <div class="dir">
+                  <div class="prebar">
+                  <a href="#" class="prev">&lang;</a>
+                  </div>
+                                 <div class="nextbar">
+             <a href="#" class="next">&rang;</a>
+             </div>
+             </div>
                </div>
+  
                <div class="col-12">
                   <ul class="actions">
                      <li><a href="#" class="button icon solid fa-file">맨위로</a></li>
@@ -114,9 +122,9 @@
             </div>
          </div>
       </section>
+      
    </div>
    
-
 
 
 

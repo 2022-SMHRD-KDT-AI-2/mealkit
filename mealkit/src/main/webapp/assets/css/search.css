@@ -1,29 +1,41 @@
 @charset "EUC-KR";
-
-
-#ulid>div:nth-child(2):hover {
-	background-color: red;
-	transition: 1.4s;
+#header {
+	position: relative;
 }
 
-#ulid>div:nth-child(3):hover {
-	background-color: blue;
-	transition: 1.4s;
-}
-
-#ulid>div:nth-child(4):hover {
-	background-color: black;
-	transition: 1.4s;
-}
-
-#ulid>div:nth-child(4):hover {
-	background-color: black;
-	transition: 1.4s;
+#ulid li {
+	margin-top: 50px;
+	padding-left: 70px;
+	font-size: 18px;
 }
 
 
 
+.container {
+	margin: 0 auto;
+	width: 1300px;
+	height: 100%;
+}
 
+.sideme {
+	font-size: 20px;
+	width: 200px;
+	height: 100px;
+	float: left;
+	position: relative;
+}
+
+
+
+#search {
+	margin-left: 45%;
+	position: absolute;
+}
+
+#menu1 div {
+	float: left;
+	padding: 40px;
+}
 
 #ulid tab-content {
 	color: blue;
@@ -39,3 +51,7 @@ div {font-size: "30px";
 	
 }
 
+.searchdiv {
+	float: left;
+	width: 140px;
+}
