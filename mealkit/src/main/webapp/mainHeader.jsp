@@ -12,7 +12,6 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="assets/css/index.css">
 
 <script type="text/javascript">
    function goOut() {
@@ -26,12 +25,14 @@
    }
 </script>
 
-
+<style>
+	
+</style>
 </head>
-<body class="homepage is-preload">
+<body>
 	<section id="header">
 		<div class="contain">
-			<div id="logob">
+			<div id="header">
 				<div class="hamjung">
 					<h1 id="logo">
 						<a href="index.jsp">함정요리</a>
@@ -39,19 +40,19 @@
 				</div>
 
 				<c:if test="${empty memVO}">
-					<div align="center">
-						<div id="joi" onclick="goJoin()">
+					<div style="background-color:black;">
+						<div id="join" onclick="goJoin()" style="float: right;">
 							<img src="images/top_join.gif" alt="회원가입"><br>회원가입
 						</div>
-						<div id="login" onclick="gologin()">
+						<div id="login" onclick="gologin()" style="float: right;">
 							<img src="images/top_login.gif" alt="로그인"><br>로그인
 						</div>
 					</div>
 				</c:if>
 
 				<c:if test="${!empty memVO}">
-					<div style="width: 100%;" align="right">
-						<div id="logo" onclick="goOut()">
+					<div>
+						<div id="logo" onclick="goOut()" style="float: right;">
 							<img src="images/top_login.gif" alt="로그아웃"><br>로그아웃
 						</div>
 					</div>

@@ -29,9 +29,6 @@
       location.href="/mealkit/memberinsertform.do"
    }
 </script>
-<style>
-
-</style>
 
 </head>
 <body class="homepage is-preload">
