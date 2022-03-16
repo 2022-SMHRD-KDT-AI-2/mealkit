@@ -21,91 +21,7 @@
 
 
 <style>
-li {
-	list-style: none;
-}
 
-a {
-	text-decoration: none !important;
-}
-
-#logob {
-	position: relative;
-}
-
-.form-control {
-	border: 1px solid #f86146
-}
-
-.hamjung {
-	overflow: hidden;
-	position: absolute;
-	left: 16%;
-}
-
-#inputdiv {
-	left: 45%;
-	position: absolute;
-}
-
-#inputg {
-	height: 50px;
-	max-width: 400px;
-}
-
-#ing {
-	font-size: 8px;
-}
-
-#icon {
-	font-size: 18px;
-}
-
-.box {
-	width: 200px;
-	float: left;
-	margin: auto;
-	margin: 2%;
-	margin-left: 2%;
-}
-
-#main {
-	width: 1000px;
-	height: 800px;
-	margin: 0 auto;
-	position: relative;
-}
-
-.boxone {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-}
-
-.boxtwo {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-	top: 300px;
-}
-
-.boxthree {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-	top: 500px;
-	padding-bottom: 100px;
-}
-
-.contain {
-	height: 300px !important;
-}
-
-#page-wrapper {
-	margin: 0 auto;
-	height: 100%;
-	width: 100%;
-}
 </style>
 
 <script type="text/javascript">
@@ -118,76 +34,33 @@ a {
 
 
 </head>
-<body class="homepage is-preload">
-	<div id="page-wrapper">
-		<div class="searchbar"></div>
+<body>
+	<%@include file="/mainHeader.jsp" %>
+	<c:if test="${empty flist}">
 
-		<!-- Header -->
-		<section id="header">
-			<div class="contain">
-			
-				<div id="logob">
-					<div class="hamjung">
-						<h1 id="logo">
-							<a href="/mealkit/index.jsp">함정요리</a>
-						</h1>
-					</div>
-					<div id="inputdiv" class="input-group mb-3">
-						<input id="inputg" type="text" class="form-control input-text"
-							placeholder="재료검색">
-						<div id="buttong" class="input-group-append">
-							<button id="ing" type="button" name="ingredient">
-								<i id="icon" class="fa fa-search"></i>
-							</button>
-						</div>
+		<button class="btn btn-primary" onclick="favorite(${r_seq})" style="position:relative; left:40%;">즐겨찾기</button>
 
-					</div>
+	</c:if>
+	<c:if test="${!empty flist}">
 
-				</div>
-			
-		
+		<button class="btn btn-primary" onclick="#" style="position:relative; left:40%;">즐겨찾기 삭제</button>
 
-				<!-- Nav -->
-				<%@ include file="/menubar.jsp" %>
+	</c:if>
 
 
+	<div class="card" style="width: 40rem; position:absolute; left:40%;">
+		<a href="#"> <img src="images/p1.jpg" width="400px"
+			class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">${r_name}</h5>
+				<p class="card-text">${r_content}</p>
 			</div>
-		</section>
+		</a>
 	</div>
-		<c:if test="${empty flist}">
-			<button class="btn btn-primary" onclick="favorite(${r_seq})">즐겨찾기</button>
-		</c:if>
-		<c:if test="${!empty flist}">
-			<button class="btn btn-primary" onclick="#">즐겨찾기 삭제</button>
-		</c:if>
-		<div id="main">
-			<div class="zero"></div>
-			<div class="boxone">
-				<div class="box">
-					<div class="img">
-						<img src="images/p1.jpg" width="200px">
-					</div>
-					<div calss="txt">
-						<h4>${r_seq}</h4>
-					</div>
-					<div calss="txt">
-						<h4>${r_name}</h4>
-					</div>
-					<div calss="txt">
-						<h4>${r_content}</h4>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+
+
 </body>
 </html>

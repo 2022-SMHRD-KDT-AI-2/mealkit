@@ -18,7 +18,6 @@
    href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
    crossorigin="anonymous">
-<link rel="stylesheet" href="assets/css/recipeMain.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script type="text/javascript">
@@ -34,7 +33,6 @@ $(function(){
           contentType: 'application/json',
           data: jsonData,
         success : function(data){
-           alert(data);
            $(".list-group").html("");
             for(let i = 0; i < Object.keys(data).length; i++){
                $(".list-group").append("<div class='container'><a href='/mealkit/searchdetail.do?r_seq="+Object.values(data)[i][0]+"' class='list-group-item'><div id='search_data'><table id='table1' border='1'><tr><td>"+Object.values(data)[i][1]+"</a></div></table></div></td></tr><tr><td>"+Object.values(data)[i][2]+"</td></tr>");
@@ -59,7 +57,17 @@ $(function(){
 	<div class="list-group"></div>
 
 	<c:if test="${empty memVO}">
-		123
+		<div class='container'>
+			<table id='table1' border='1'>
+				<tr>
+					<td>로그인해주세요</td>
+				</tr>
+				<tr>
+					<td>로그인해주세요</td>
+				</tr>
+			</table>
+		</div>
+		
 	</c:if>
 
 
