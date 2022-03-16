@@ -19,10 +19,34 @@
 	integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/recipeMain.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<style>
+<script type="text/javascript">
 
-</style>
+let Item1 = new Object();
+Item1.id = '<c:out value="${memVO.getM_id()}"/>';
+var jsonData = JSON.stringify(Item1);
+
+$(function(){
+    $.ajax({
+       	url : "http://220.95.45.213:8083/star",
+       	type : "post",
+       	contentType: 'application/json',
+       	data: jsonData,
+        success : function(data){
+        	alert(data);
+        	$(".list-group").html("");
+            for(let i = 0; i < Object.keys(data).length; i++){
+               $(".list-group").append("<div class='container'><a href='/mealkit/searchdetail.do?r_seq="+Object.values(data)[i][0]+"' class='list-group-item'><div id='search_data'><table id='table1' border='1'><tr><td>"+Object.values(data)[i][1]+"</a></div></table></div></td></tr><tr><td>"+Object.values(data)[i][2]+"</td></tr>");
+               
+            }
+        },
+        error : function(){
+            alert("erro입니다!");
+        }
+    });
+})
+</script>
 </head>
 <body class="homepage is-preload">
 	<div id="page-wrapper">
@@ -31,21 +55,13 @@
 		<%@include file="/mainHeader.jsp" %>
 	</div>
 
-	<div id="main">
-			<div class="zero"></div>
-			<div class="boxone">
-				<c:forEach begin="1" end="4">
-					<div class="box">
-						<div class="img">
-							<img src="images/p1.jpg" width="200px">
-						</div>
-						<div calss="txt">
-							<h4>제육볶음1</h4>
-						</div>
-					</div>
-				</c:forEach>
-			</div>
-		</div>
+	
+	<div class="list-group">
+			
+	</div>
+	
+
+	
 
 
 

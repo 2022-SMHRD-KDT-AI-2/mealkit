@@ -13,9 +13,11 @@ alter table t_material modify mat_weight varchar2(20);
 
 delete from t_material;
 
+alter sequence t_
+
 alter table t_material drop constraint SYS_C0033570;
 
-select * from t_material;
+select * from t_material where r_seq = 19;
 
 delete from t_keyword;
 
