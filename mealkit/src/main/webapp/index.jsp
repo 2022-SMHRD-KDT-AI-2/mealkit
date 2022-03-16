@@ -45,7 +45,7 @@
          <div class="container">
             <header>
                <h2>
-                  오늘 추천 <strong>레시피!!!</strong>!
+                  오늘 추천 <strong>레시피!!!!</strong>
                </h2>
             </header>
             <div class="row aln-center">
