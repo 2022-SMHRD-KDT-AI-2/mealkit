@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+
+#inputdiv {
+	left: 45%;
+	position: absolute;
+}
+
+#inputg {
+	height: 50px;
+	max-width: 400px;
+}
+
+#login{
+left:8%;
+position:relative;
+height:30px;
+float:right;
+
+}
+
+#joi{
+left:10%;
+position:relative;
+height:30px;
+float:right;
+
+
+}
+#mem{
+left:12%;
+position:relative;
+height:30px;
+float:right;
+
+
+}
+#logo{
+position:relative;
+height:30px;
+float:right;
+}
+#logi,#joi, #mem:hover{
+   cursor: pointer;
+}
+

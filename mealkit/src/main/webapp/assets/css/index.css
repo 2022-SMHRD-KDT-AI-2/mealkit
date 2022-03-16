@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+#logob {
+	position: relative;
+}
+
+.form-control {
+	border: 1px solid #f86146
+}
+
+#inputdiv {
+	left: 45%;
+	position: absolute;
+}
+
+#inputg {
+	height: 50px;
+	max-width: 400px;
+}
+
+#ing {
+	font-size: 8px;
+}
+
+#icon {
+	font-size: 18px;
+}
+.pull{
+	width: 100%;
+}
+
+#login{
+left:8%;
+position:relative;
+height:30px;
+float:right;
+
+}
+
+#joi{
+left:10%;
+position:relative;
+height:30px;
+float:right;
+
+
+}
+#mem{
+left:12%;
+position:relative;
+height:30px;
+float:right;
+
+
+}
+#logo{
+position:relative;
+height:30px;
+float:right;
+}
+#logi,#joi, #mem:hover{
+   cursor: pointer;
+}
+
