@@ -1,7 +1,9 @@
-@charset "EUC-KR";
-#header {
-	position: relative;
-}
+@charset "utf-8";
+
+
+#ulid>div:nth-child(2):hover {
+	background-color: red;
+	transition: 1.4s;}
 
 #ulid li {
 	margin-top: 50px;
