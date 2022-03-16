@@ -7,6 +7,13 @@
 	<name>mealkit Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+	
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.5.7</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -47,9 +54,6 @@
 			<artifactId>tomcat-servlet-api</artifactId>
 			<version>8.5.75</version>
 		</dependency>
-
-
-
 	</dependencies>
 	<build>
 		<finalName>mealkit</finalName>
