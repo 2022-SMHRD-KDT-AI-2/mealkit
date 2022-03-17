@@ -14,10 +14,12 @@ alter table t_material modify mat_weight varchar2(20);
 delete from t_material;
 
 alter table t_material drop constraint SYS_C0033570;
-
+select * from t_recipe where r_seq in(1);
 select * from t_material;
-
+select * from t_mealkit;
 delete from t_keyword;
+delete from t_mealkit where ml_seq = 2;
+alter table t_mealkit modify ml_name varchar2(100);
 
 select * from t_material;
 

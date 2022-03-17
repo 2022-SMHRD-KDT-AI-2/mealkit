@@ -48,7 +48,7 @@
 	</c:if>
 
 
-	<div class="card" style="width: 40rem; position:absolute; left:40%;">
+	<div class="card" style="width: 40rem; position:relative; left:40%;">
 		<a href="#"> <img src="images/p1.jpg" width="400px"
 			class="card-img-top" alt="...">
 			<div class="card-body">
@@ -56,6 +56,16 @@
 				<p class="card-text">${r_content}</p>
 			</div>
 		</a>
+	</div>
+	
+
+	<div class="card" style="width: 18rem; position:relative; left:40%;">
+		<div class="card-header">재료</div>
+		<ul class="list-group list-group-flush">
+			<c:forEach var="list" items="${mlist}">
+				<li class="list-group-item">${list.mat_name }</li>
+			</c:forEach>
+		</ul>
 	</div>
 
 

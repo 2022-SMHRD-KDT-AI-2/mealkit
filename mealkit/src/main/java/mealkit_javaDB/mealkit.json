@@ -1,0 +1,752 @@
+{
+    "Sheet1":[
+     {
+      "id": 1,
+      "meal_name": "[마이셰프] 밀푀유나베(2인)",
+      "meal_material": [
+        {"r_name":"소고기"},
+        {"r_name": "알배기배추"},
+        {"r_name":"깻잎"},
+          {"r_name":"팽이버섯"},
+        {"r_name":"청경채"},
+          {"r_name":"표고버섯"},
+          {"r_name":"육수"},
+          {"r_name":"칼국수"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000559",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/03\/15\/1000000559\/1000000559_add2_098.jpg"
+     },
+     {
+      "id": 2,
+      "meal_name": "[마이셰프] 감바스알아히요(2인)",
+      "meal_material": [
+        {"r_name":"바게트"},
+        {"r_name":"탈각새우"},
+        {"r_name":"올리브유"},
+        {"r_name":"문어"},
+        {"r_name":"마늘"},
+        {"r_name":"방울토마토"}   
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000559",
+      "addr_source": ""
+     },
+     {
+      "id": 3,
+      "meal_name": "[마이셰프] 찹스테이크(2인)",
+      "meal_material": [
+        {"r_name":"소고기"},
+        {"r_name": "파프리카"},
+        {"r_name":"브로콜리"},
+          {"r_name":"마늘"},
+        {"r_name":"파인애플"},
+          {"r_name":"올리브유"}     
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000822",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/10\/39\/1000000822\/1000000822_add2_023.jpg"
+     },
+     {
+      "id": 4,
+      "meal_name": "[마이셰프] 일품소고기 고추잡채 꽃빵(2인)",
+      "meal_material": [
+        {"r_name":"꽃빵"},
+        {"r_name": "소고기"},
+        {"r_name":"양파"},
+          {"r_name":"홍파프리카"},
+        {"r_name":"청피망"},
+          {"r_name":"표고버섯"},
+          {"r_name":"죽순"},
+          {"r_name":"고추기름"},
+         {"r_name":"소스"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001070",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/11\/47\/1000001070\/1000001070_add2_073.jpg"
+     },
+     {
+      "id": 5,
+      "meal_name": "[마이셰프] 양장피(2인)",
+      "meal_material": [
+        {"r_name":"돼지고기"},
+        {"r_name": "새우"},
+        {"r_name":"오징어"},
+          {"r_name":"크래미"},
+        {"r_name":"지단"},
+          {"r_name":"양장피"},
+          {"r_name":"면"},
+          {"r_name":"볶음소스"},
+          {"r_name":"참기름"},
+          {"r_name":"겨자소스"},
+          {"r_name":"표고버섯"},
+          {"r_name":"양파"},
+          {"r_name":"당근"},
+          {"r_name":"청피망"},
+          {"r_name":"홍파프리카"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000555",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/03\/04\/1000000555\/1000000555_add2_061.jpg"
+     },
+     {
+      "id": 6,
+      "meal_name": "[마이셰프] 월남쌈(2인)",
+      "meal_material": [
+        {"r_name":"파프리카"},
+        {"r_name": "적양배추"},
+        {"r_name":"모둠새싹"},
+          {"r_name":"양파"},
+         {"r_name":"당근"},
+         {"r_name":"파인애플"},
+          {"r_name":"방울토마토"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000025",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/14\/06\/02\/1000000025\/1000000025_add2_053.jpg"
+     },
+     {
+      "id":7 ,
+      "meal_name": "[마이셰프] 인생 닭갈비(2인)",
+      "meal_material": [
+        {"r_name":"닭양념육"},
+        {"r_name": "떡볶이떡"},
+        {"r_name":"깻잎"},
+          {"r_name":"양배추"},
+        {"r_name":"대파"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001231",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/11\/48\/1000001231\/1000001231_add2_065.jpg"
+     },
+     {
+      "id": 8,
+      "meal_name": "[마이셰프] 하우스비프스테이크(2인)",
+      "meal_material": [
+        {"r_name":"소고기"},
+        {"r_name": "적양파"},
+        {"r_name":"방울토마토"},
+          {"r_name":"브로콜리"},
+        {"r_name":"마늘"},
+          {"r_name":"소스"},
+          {"r_name":"올리브오일"},
+          {"r_name":"시즈닝"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001153",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/18\/10\/44\/1000001153\/1000001153_add2_041.jpg"
+     },
+     {
+      "id": 9,
+      "meal_name": "[마이셰프] 마라 밀푀유(2인)",
+      "meal_material": [
+        {"r_name":"소고기"},
+        {"r_name": "마라소스"},
+        {"r_name":"알배기배추"},
+          {"r_name":"깻잎"},
+        {"r_name":"청경채"},
+          {"r_name":"표고버섯"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001183",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/03\/13\/1000001183\/1000001183_add2_028.jpg"
+     },
+     {
+      "id": 10,
+      "meal_name": "[마이셰프] 훈제오리무쌈(2인)",
+      "meal_material": [
+        {"r_name":"훈제오리"},
+        {"r_name": "홍파프리카"},
+        {"r_name":"황파프리카"},
+          {"r_name":"오이"},
+        {"r_name":"쌈무"},
+          {"r_name":"허니"},
+          {"r_name":"머스터드 드레싱"}
+        ],
+      "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000769",
+      "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/09\/36\/1000000769\/1000000769_add2_060.jpg"
+     },
+     {
+        "id": 11,
+        "meal_name": "[마이셰프] 베이컨야채말이(12ea)",
+        "meal_material": [
+          { "r_name": "베이컨" },
+          { "r_name": "파프리카" },
+          { "r_name": "청피망" },
+          { "r_name": "머스타드" }
+        ],
+        "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000559",
+        "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/03\/28\/1000000569\/1000000569_add2_052.jpg"
+      },
+      {
+          "id": 12,
+          "meal_name": "[마이셰프] 쉬림프로제파스타(2인)",
+          "meal_material": [
+            { "r_name": "로제소스" },
+            { "r_name": "양파" },
+            { "r_name": "마늘" },
+            { "r_name": "파마산 치즈" },
+            { "r_name": "스파게티" },
+            { "r_name": "새우" },
+            { "r_name": "건고추" },
+            { "r_name": "올리브오일" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001230",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/11\/48\/1000001230\/1000001230_add2_066.jpg"
+        },
+   {
+          "id": 13,
+          "meal_name": "[마이셰프] 르네 프렌치스테이크(2인)",
+          "meal_material": [
+            { "r_name": "소고기" },
+            { "r_name": "쥬키니호박" },
+            { "r_name": "방울토마토" },
+            { "r_name": "엄지 새송이버섯" },
+            { "r_name": "버터" },
+            { "r_name": "올리브오일" },
+            { "r_name": "시즈닝" },
+            { "r_name": "소스" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001254",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/03\/13\/1000001254\/1000001254_add2_044.jpg"
+        },
+        {
+          "id": 14,
+          "meal_name": "[마이셰프] 한우소고기미역국(2인)",
+          "meal_material": [
+            { "r_name": "미역" },
+            { "r_name": "한우" },
+            { "r_name": "마늘" },
+            { "r_name": "참기름" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000101",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/14\/06\/16\/1000000101\/1000000101_add2_04.jpg"
+        },
+      {
+          "id": 15,
+          "meal_name": "[마이셰프] 볼케이노나베(2인)",
+          "meal_material": [
+            { "r_name": "소고기" },
+            { "r_name": "숙주나물" },
+            { "r_name": "건고추" },
+            { "r_name": "우동 면" },
+            { "r_name": "대파" },
+            { "r_name": "간장 소스" },
+            { "r_name": "미소 된장" },
+            { "r_name": "사골 육수" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001154",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/18\/11\/44\/1000001154\/1000001154_add2_018.jpg"
+        },
+   {
+          "id": 16,
+          "meal_name": "[마이셰프] UFO 부디찌개(2인)",
+          "meal_material": [
+            { "r_name": "훈제 슬라이스 햄" },
+            { "r_name": "숙주나물" },
+            { "r_name": "디파채" },
+            { "r_name": "양파" },
+            { "r_name": "슬라이스 치즈" },
+            { "r_name": "라면사리" },
+            { "r_name": "순살 햄2종" },
+            { "r_name": "소스" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001228",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/11\/48\/1000001228\/1000001228_add2_091.jpg"
+        },
+      {
+          "id": 17,
+          "meal_name": "[마이셰프] 궁중소불고기(2인)",
+          "meal_material": [
+            { "r_name": "소고기" },
+            { "r_name": "양파" },
+            { "r_name": "대파" },
+            { "r_name": "당근" },
+            { "r_name": "청양고추" },
+            { "r_name": "홍 청양고추" },
+            { "r_name": "팽이버섯" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000057",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/14\/06\/03\/1000000057\/1000000057_add2_049.jpg"
+        },
+       {
+          "id": 18,
+          "meal_name": "[마이셰프] 냄비가득 5분 모둠 부대찌개(2인)",
+          "meal_material": [
+            { "r_name": "모둠 햄" },
+            { "r_name": "양념" },
+            { "r_name": "체다 치즈" },
+            { "r_name": "대파" },
+            { "r_name": "라면사리" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001243",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/01\/03\/1000001243\/1000001243_add2_072.jpg"
+        },
+     {
+          "id": 19,
+          "meal_name": "[마이셰프] 고기듬뿍 토마토 파스타(2인)",
+          "meal_material": [
+            { "r_name": "소고기" },
+            { "r_name": "마늘" },
+            { "r_name": "스파게티" },
+            { "r_name": "파마산 치즈가루" },
+            { "r_name": "오일" },
+            { "r_name": "건고추" },
+            { "r_name": "소스" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001229",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/11\/48\/1000001229\/1000001229_add2_084.jpg"
+        },
+     {
+          "id": 20,
+          "meal_name": "[마이셰프] 바삭 코코넛 쉬림프(1인)",
+          "meal_material": [
+            { "r_name": "코코넛 쉬림프" },
+            { "r_name": "칠리소스" }
+          ],
+          "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001281",
+          "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001281\/1000001281_add2_060.jpg"
+        },
+        {
+            "id": 21,
+            "meal_name": "[마이셰프] 두툼 우리쌀 치즈 돈까스(1인)",
+            "meal_material": [
+              {"r_name":"치즈돈까스"},
+              {"r_name": "소스"},
+              {"r_name":"꼬마당근"},
+              {"r_name":"브로콜리"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001279",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001279\/1000001279_add2_080.jpg"
+           },
+           {
+            "id": 22,
+            "meal_name": "[마이셰프] 마라탕(2인)",
+            "meal_material": [
+              {"r_name":"소고기"},
+              {"r_name": "건 목이버섯"},
+              {"r_name":"육수 농축액"},
+              {"r_name":"마라 소스"},
+              {"r_name":"느타리버섯"},
+              {"r_name": "푸주"},
+              {"r_name":"청경채"},
+              {"r_name":"대파"},
+              {"r_name":"옥수수 면"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001216",
+            "addr_source": "ttps:\/\/www.mychef.kr\/data\/goods\/19\/10\/41\/1000001216\/1000001216_add2_031.jpg"
+           },
+           {
+            "id": 23,
+            "meal_name": "[마이셰프] 뜨끈한 쌀국수(1인)",
+            "meal_material": [
+              {"r_name":"돼지고기"},
+              {"r_name": "숙주나물"},
+              {"r_name":"쌀국수"},
+              {"r_name":"농축 육수"},
+              {"r_name":"쪽파"},
+              {"r_name": "홍 청양고추"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001248",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/03\/12\/1000001248\/1000001248_add2_056.jpg"
+           },
+           {
+            "id": 24,
+            "meal_name": "[마이셰프] 직화 불고기 떡볶이(3인)",
+            "meal_material": [
+              {"r_name":"떡볶이 소스"},
+              {"r_name": "양배추"},
+              {"r_name":"대파"},
+              {"r_name":"떡볶이 떡"},
+              {"r_name":"어묵"},
+              {"r_name": "직화 불고기"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001534",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/11\/46\/1000001534\/1000001534_add2_056.jpg"
+           },
+           {
+            "id": 25,
+            "meal_name": "[마이셰프] 로열크리미 스테이크(1인)",
+            "meal_material": [
+              {"r_name":"소고기"},
+              {"r_name": "마늘종"},
+              {"r_name":"미니 파프리카"},
+              {"r_name":"소스"},
+              {"r_name":"시즈닝"},
+              {"r_name": "매쉬 포테이토 가루"},
+              {"r_name": "올리브오일"},
+              {"r_name": "파마산치즈가루"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001253",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/03\/13\/1000001253\/1000001253_add2_064.jpg"
+           },
+           {
+            "id": 26,
+            "meal_name": "[마이셰프] 고기가득 마파두부(2인)",
+            "meal_material": [
+              {"r_name":"돼지고기"},
+              {"r_name": "전분"},
+              {"r_name":"연두부"},
+              {"r_name":"당근"},
+              {"r_name":"홍 청양고추"},
+              {"r_name": "마늘"},
+              {"r_name": "양파"},
+              {"r_name": "대파"},
+              {"r_name": "고추기름"},
+              {"r_name": "참기름"},
+              {"r_name": "소스"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001209",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/06\/25\/1000001209\/1000001209_add2_084.jpg"
+           },
+           {
+            "id": 27,
+            "meal_name": "[마이셰프] 냄비가득 5분 가쓰오 어묵우동(2인)",
+            "meal_material": [
+              {"r_name":"우동면"},
+              {"r_name": "어묵"},
+              {"r_name":"대파"},
+              {"r_name":"홍 청양고추"},
+              {"r_name":"농축육수"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001241",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/01\/03\/1000001241\/1000001241_add2_032.jpg"
+           },
+           {
+            "id": 28,
+            "meal_name": "[마이셰프] 모짜렐라 뿌링뿌링 치즈볼(1인)",
+            "meal_material": [
+              {"r_name":"치즈볼"},
+              {"r_name": "뿌링뿌링 시즈닝"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001284",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001284\/1000001284_add2_020.jpg"
+           },
+           {
+            "id": 29,
+            "meal_name": "[마이셰프] 두툼 우리쌀 돈까스(1인)",
+            "meal_material": [
+              {"r_name":"등심돈까스"},
+              {"r_name": "소스"},
+              {"r_name":"브로콜리"},
+              {"r_name":"당근"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001278",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001278\/1000001278_add2_066.jpg"
+           },
+           {
+            "id": 30,
+            "meal_name": "[마이셰프] 사와디캅 팟타이(1인)",
+            "mael_material":[ 
+                {"r_name":"소고기"},
+                {"r_name":"소스"},
+                {"r_name":"부추"},
+                {"r_name":"당근"},
+                {"r_name":"쌀국수"},
+                {"r_name":"숙주나물"},
+                {"r_name":"건고추"},
+                {"r_name":"땅콩"}
+            ],
+          
+               
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001250",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/03\/12\/1000001250\/1000001250_add2_090.jpg"
+           },
+           {
+            "id": 31,
+            "meal_name": "[마이셰프] 레드와인스테이크(2인)",
+           "meal_material":[
+                 {"r_name":"소고기"},
+                 {"r_name":"꼬마양배추"},
+                 {"r_name":"방울토마토"},
+                 {"r_name":"시즈닝"},
+                 {"r_name":"양파절임"},
+                 {"r_name":"마늘칩"},
+                 {"r_name":"버터"},
+                 {"r_name":"소스"},
+                 {"r_name":"올리브유"},
+                 {"r_name":"새송이버섯"}
+           ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001141",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/18\/06\/25\/1000001141\/1000001141_add2_078.jpg"
+           },
+           {
+               "id": 32,
+            "meal_name": "[마이셰프] 포크안심스테이크(2인)",
+           "meal_material":[
+                 {"r_name":"돼지고기"},
+                 {"r_name":"알감자"},
+                 {"r_name":"데리야끼소스"},
+                 {"r_name":"올리브유"},
+                 {"r_name":"그린빈(완두콩)"},
+                 {"r_name":"와사비"}
+                
+           ],
+           "addr":"https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001083",
+             "addr_source":  "https:\/\/www.mychef.kr\/data\/goods\/17\/12\/49\/1000001083\/1000001083_add2_062.jpg"
+           },
+           {
+               "id": 33,
+            "meal_name": "[마이셰프] 삼색 막국수(2인)",
+           "meal_material":[
+                 {"r_name":"메밀면"},
+                 {"r_name":"오이"},
+                 {"r_name":"적양배추"},
+                 {"r_name":"당근"},
+                 {"r_name":"반숙란"},
+                 {"r_name":"소스"}
+                
+           ],
+            "addr":"https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001305",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/06\/26\/1000001305\/1000001305_add2_093.jpg"
+           },
+           {
+            "id": 34,
+            "meal_name": "[마이셰프] 두툼 우리쌀 치즈 돈까스(1인)",
+            "meal_material": [
+              {"r_name":"소고기"},
+              {"r_name": "대파"},
+              {"r_name":"양파"},
+              {"r_name":"농축육수"},
+              {"r_name":"볶음김치"},
+               {"r_name":"라면사리"}
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001279",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001279\/1000001279_add2_080.jpg"
+           },
+            {
+            "id": 35,
+            "meal_name": "[마이셰프] 헬케이노 국물닭발(2인)",
+            "meal_material": [
+              {"r_name":"육수"},
+              {"r_name": "닭발"},
+              {"r_name":"숙주나물"},
+              {"r_name":"홍 청양고추"},
+              {"r_name":"대파"},
+               {"r_name":"매운 분말"}
+                
+           
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001306",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/06\/26\/1000001306\/1000001306_add2_062.jpg"
+           },
+            {
+            "id": 36,
+            "meal_name": "[마이셰프] 토종순대국(1인)",
+            "meal_material": [
+              {"r_name":"순대"},
+              {"r_name": "수육"},
+              {"r_name":"육수"},
+              {"r_name":"양념장 "},
+              {"r_name":"대파"}
+              
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001173",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/02\/07\/1000001173\/1000001173_add2_077.jpg"
+           },
+          {
+            "id": 37,
+            "meal_name": "[마이셰프] 불고기 찜 샐러드",
+            "meal_material": [
+              {"r_name":"배추"},
+              {"r_name": "홍파프리카"},
+              {"r_name":"브로콜리"},
+              {"r_name":"느타리버섯 "},
+              {"r_name":"병아리콩"},
+               {"r_name":"청양고추 "},
+                {"r_name":"불고기 "},
+                 {"r_name":"소스 "}
+              
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001372",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/07\/31\/1000001372\/1000001372_add2_065.jpg"
+           },
+           {
+            "id": 38,
+            "meal_name": "[마이셰프] 굳지않는 가래떡과 쌀로만든 조청(1인)",
+            "meal_material": [
+              {"r_name":"가래떡"},
+              {"r_name": "조청"}
+             
+              
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001285",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001285\/1000001285_add2_034.jpg"
+           },
+           {
+            "id": 39,
+            "meal_name": "[마이셰프] [frozen] 찹스테이크(1인)",
+            "meal_material": [
+              {"r_name":"소고기"},
+              {"r_name": "당근"},
+              {"r_name":"스테이크소스"},
+              {"r_name":"파인애플 "},
+              {"r_name":"브로콜리"},
+               {"r_name":"시즈닝 "},
+                {"r_name":"양파 "},
+                 {"r_name":"파프리카 "}
+              
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001195",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/05\/22\/1000001195\/1000001195_add2_034.jpg"
+           },
+           {
+            "id": 40,
+            "meal_name": "[마이셰프] 소고기 숙주볶음(2인)",
+            "meal_material": [
+              {"r_name":"소고기"},
+              {"r_name": "숙주나물"},
+              {"r_name":"청경채"},
+              {"r_name":"마늘 "},
+              {"r_name":"소스"},
+               {"r_name":"건고추 "},
+                {"r_name":"양파 "}
+                 
+              
+              ],
+            "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001487",
+            "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/10\/42\/1000001487\/1000001487_add2_053.jpg"
+           },
+ {
+    "id": 41,
+    "meal_name": "[마이셰프] 나시고랭(2인)",
+    "meal_material": [
+      {"r_name":"새우"},
+      {"r_name":"건고추"},
+      {"r_name":"고추기름"},
+      {"r_name":"당근"},
+      {"r_name":"쪽파"},
+      {"r_name":"숙주나물"},
+      {"r_name":"완두콩"},
+      {"r_name":"옥수수"},
+      {"r_name":"소스"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000562",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/17\/03\/23\/1000000562\/1000000562_add2_024.jpg"
+},
+ {
+    "id": 42,
+    "meal_name": "[마이셰프] 모듬닭쌈 찜 샐러드",
+    "meal_material": [
+      {"r_name":"배추"},
+      {"r_name":"홍파프리카"},
+      {"r_name":"브로콜리"},
+      {"r_name":"새송이버섯"},
+      {"r_name":"청양고추"},
+      {"r_name":"유부닭"},
+      {"r_name":"닭가슴살"},
+      {"r_name":"양배추쌈"},
+      {"r_name":"챠오 칙피"},
+      {"r_name":"소스"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001371",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/07\/31\/1000001371\/1000001371_add2_021.jpg"
+},
+ {
+    "id": 43,
+    "meal_name": "[마이셰프] 포크안심 찜 샐러드",
+    "meal_material": [
+      {"r_name":"배추"},
+      {"r_name":"새송이버섯"},
+      {"r_name":"홍파프리카"},
+      {"r_name":"브로콜리"},
+      {"r_name":"소스용기"},
+      {"r_name":"안심 바베큐"},
+      {"r_name":"소스"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001373",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/07\/31\/1000001373\/1000001373_add2_09.jpg"
+},
+ {
+    "id": 44,
+    "meal_name": "[마이셰프] 호이즌제육 찜 샐러드",
+    "meal_material": [
+      {"r_name":"배추"},
+      {"r_name":"느타리버섯"},
+      {"r_name":"홍파프리카"},
+      {"r_name":"마늘종"},
+      {"r_name":"고추장 불고기"},
+      {"r_name":"호이즌 드레싱"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001374",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/07\/31\/1000001374\/1000001374_add2_030.jpg"
+},
+ {
+    "id": 45,
+    "meal_name": "[마이셰프] 진국닭칼국수(2인)",
+    "meal_material": [
+      {"r_name":"닭가슴살"},
+      {"r_name":"대파"},
+      {"r_name":"양념장"},
+      {"r_name":"칼국수면"},
+      {"r_name":"새송이버섯"},
+      {"r_name":"닭 육수"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001221",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/19\/10\/44\/1000001221\/1000001221_add2_064.jpg"
+},
+ {
+    "id": 46,
+    "meal_name": "[마이셰프] 한우소고기무국(2인)",
+    "meal_material": [
+      {"r_name":"무"},
+      {"r_name":"소고기"},
+      {"r_name":"대파"},
+      {"r_name":"마늘"},
+      {"r_name":"육수"},
+      {"r_name":"참기름"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000000439",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/16\/11\/09\/1000000439\/1000000439_add2_094.jpg"
+},
+ {
+    "id": 47,
+    "meal_name": "[마이셰프] 냄비가득 새우 소금구이",
+    "meal_material": [
+      {"r_name":"새우"},
+      {"r_name":"소금"},
+      {"r_name":"초장"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001286",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/05\/21\/1000001286\/1000001286_add2_096.jpg"
+},
+ {
+    "id": 48,
+    "meal_name": "[마이셰프] 매콤 크림 닭 떡볶이(2인)",
+    "meal_material": [
+      {"r_name":"닭 양념육"},
+      {"r_name":"크림소스"},
+      {"r_name":"떡볶이 떡"},
+      {"r_name":"대파"},
+      {"r_name":"양배추"},
+      {"r_name":"청양고추"},
+      {"r_name":"파마산치즈"},
+      {"r_name":"고추기름"},
+      {"r_name":"체다치즈"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001709",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/21\/06\/22\/1000001709\/1000001709_add2_051.jpg"
+},
+ {
+    "id": 49,
+    "meal_name": "[마이셰프] 허챠밍 청귤 & 딜 냉파스타(2인)",
+    "meal_material": [
+      {"r_name":"카펠리니"},
+      {"r_name":"샐러리"},
+      {"r_name":"적양파"},
+      {"r_name":"방울토마토"},
+      {"r_name":"레몬"},
+      {"r_name":"새우"},
+      {"r_name":"올리브 오일"},
+      {"r_name":"파마산 치즈가루"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001709",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/21\/06\/22\/1000001709\/1000001709_add2_051.jpg"
+},
+ {
+    "id": 50,
+    "meal_name": "[마이셰프] 보니따 리꼬 스테이크(1인)",
+    "meal_material": [
+      {"r_name":"소고기"},
+      {"r_name":"쥬키니 호박"},
+      {"r_name":"방울토마토"},
+      {"r_name":"시즈닝"},
+      {"r_name":"엄지새송이"}
+  ],
+    "addr": "https:\/\/www.mychef.kr\/goods\/goods_view.php?goodsNo=1000001553",
+    "addr_source": "https:\/\/www.mychef.kr\/data\/goods\/20\/11\/48\/1000001553\/1000001553_add2_086.jpg"
+}
+ 
+]
+}

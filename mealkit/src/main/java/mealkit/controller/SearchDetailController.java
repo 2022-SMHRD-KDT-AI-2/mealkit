@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import mealkit.entity.FavoriteVO;
+import mealkit.entity.MaterialVO;
 import mealkit.entity.MemberVO;
 import mealkit.entity.RecipeVO;
 import mealkit.model.RecipeDAO;
@@ -30,6 +31,8 @@ public class SearchDetailController implements Controller {
 		request.setAttribute("r_seq", vo.getR_seq());
 		request.setAttribute("r_name", vo.getR_name());
 		request.setAttribute("r_content", vo.getR_content());
+		List<MaterialVO> mlist = dao.selectMaterial(r_seq);
+		request.setAttribute("mlist", mlist);
 		
 		HttpSession session = request.getSession();
 		MemberVO memvo = (MemberVO) session.getAttribute("memVO");
@@ -40,6 +43,8 @@ public class SearchDetailController implements Controller {
 		
 		List<FavoriteVO> flist = dao.selectFavorite(fvo);
 		request.setAttribute("flist", flist);
+		
+		
 		
 		return "searchDetail";
 	}

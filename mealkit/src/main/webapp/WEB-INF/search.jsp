@@ -103,24 +103,28 @@
 			</ul>
 
 			<form action="/mealkit/search.do" id="form">
+				<div class="button" style="margin:50px; postion:absolute; left:35%;">
+					<button type="button" class="btn btn-primary" onclick="aa()">검색</button>
+					<button type="reset" class="btn btn-primary">초기화</button>
+				</div>
 				<div class="tab-content">
 					<c:forEach var="i" begin="1000" end="13000" step="1000">
 						<div id="${i}" class="tab-pane fade">
 							<c:forEach var="v" items="${list}">
 								<c:if test="${v.k_super_seq == i}">
 									<div class="searchdiv">
-										<li><input class="kname" type="checkbox"
-											name="${v.k_name}" value='1' />${v.k_name}</li>
+										<input class="kname" type="checkbox" name="${v.k_name}" value='1' />${v.k_name}
+										<%-- <input class="kname" type="checkbox" name="${v.k_name}" value='-1' />${v.k_name}제외--%>
 									</div>
 								</c:if>
 							</c:forEach>
 						</div>
 					</c:forEach>
 				</div>
-				<button type="button" class="btn" onclick="aa()">검색</button>
+				
 			</form>
 			
-			<div class="list-group">
+			<div class="list-group" style="margin-top:200px;">
 			
 			</div>
 		</div>

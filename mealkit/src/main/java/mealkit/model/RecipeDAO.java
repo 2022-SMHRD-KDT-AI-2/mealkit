@@ -44,9 +44,23 @@ public class RecipeDAO {
 		return vo;
 	}
 	
+	public List<MaterialVO> selectMaterial(int r_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<MaterialVO> list = session.selectList("selectMaterial", r_seq);
+		session.close();
+		return list;
+	}
+	
 	public List<FavoriteVO> selectFavorite(FavoriteVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		List<FavoriteVO> list = session.selectList("selectFavorite", vo);
+		session.close();
+		return list;
+	}
+	
+	public List<FavoriteVO> selectFavoriteOne(String m_id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<FavoriteVO> list = session.selectList("selectFavoriteOne", m_id);
 		session.close();
 		return list;
 	}

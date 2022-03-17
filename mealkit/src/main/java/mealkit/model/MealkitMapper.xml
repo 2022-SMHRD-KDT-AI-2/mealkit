@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mealkit.model.MealkitMapper">
+
+	
+	<select id="selectAllMealkit" resultType="mealkit.entity.MealkitVO">
+		select * from t_mealkit
+	</select>
+	
+	<insert id="mealkitInsert" parameterType="mealkit.entity.MealkitVO">
+		insert into t_mealkit
+		values(#{ml_seq}, #{ml_name}, #{ml_addr_img})
+	</insert>
+	
+  
+</mapper>
+

@@ -54,7 +54,9 @@ $(function(){
 	</div>
 
 
-	<div class="list-group"></div>
+	<div class="list-group" style="padding-top:50px;">
+	
+	</div>
 
 	<c:if test="${empty memVO}">
 		<div class='container'>
